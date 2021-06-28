@@ -1,0 +1,42 @@
+.main-navbar{
+    background-color: $mainColor3;
+    font-family: $font2;
+    .navbar-toggler:focus{box-shadow: none;}
+    .navbar-brand{
+        color: $mainColor2 ;
+        font-family: inherit;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                font-family: $font2;
+                color: $mainColor2;
+                line-height: 1.31;
+                font-weight: bold;
+            }
+        }
+    }
+    .search-btn{
+        background-color: $mainColor4;
+        border: 1px solid #bdbdbd;
+        padding: 4px 10px;
+        .svg-inline--fa{
+            color: #212529;
+        }
+    }
+    
+    .sign-up-btn{
+        background-color: $mainColor1;
+        border: 1px solid $mainColor1;
+        padding: 4px 18px;
+        color: $mainColor2;
+        margin: 0 15px 0 50px;
+    }
+    .sign-up-btn:hover{
+        background-color: $mainColor4;
+        transition: $transtion;
+        
+    }
+}

@@ -1,0 +1,28 @@
+.upper-navbar{
+    background-color: $mainColor1;
+    padding: 12px;
+    .upper-navbar--postion{
+        display: flex;
+        justify-content: space-between;
+    }
+    .upper-navbar__info{
+        .upper-navbar__info__link{
+        font-family: $font2;
+        font-weight: 500;
+        line-height: 1.21;
+        margin-#{$end}:50px;
+        color: #212529;
+        }
+    }
+    .upper-navbar__social{
+        .upper-navbar__social__link{
+            margin-#{$start}:15px ;
+        }
+
+    }
+}
+
+@media only screen and (max-width:767px) {
+    
+    
+}

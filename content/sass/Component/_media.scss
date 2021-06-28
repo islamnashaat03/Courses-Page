@@ -1,0 +1,40 @@
+@media only screen and (max-width:1920px){
+    html{
+        font-size: calc(16px + 6 *((100vw - 1366px )/554));
+        
+    }
+}
+
+@media only screen and (max-width:1366px){
+
+}
+
+
+@media only screen and (max-width:1024px){
+    html{
+        font-size: calc(16px + 6 *((100vw - 320px )/704));
+    }
+}
+
+@media only screen and (max-width:991px){
+
+}
+
+@media only screen and (max-width:767px){
+    .upper-navbar{
+        .upper-navbar--postion{
+            flex-direction: column;
+            text-align: center;
+        }
+        .upper-navbar__info{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .upper-navbar__info__link{
+                margin-#{$end}:0;
+                margin-bottom: 10px;
+            }
+            
+        }
+    }
+}

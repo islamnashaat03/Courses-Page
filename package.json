@@ -1,0 +1,31 @@
+{
+  "name": "courses-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islamnashaat03/Courses-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/islamnashaat03/Courses-Page/issues"
+  },
+  "homepage": "https://github.com/islamnashaat03/Courses-Page#readme",
+  "devDependencies": {
+    "beeper": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-notifier": "^10.0.0",
+    "sass": "^1.35.1"
+  }
+}
