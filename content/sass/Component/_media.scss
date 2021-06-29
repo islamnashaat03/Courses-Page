@@ -3,19 +3,19 @@
 }
 @media (min-width: 1366px) and (max-width:1920px ) {
 
-    html{
-        font-size: calc(16px + 6 *((100vw - 1366px )/554));
+    // html{
+    //     font-size: calc((16px + (22-16)) *((100vw - 1366px)/(1920-1366)));
         
-    }
+    // }
 }
 @media only screen and (max-width:1366px){
 
 }
 @media (min-width: 319px) and (max-width: 1366px) {
 
-    html{
-        font-size: calc(16px + 6 *((100vw - 320px )/1046));
-    }
+    // html{
+    //     font-size: calc(20px + (26-20) *((100vw - 320px )/(1366-320)));
+    // }
 }
 @media only screen and (max-width:1024px){
 
@@ -52,9 +52,12 @@
             .upper-navbar__info__link{
                 margin-#{$end}:0;
                 margin-bottom: 10px;
-                font-size: 13px;
+                // font-size: 13px;
             }
             
         }
     }
+}
+@media (min-width: 401px){
+    .signature-wrapper {display:none;}
 }
