@@ -1,0 +1,38 @@
+.my-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+
+    .my-card__image{
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+        border-radius: 6px;
+    
+    }
+    .my-card__small-img{
+        background-color: $mainColor4;
+        padding: 5px;
+        position: absolute;
+        bottom: -15px;
+        left: 22px;
+    }
+    .my-card__body{
+        padding: 8px;
+    }
+    .my-card__title{
+        font-family: $font2;
+        font-weight: bold;
+        line-height: 1.2;
+        color: $mainColor2;
+    }
+    .my-card__paragraph{
+        font-family: $font2;
+        font-size: 14px;
+        line-height: 1.71;
+        text-align: left;
+        color: #757575;
+    }
+}

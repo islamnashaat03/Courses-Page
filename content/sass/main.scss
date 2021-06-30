@@ -5,6 +5,17 @@
 @import './Layout/main-navbar';
 @import './Layout/main-header';
 @import './Layout/counter';
+.top-courses{
+    margin-bottom: 100px;
+    .top-courses__head {
+        font-family: $font1;
+        font-weight: bold;
+        line-height: 1.63;;
+        color: $mainColor2;
+        margin-bottom: 27px
+    }
+}
+@import './Component/my-card.scss';
 
 
 
