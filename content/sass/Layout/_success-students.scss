@@ -3,19 +3,25 @@
         display: flex;
         margin-left: 30px;
         position: relative;
+        .students__picture{
+            .students__main-img{
+                position: relative;
+                margin: auto;
+            }
+            .students__top-left-img{
+                position: absolute;
+                top: -35px;
+                left: -30px;
+            }
+            .students__bottom-img-text{
+                background-color: $mainColor4;
+                position: absolute;
+                margin: auto;
+                text-align: center;
+                bottom: 0;
+                width: 35%;
+            }
+        }
     }
-    .students__main-img{
-        position: relative;
-    }
-    .students__top-left-img{
-        position: absolute;
-        top: -35px;
-        left: -30px;
-    }
-    .students__bottom-img-text{
-        background-color: $mainColor4;
-        position: absolute;
-        margin: auto;
-        text-align: center;
-    }
+    
 }
