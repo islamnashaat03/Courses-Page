@@ -3,8 +3,16 @@
     color: $mainColor4;
     margin-top: -100px;
     margin-bottom: 70px;
-    span {
+    .counter__head{
+        font-family: $font1;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.17;
+        text-align: left;
+        span {
         color: $mainColor1;
     }
+    }
+    
 }
 

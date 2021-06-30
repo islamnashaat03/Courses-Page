@@ -12,3 +12,9 @@ a{
     }
 }
 .btn:focus{box-shadow: none;}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

@@ -1,0 +1,21 @@
+.students{
+    .row-students{
+        display: flex;
+        margin-left: 30px;
+        position: relative;
+    }
+    .students__main-img{
+        position: relative;
+    }
+    .students__top-left-img{
+        position: absolute;
+        top: -35px;
+        left: -30px;
+    }
+    .students__bottom-img-text{
+        background-color: $mainColor4;
+        position: absolute;
+        margin: auto;
+        text-align: center;
+    }
+}
