@@ -6,3 +6,10 @@
     js.src = "//www.tickcounter.com/static/js/loader.js";
     pjs.parentNode.insertBefore(js, pjs);
 }(document, "script", "tickcounter-sdk"));
+
+$(function(){
+    "use strict"
+    // $(".course-published__count").countTo();
+    $(".course-published__count").countTo('toggle');
+});
+
