@@ -10,9 +10,9 @@ hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
 minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60)),
 seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days + " : " + " "
-    document.getElementById("hours").innerHTML = hours + " : "
-    document.getElementById("mins").innerHTML = minutes + " : "
+    document.getElementById("days").innerHTML =  days 
+    document.getElementById("hours").innerHTML =  hours 
+    document.getElementById("mins").innerHTML = minutes 
     document.getElementById("secs").innerHTML = seconds 
 
 if (timeleft < 0) {

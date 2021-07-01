@@ -9,9 +9,20 @@
             }
         }
     }
+    .counter{
+        padding: 47px;
+        .countdown--num{
+            .countdown__num{
+                font-size: 65px;
+            } 
+        }
+        .countdown--name{
+            .countdown__name{
+                padding: 10px;
+            }
+    }  
 
 }
-
 @media only screen and (max-width:1366px){
     .students{
         .row-students{
@@ -53,6 +64,13 @@
             }
         }
     }
+    .counter{
+        .countdown--num{
+            .countdown__num{
+                font-size: 40px;
+            }
+        }
+    } 
 }
 @media (min-width: 991px) and (max-width:1920px ) {
     .students{
@@ -108,7 +126,6 @@
             }
         }
     }
-
 }
 @media only screen and (max-width:767px){
     .upper-navbar{
@@ -162,14 +179,24 @@
                     padding: 8px;
                     margin-bottom: 25px
                 }
-
             }
         }
     }   
-
-
+    .counter{
+        padding: 20px;
+        .counter__head-side{
+            margin-bottom: 30px;
+        }
+        .countdown--name{
+            padding-bottom: 36px;
+            .countdown__name{
+                font-size: 12px;
+                padding: 15px;
+            
+        }
+        }
+    }
 }
-
 @media only screen and  (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         max-width: 1190px;
@@ -255,6 +282,14 @@
             }
         }
     }
+    
+        .counter__head-side{display: flex;}
+        .countdown--num{
+            .countdown__num{
+                font-size: 60px;
+            }
+        }
+    }
     .visitors{
         .course-published{
             .course-published__count{
@@ -265,5 +300,3 @@
             }
         }
     }  
-    
-}
