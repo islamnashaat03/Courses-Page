@@ -27,7 +27,8 @@ document.getElementById("end").innerHTML = "TIME UP!!";
 
 $(function(){
     "use strict"
-    // $(".course-published__count").countTo();
-    $(".course-published__count").countTo('toggle');
+    $(".course-published__count").countTo();
+    
 });
+
 
