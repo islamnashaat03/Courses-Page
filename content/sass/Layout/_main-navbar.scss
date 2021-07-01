@@ -1,7 +1,7 @@
 .main-navbar{
     background-color: $mainColor3;
     font-family: $font2;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
     .navbar-toggler:focus{box-shadow: none;}
     .navbar-brand{
         color: $mainColor2 ;
@@ -16,6 +16,7 @@
                 color: $mainColor2;
                 line-height: 1.31;
                 font-weight: bold;
+
             }
         }
     }

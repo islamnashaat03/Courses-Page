@@ -1,0 +1,45 @@
+.subscribe-now{
+    .subscribe-now__content{
+        .subscribe-now__content__title{
+            font-family: $font2;
+            line-height: 3.75;
+            text-align: left;
+            color: $mainColor1;
+            font-weight: bold;
+        }
+        .subscribe-now__content__quote{
+            font-family: $font1;
+            font-weight: bold;
+            line-height: 1.25;
+            text-align: left;
+            color: $mainColor2;
+        }
+        .subscribe-now__content__form{
+            input{
+                outline: 0;
+                border: 1px solid #bdbdbd;
+                border-radius: 4px;
+                padding: 15px;
+                width: 100%;
+                padding-left: 35px;
+                &::placeholder{
+                    font-family: $font2;
+                    font-size: 16px;
+                    line-height: 3.75;
+                    text-align: left;
+                    color: #bdbdbd;
+                }
+            }
+            svg:not(:root).svg-inline--fa.fa-w-16 {
+                position: absolute;
+                left: 10px;
+            }
+            
+            button{
+                @extend.my-btn;
+            
+            }
+        }
+    }
+}
+    

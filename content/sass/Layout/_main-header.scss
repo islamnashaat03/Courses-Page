@@ -12,15 +12,9 @@
         color: #002147;
     }
     .main-header__quote-btn{
-        background-color: $mainColor1;
-        border: 1px solid $mainColor1;
+        @extend.my-btn;
         margin-right: 8px;
-        font-family: $font2;
-        color: $mainColor2;
         padding: 9px 25px;
-        &:hover{
-            background-color: $mainColor4;
-        }
     }
     
     .main-header__read-more-btn{

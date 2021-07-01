@@ -1,11 +1,28 @@
 @media only screen and (max-width:1920px){
+    .students{
+        .row-students{
+            .students__picture{
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 65px;
+                }
+            }
+        }
+    }
 
 }
-@media (min-width: 1366px) and (max-width:1920px ) {
 
-}
 @media only screen and (max-width:1366px){
-
+    .students{
+        .row-students{
+            .students__picture{
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 65px;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 320px) and (max-width: 1366px) {
 
@@ -26,11 +43,73 @@
             }
         }
     }
+    .students{
+        .row-students{
+            .students__picture{
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 60px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 991px) and (max-width:1920px ) {
+    .students{
+        .row-students{
+            .students__picture{
+                width: 50%;
+                flex: 0 0 auto;
+                margin-#{$end}:30px;
+            }
+            .students__brief{
+                flex: 0 0 auto;
+                width: 50%;
+            }
+        }
+    }
 }
 @media only screen and (max-width:991px){
-    
+    .students{
+        .row-students{
+            flex-direction: column;
+            .students__picture{
+                margin-bottom: 50px;
+            }
+        }
+    }
 }
+@media (min-width:768px) and (max-width:992px){
+    .students{
+        .row-students{
+            .students__picture{
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 20px;
+                }
+            }
+        }
+    }
+}
+@media only  screen and  (min-width:768px){
+    .students{
+        .row-students{
+            .students__brief__card{
+                position: relative;
+                margin-left: 60px;
+                width: 84%;
+                .students__brief__card-img{
+                    position: absolute;
+                    left: -55px;
+                }
+                .students__brief__card-info{
+                    margin-#{$start}: 30px;
+                }
+            }
+        }
+    }
 
+}
 @media only screen and (max-width:767px){
     .upper-navbar{
         .upper-navbar--postion{
@@ -45,7 +124,6 @@
                 margin-bottom: 10px;
                 font-size: 13px;
             }
-            
         }
     }
     .main-navbar{
@@ -55,11 +133,128 @@
     }
     .flex-center{flex-direction: column;}
     .students{
-        .row-students{flex-direction: column;}
+        .row-students{
+            .students__picture{
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 10%;
+                }
+            }
+        }
+        .students__brief__card{
+            flex-direction: column;
+            .students__brief__card-img{
+                margin-bottom: 15px;
+            }
+        }
     }
+    .main-footer{
+        .main-footer__copyright{
+            flex-direction: column;
+            padding: 10px;
+        }
+    }
+    .subscribe-now{
+        .subscribe-now__content{
+            .subscribe-now__content__form{
+                text-align: center;
+                input{
+                    padding: 8px;
+                    margin-bottom: 25px
+                }
+
+            }
+        }
+    }   
+
+
 }
-@media (min-width: 1400px){
+
+@media only screen and  (min-width: 1400px){
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         max-width: 1190px;
     }
+    .students{
+        .row-students{
+            .students__picture{
+                width: 50%;
+                flex: 0 0 auto;
+                margin-#{$end}:30px;
+                .students__bottom-img-text{
+                    width: 75%;
+                    left: 60px;
+                }
+            }
+            .students__brief{
+                flex: 0 0 auto;
+                width: 50%;
+            }
+        }
+    }
+}
+    // ===============FONT MEDIA ===========
+@media only screen and (min-width:1366px) {
+    .main-navbar{
+        .navbar-brand{
+            font-size: 24px;
+        }
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .main-header{
+        .main-header__title{
+            font-size: 30px;
+
+        }
+        .main-header__brief{
+            font-size: 50px;
+        }
+    }
+    .top-courses{
+        .top-courses__head{
+            font-size: 48px;
+        }
+    }
+    .students{
+        .row-students{
+            .students__brief{
+                .students__brief__main-head{
+                    font-size: 48px;
+                }
+            }
+        }
+    }  
+    .subscribe-now{
+        .subscribe-now__content{
+            .subscribe-now__content__title{
+                font-size: 16px;
+                margin-bottom: 0;
+
+            }
+            .subscribe-now__content__quote{
+                font-size: 48px;
+                width: 85%;
+            }
+            .subscribe-now__content__form{
+                display: flex;
+                align-items: center;
+                position: relative;
+                input{
+                    width: 100%;
+                    
+                }
+                button{
+                    position: absolute;
+                    right: 6px;
+                }
+            }
+        }
+    }
+        
+    
 }

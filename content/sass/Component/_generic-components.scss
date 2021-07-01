@@ -19,3 +19,12 @@ a{
     align-items: center;
     height: 100%;
 }
+.my-btn{
+    background-color: $mainColor1;
+    border: 1px solid $mainColor1;
+    font-family: $font2;
+    color: $mainColor2;
+    &:hover{
+        background-color: $mainColor4;
+    }
+}
