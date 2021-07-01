@@ -8,7 +8,7 @@
         .main-footer__contact-info__links{
             display: flex;
             flex-direction: column;
-            margin-top: 50px;
+            margin-top: 20px;
             a{
                 margin: 10px 0;
             }
@@ -24,6 +24,7 @@
         .main-footer__contact-info__title{
         display: flex;
         align-items: center;
+        h4{margin-bottom: 0;}
         }
     }
     .main-footer__links{
