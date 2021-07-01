@@ -30,6 +30,7 @@
                     text-align: left;
                     color: #bdbdbd;
                 }
+
             }
             svg:not(:root).svg-inline--fa.fa-w-16 {
                 position: absolute;
@@ -39,6 +40,10 @@
             button{
                 @extend.my-btn;
             
+            }
+            span{
+                color: red;
+                font-weight: bold;
             }
         }
     }
