@@ -1,30 +1,52 @@
 .upper-navbar{
     background-color: $mainColor1;
-    padding: 12px;
-    font-size: 14px;
+    padding: 8px;
+
     .upper-navbar--postion{
         display: flex;
         justify-content: space-between;
     }
     .upper-navbar__info{
         .upper-navbar__info__link{
-        font-family: $font2;
-        font-weight: 500;
-        line-height: 1.21;
-        margin-#{$end}:50px;
-        color: #212529;
+            font-size: calc(14px + ((20 - 14)*((100vw - 1366px)/(1920-1366))));
+            font-family: $font2;
+            font-weight: 500;
+            line-height: 1.21;
+            margin-#{$end}:50px;
+            color: #212529;
         
         }
     }
     .upper-navbar__social{
         .upper-navbar__social__link{
-            margin-#{$start}:15px ;
+            margin-#{$start}:8px ;
+            font-size: 23px;
         }
+        
 
     }
 }
 
 @media only screen and (max-width:767px) {
-    
+    .upper-navbar{
+        .upper-navbar--postion{
+            flex-direction: column;
+        }
+        .upper-navbar__info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .upper-navbar__info__link{
+                font-size: calc(13px + ((19 - 13)*((100vw - 320px)/(1366-320))));
+                margin: 4px;
+                
+            }
+        }
+        .upper-navbar__social{
+            text-align: center;
+            
+        }
+        
+    }
     
 }

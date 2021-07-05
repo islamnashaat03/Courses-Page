@@ -7,12 +7,26 @@
 @import './Layout/counter';
 .top-courses{
     margin-bottom: 100px;
+    .col--edit{
+        padding: 0 13px;
+        margin-bottom: 30px;
+    }
     .top-courses__head {
         font-family: $font1;
+        font-size: calc(42px + ((48 - 42 )*((100vw - 1366px)/(1920 - 1366))));
         font-weight: bold;
         line-height: 1.63;;
         color: $mainColor2;
         margin-bottom: 27px
+
+
+    }
+}
+@media only screen and (max-width:768px) {
+    .top-courses{
+        .top-courses__head{
+            font-size: calc(28px + ((34 - 28 )*((100vw - 320px)/(1366 - 320))));
+        }
     }
 }
 @import './Component/my-card.scss';
@@ -22,9 +36,6 @@
 @import './Layout/main-footer';
 
 
-
-
-@import './Component/media';
 
 
 

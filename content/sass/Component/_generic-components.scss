@@ -24,7 +24,10 @@ a{
     border: 1px solid $mainColor1;
     font-family: $font2;
     color: $mainColor2;
-    &:hover{
-        background-color: $mainColor4;
+}
+@media only  screen and (min-width:1366px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl{
+        max-width: 1170px;
+        padding: 0;
     }
 }

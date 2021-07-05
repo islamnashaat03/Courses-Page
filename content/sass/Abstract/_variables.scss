@@ -1,17 +1,29 @@
+@font-face {
+    font-family:'inter-regular' ;
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.eot');
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.otf');
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.svg');
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.ttf');
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.woff');
+    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.woff2');
+
+}
 
 @font-face {
-    font-family:inter ;
-    src: url(../../css/fonts/inter-regular.otf);
-}
-@font-face {
-    font-family:georgia-bold ;
-    src: url(../../css/fonts/georgia.woff);
+    font-family: 'Georgia Regular font';
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.eot');
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.otf');
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.svg');
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.ttf');
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.woff');
+    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.woff2');
+
 }
 
 $mainColor1:#fdc800;
 $mainColor2:#002147;
 $mainColor3:#f0f4f9;
 $mainColor4:#fff;
-$font1:georgia-bold;
-$font2:inter;
+$font1:'Georgia Regular font';
+$font2:'inter-regular';
 $transtion:.5s;

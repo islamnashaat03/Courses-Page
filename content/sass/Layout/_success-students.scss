@@ -1,20 +1,14 @@
 .students{
     margin-bottom: 110px;
-    .row-students{
-        display: flex;
-        margin-left: 30px;
-        // position: relative;
-        justify-content: space-between;
         .students__picture{
-            .students__main-img{
                 position: relative;
-                // margin: auto;
+                margin-#{$start}: 30px;
                 .students__top-left-img{
                 position: absolute;
                 top: -35px;
                 left: -30px;
                 }
-            }
+            
             .students__bottom-img-text{
                 background-color: $mainColor4;
                 position: absolute;
@@ -83,6 +77,6 @@
             }
             
         }
-    }
+    
     
 }

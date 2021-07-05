@@ -10,14 +10,15 @@
         position: relative;
         margin-bottom: 30px;
         border-radius: 6px;
+        img{width: 100%;}
     
     }
     .my-card__small-img{
-        background-color: $mainColor4;
+        background-color: #f0f4f9;
         padding: 5px;
         position: absolute;
         bottom: -15px;
-        left: 22px;
+        left: 16px;
     }
     .my-card__body{
         padding: 8px;
@@ -27,12 +28,20 @@
         font-weight: bold;
         line-height: 1.2;
         color: $mainColor2;
+        font-size: 20px;
+        font-size: calc(14px + ((20 - 14 )*((100vw - 1366px)/(1920 - 1366))));
     }
     .my-card__paragraph{
         font-family: $font2;
         font-size: 14px;
         line-height: 1.71;
-        text-align: left;
         color: #757575;
+    }
+}
+@media only screen and (max-width:768px ){
+    .my-card{
+        .my-card__title{
+            font-size: calc(14px + ((20 - 14 )*((100vw - 320px)/(1366 - 320))));
+        }
     }
 }

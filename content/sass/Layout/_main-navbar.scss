@@ -2,12 +2,16 @@
     background-color: $mainColor3;
     font-family: $font2;
     padding-bottom: 80px;
+    padding-top: 17px;
     .navbar-toggler:focus{box-shadow: none;}
     .navbar-brand{
         color: $mainColor2 ;
-        font-family: inherit;
+        font-family: $font2;
         font-weight: 500;
         text-transform: uppercase;
+        font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
+        display: flex;
+        align-items: center;
     }
     .navbar-nav{
         .nav-item{
@@ -16,29 +20,36 @@
                 color: $mainColor2;
                 line-height: 1.31;
                 font-weight: bold;
-
+                font-size: calc(16px + ((22 - 16)*((100vw - 1366px)/(1920-1366))));
+                padding-right: 27px;
             }
         }
     }
     .search-btn{
         background-color: $mainColor4;
         border: 1px solid #bdbdbd;
-        padding: 4px 10px;
+        padding: 9px 13px;
         .svg-inline--fa{
             color: #212529;
         }
     }
     
     .sign-up-btn{
-        background-color: $mainColor1;
-        border: 1px solid $mainColor1;
-        padding: 4px 18px;
-        color: $mainColor2;
-        margin: 0 15px 0 50px;
+        @extend.my-btn;
+        padding: 9px 32px;
+        margin: 0 15px 0 35px;
     }
-    .sign-up-btn:hover{
-        background-color: $mainColor4;
-        transition: $transtion;
-        
+}
+@media only screen and (max-width:767px) {
+    .main-navbar{
+        .navbar-brand{
+            font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366-320))));
+        }
+    }
+    
+}
+@media only screen and (min-width:1366px) {
+    .main-navbar{
+        padding-bottom:95px;
     }
 }
