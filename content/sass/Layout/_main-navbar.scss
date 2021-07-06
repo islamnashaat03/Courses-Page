@@ -43,7 +43,7 @@
 @media only screen and (max-width:767px) {
     .main-navbar{
         .navbar-brand{
-            font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366-320))));
+            font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366 - 320))));
         }
     }
     
