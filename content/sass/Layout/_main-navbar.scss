@@ -3,6 +3,7 @@
     font-family: $font2;
     padding-bottom: 80px;
     padding-top: 17px;
+    .navbar-toggler{border: 0;}
     .navbar-toggler:focus{box-shadow: none;}
     .navbar-brand{
         color: $mainColor2 ;

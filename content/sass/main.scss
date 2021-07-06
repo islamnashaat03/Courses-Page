@@ -24,6 +24,7 @@
 }
 @media only screen and (max-width:768px) {
     .top-courses{
+        margin-bottom: 75px;
         .top-courses__head{
             font-size: calc(28px + ((34 - 28 )*((100vw - 320px)/(1366 - 320))));
         }

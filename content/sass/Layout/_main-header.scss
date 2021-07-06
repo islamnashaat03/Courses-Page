@@ -1,14 +1,12 @@
 .main-header{
     background-color: $mainColor3;
-    padding-bottom: 160px;
+    padding-bottom: 240px;
     .main-header__title{
         font-size: calc(24px + ((30 - 24) * ((100vw - 1366px)/(1920 - 1366))));
         font-family: $font2;
         font-weight: bold;
         color:$mainColor2;
         line-height: 2.6;
-        
-
     }
     .main-header__brief{
         font-size: calc(48px + ((56 - 48) * ((100vw - 1366px)/(1920 - 1366))));
@@ -24,12 +22,11 @@
         line-height: 1.31;
         min-width: 120px;
     }
-    
     .main-header__read-more-btn{
         background-color: $mainColor4;
-        border: 1px soloid $mainColor4;
+        border: 1px solid #bdbdbd;
         color: $mainColor2;
-        padding: 15px 25px;
+        padding: 16px 25px;
         min-width: 120px;
         line-height: 1.31;
     }
@@ -39,7 +36,7 @@
     //     display: block;
     //     content: "";
     //     width: 100%;
-    //       padding-top: (49 / 50) * 100%;
+    //       padding-top: (16 / 9) * 100%;
     //     }
     //     > .inner {
     //     position: absolute;
@@ -48,7 +45,7 @@
     //     bottom: 0;
     //     left: 0;
     //     }
-    //   }
+    // }
 }
 @media only screen and (max-width:768px){
     .main-header{

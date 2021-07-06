@@ -31,39 +31,27 @@ document.getElementById("end").innerHTML = "TIME UP!!";
 //     $(".course-published__count").countTo();
     
 // });
-function countUp() {
-    $('.course-published__count').each(function() {
-        $(this).prop('Counter', 0).animate({
-          Counter: $(this).text()
-        }, {
-          duration: 4000,
-          easing: 'swing',
-          step: function(now) {
-            $(this).text(Math.ceil(now));
-          }
-        });
-      });
+
+const counters = document.querySelectorAll(".course-published__count");
+const speed = 300;
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = Math.ceil(+counter.getAttribute("data-target"));
+    const count =Math.ceil(+counter.innerText);
+    const increment = Math.ceil(target / speed);
+    console.log(increment);
+
+    if (count < target) {
+      counter.innerText = count + increment;
+      setTimeout(updateCount, 1);
+    } else {
+      count.innerText = target;
     }
-    $(function() {
-      "user strict";
-      var bAnimate = true;
-      $(".course-published__count").css ("opacity", "0.0");
-      
-      $(window).scroll(function() {
-        console.log("scroll top=" + $(this).scrollTop());
-        console.log("div offset top=" + $("div").offset().top);
-        var scrolling = $(this).scrollTop(),
-          divoffset = $(".course-published__count").offset().top,
-          screenBottom = scrolling + $(window).height(), 
-          elemBottom = divoffset + $(".course-published__count").outerHeight (); // 
-        if (screenBottom > elemBottom) {
-          if (bAnimate) {
-             $(".course-published__count").css ("opacity", "1.0");
-            countUp();
-            bAnimate = false;
-          }
-        }
-      })
-    })
+  };
+  updateCount();
+});
+
+
 
 
