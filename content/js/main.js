@@ -34,18 +34,20 @@ if (window.location.pathname == '/index.html') {
   
   // START COUNTER 
   const counters = document.querySelectorAll(".course-published__count");
-  const speed = 300;
+  const speed = 200;
   
   counters.forEach((counter) => {
     const updateCount = () => {
-      const target = Math.ceil(+counter.getAttribute("data-target"));
-      const count =Math.ceil(+counter.innerText);
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
       const increment = Math.ceil(target / speed);
       console.log(increment);
+      
   
       if (count < target) {
-        counter.innerText = count + increment;
+        counter.innerText = Math.ceil(count + increment) ;
         setTimeout(updateCount, 1);
+        
       } else {
         count.innerText = target;
       }
@@ -60,7 +62,6 @@ if (window.location.pathname == '/index.html') {
       if(window.matchMedia('(max-width:767px)').matches){
         $('.owl-carousel').owlCarousel({
           loop:true,
-          stagePadding:0,
           margin:10,
           loop:false,
           responsiveClass:true,

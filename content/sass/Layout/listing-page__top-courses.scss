@@ -20,6 +20,7 @@
     box-shadow: none;
     padding: 10px;
   }
+  
   .owl-theme{
     .owl-dots{display: none;}
     .owl-nav{
@@ -33,4 +34,7 @@
       }
     }
   }
+}
+@media screen and (min-width:1366px) {
+  .owl-carousel{width: unset;}
 }
