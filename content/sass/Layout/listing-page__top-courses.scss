@@ -1,0 +1,35 @@
+.listing-page__top-courses{
+  margin-top: -370px;
+  .top-courses__label{
+    font-family: $font2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.35;
+    text-align: left;
+    color: $mainColor2;
+  }
+  .top-courses__select{
+    margin: 5px 0px 33px 0;
+    font-family: $font2;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.31;
+    color: $mainColor2;
+    outline: 0;
+    box-shadow: none;
+    padding: 10px;
+  }
+  .owl-theme{
+    .owl-dots{display: none;}
+    .owl-nav{
+      .owl-prev,.owl-next{
+        font-size: 50px;
+        outline: 0;
+        &:hover{
+          background:#fff;
+          color: black;
+        }
+      }
+    }
+  }
+}

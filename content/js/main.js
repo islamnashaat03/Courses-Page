@@ -1,65 +1,102 @@
-//  START TIMER IN HOME PAGE 
-var countDownDate = new Date("Jul 14, 2021 12:00:00").getTime(),
+$(document).ready(function(){
 
-myfunc = setInterval(function() {
 
-var now = new Date().getTime(),
-timeleft = countDownDate - now,
-days = Math.floor(timeleft / (1000 * 60 * 60 * 24)),
-hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60)),
-seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+    // START HOME PAGE 
+if (window.location.pathname == '/index.html') {
 
-    document.getElementById("days").innerHTML =  days 
-    document.getElementById("hours").innerHTML =  hours 
-    document.getElementById("mins").innerHTML = minutes 
-    document.getElementById("secs").innerHTML = seconds 
+  // START TIMER 
+  var countDownDate = new Date("Jul 14, 2021 12:00:00").getTime(),
 
-if (timeleft < 0) {
-clearInterval(myfunc);
-document.getElementById("days").innerHTML = ""
-document.getElementById("hours").innerHTML = "" 
-document.getElementById("mins").innerHTML = ""
-document.getElementById("secs").innerHTML = ""
-document.getElementById("end").innerHTML = "TIME UP!!";
-}
-}, 1000);
-// END TIMER IN HOME PAGE 
-// START COUNTER IN HOME PAGE 
-// $(function(){
-//     "use strict"
-//     $(".course-published__count").countTo();
-    
-// });
-
-  function scrllFunction(){
-    var elmnt = document.getElementById("counter-div"),
-        scrll = elmnt.scrollTop;
-    console.log(scrll);
+  myfunc = setInterval(function() {
+  
+  var now = new Date().getTime(),
+  timeleft = countDownDate - now,
+  days = Math.floor(timeleft / (1000 * 60 * 60 * 24)),
+  hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+  minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60)),
+  seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+  
+      document.getElementById("days").innerHTML =  days 
+      document.getElementById("hours").innerHTML =  hours 
+      document.getElementById("mins").innerHTML = minutes 
+      document.getElementById("secs").innerHTML = seconds 
+  
+  if (timeleft < 0) {
+  clearInterval(myfunc);
+  document.getElementById("days").innerHTML = ""
+  document.getElementById("hours").innerHTML = "" 
+  document.getElementById("mins").innerHTML = ""
+  document.getElementById("secs").innerHTML = ""
+  document.getElementById("end").innerHTML = "TIME UP!!";
   }
- 
-
-
-const counters = document.querySelectorAll(".course-published__count");
-const speed = 300;
-
-counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = Math.ceil(+counter.getAttribute("data-target"));
-    const count =Math.ceil(+counter.innerText);
-    const increment = Math.ceil(target / speed);
-    console.log(increment);
-
-    if (count < target) {
-      counter.innerText = count + increment;
-      setTimeout(updateCount, 1);
-    } else {
-      count.innerText = target;
+  }, 1000);
+  // END TIMER 
+  
+  // START COUNTER IN HOME PAGE 
+  
+  // $(function(){
+  //     "use strict"
+  //     $(".course-published__count").countTo();
+      
+  // });
+  
+    function scrllFunction(){
+      var elmnt = document.getElementById("counter-div"),
+          scrll = elmnt.scrollTop;
+      console.log(scrll);
     }
-  };
-  // updateCount();
+  
+  
+  
+  const counters = document.querySelectorAll(".course-published__count");
+  const speed = 300;
+  
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = Math.ceil(+counter.getAttribute("data-target"));
+      const count =Math.ceil(+counter.innerText);
+      const increment = Math.ceil(target / speed);
+      console.log(increment);
+  
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 1);
+      } else {
+        count.innerText = target;
+      }
+    };
+    
+  });
+};
+  
+    // START LISTING PAGE 
+    if (window.location.pathname == '/listing-page.html'){
+      if(window.matchMedia('(max-width:767px)').matches){
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          stagePadding:0,
+          margin:10,
+          loop:false,
+          responsiveClass:true,
+          
+          responsive:{
+              0:{
+                  items:1,
+                  nav:true
+              },
+              600:{
+                  items:3,
+                  nav:false
+              },
+              1000:{
+                  items:5,
+                  nav:true,
+                  loop:false
+              }
+          }
+      })
+      }
+    }
+    // END LISTING PAGE 
+
 });
-
-
-
-
