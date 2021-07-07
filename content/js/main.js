@@ -32,6 +32,14 @@ document.getElementById("end").innerHTML = "TIME UP!!";
     
 // });
 
+  function scrllFunction(){
+    var elmnt = document.getElementById("counter-div"),
+        scrll = elmnt.scrollTop;
+    console.log(scrll);
+  }
+ 
+
+
 const counters = document.querySelectorAll(".course-published__count");
 const speed = 300;
 
@@ -49,7 +57,7 @@ counters.forEach((counter) => {
       count.innerText = target;
     }
   };
-  updateCount();
+  // updateCount();
 });
 
 

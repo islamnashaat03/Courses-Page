@@ -7,6 +7,7 @@
             text-align: left;
             color: $mainColor1;
             font-weight: bold;
+            margin-bottom: -15px;
         }
         .subscribe-now__content__quote{
             font-family: $font1;
@@ -65,5 +66,14 @@
         }
         
     }
+}
+@media only screen and (min-width:1024px) {
+    .subscribe-now {
+        .subscribe-now__content{
+            .subscribe-now__content__quote{
+                width: 75%;
+            }
+        }
+    }  
 }
     
