@@ -32,22 +32,7 @@ if (window.location.pathname == '/index.html') {
   }, 1000);
   // END TIMER 
   
-  // START COUNTER IN HOME PAGE 
-  
-  // $(function(){
-  //     "use strict"
-  //     $(".course-published__count").countTo();
-      
-  // });
-  
-    function scrllFunction(){
-      var elmnt = document.getElementById("counter-div"),
-          scrll = elmnt.scrollTop;
-      console.log(scrll);
-    }
-  
-  
-  
+  // START COUNTER 
   const counters = document.querySelectorAll(".course-published__count");
   const speed = 300;
   
@@ -65,10 +50,11 @@ if (window.location.pathname == '/index.html') {
         count.innerText = target;
       }
     };
-    
+    updateCount();
   });
 };
-  
+  // END COUNTER 
+  // END HOME PAGE 
     // START LISTING PAGE 
     if (window.location.pathname == '/listing-page.html'){
       if(window.matchMedia('(max-width:767px)').matches){
