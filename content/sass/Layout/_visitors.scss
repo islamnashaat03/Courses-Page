@@ -12,12 +12,23 @@
             line-height: 1;
             color: $mainColor2;
             padding: 10px 0;
+            font-size: calc(48px + ((60 - 48 ) * ((100vw - 1366px) / (1920 - 1366 ))));
         }
         .course-published__name{
             font-family: $font2;
             font-weight: bold;
             line-height: 1.5;
             color: #00b2b2;
+            font-size: 16px;
         }
     }
+}
+@media only screen and (max-width:768px) {
+    .visitors{
+        .course-published {
+            .course-published__name{
+                font-size: 14px;
+            }
+        }
+    } 
 }

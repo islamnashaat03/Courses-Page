@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     // START HOME PAGE 
 if (window.location.pathname == '/index.html') {
 
@@ -40,16 +39,14 @@ if (window.location.pathname == '/index.html') {
     const updateCount = () => {
       const target = +counter.getAttribute('data-target');
       const count = +counter.innerText;
-      const increment = Math.ceil(target / speed);
-      console.log(increment);
-      
-  
+      const increment = (target / speed);
+
       if (count < target) {
         counter.innerText = Math.ceil(count + increment) ;
         setTimeout(updateCount, 1);
         
       } else {
-        count.innerText = target;
+        counter.innerText = target;
       }
     };
     updateCount();
@@ -57,6 +54,10 @@ if (window.location.pathname == '/index.html') {
 };
   // END COUNTER 
   // END HOME PAGE 
+
+  // ====================================================================================
+  // ====================================================================================
+
     // START LISTING PAGE 
     if (window.location.pathname == '/listing-page.html'){
       if(window.matchMedia('(max-width:767px)').matches){
