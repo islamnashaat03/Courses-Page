@@ -1,5 +1,5 @@
 .visitors{
-    background-color: $mainColor3;
+    background-color: $colorBackground;
     padding: 80px 0;
     .course-published{
         display: flex;
@@ -7,15 +7,15 @@
         align-items: center;
         padding: 20px 0;
         .course-published__count{
-            font-family: $font1;
+            font-family: $georgiaFont;
             font-weight: bold;
             line-height: 1;
-            color: $mainColor2;
+            color: $colorBlue;
             padding: 10px 0;
             font-size: calc(48px + ((60 - 48 ) * ((100vw - 1366px) / (1920 - 1366 ))));
         }
         .course-published__name{
-            font-family: $font2;
+            font-family: $interFont;
             font-weight: bold;
             line-height: 1.5;
             color: #00b2b2;

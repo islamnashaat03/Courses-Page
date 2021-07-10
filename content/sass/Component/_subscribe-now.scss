@@ -2,19 +2,19 @@
     padding: 80px 0;
     .subscribe-now__content{
         .subscribe-now__content__title{
-            font-family: $font2;
+            font-family: $interFont;
             line-height: 3.75;
             text-align: left;
-            color: $mainColor1;
+            color: $colorYellow;
             font-weight: bold;
             margin-bottom: -15px;
         }
         .subscribe-now__content__quote{
-            font-family: $font1;
+            font-family: $georgiaFont;
             font-weight: bold;
             line-height: 1.25;
             text-align: left;
-            color: $mainColor2;
+            color: $colorBlue;
             font-size: calc( 42px + ((48 - 42 ) * ((100vw - 1366px ) / (1920 - 1366 ))));
             margin-bottom: 26px;
         }
@@ -28,7 +28,7 @@
                 width: 100%;
                 padding-left: 35px;
                 &::placeholder{
-                    font-family: $font2;
+                    font-family: $interFont;
                     font-size: 16px;
                     line-height: 3.75;
                     text-align: left;

@@ -1,6 +1,6 @@
 .counter{
-    background-color: $mainColor2;
-    color: $mainColor4;
+    background-color: $colorBlue;
+    color: $colorWhite;
     margin-top: -100px;
     margin-bottom: 60px;
     padding:24px ;
@@ -10,7 +10,7 @@
         align-items: center;
     }
     .counter__left-side__header{
-        font-family: $font1;
+        font-family: $georgiaFont;
         font-size: 30px;
         font-weight: bold;
         line-height: 1.17;
@@ -18,7 +18,7 @@
         margin-bottom: 0;
         margin-#{$start}: 10px;
         span {
-        color: $mainColor1;
+        color: $colorYellow;
         }
     }
     .countdown{
@@ -46,10 +46,10 @@
             .countdown__box__num{
                 font-size: 60px;
                 font-weight: bold;
-                font-family: $font2;
+                font-family: $interFont;
                 line-height: 1.3;
                 text-align: center;
-                color: $mainColor4;
+                color: $colorWhite;
                 margin-bottom: 0;
             }
         }

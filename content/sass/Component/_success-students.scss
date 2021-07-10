@@ -10,7 +10,7 @@
                 left: -30px;
                 }
             .students__bottom-img-text{
-                background-color: $mainColor4;
+                background-color: $colorWhite;
                 position: absolute;
                 margin: auto;
                 text-align: center;
@@ -24,7 +24,7 @@
                     font-size: 20px;
                     margin-top: 4px;
                     margin-bottom: 0;
-                    font-family:$font2;
+                    font-family:$interFont;
                     font-weight: bold;
                     line-height: 1.2;
                     text-align: center;
@@ -32,7 +32,7 @@
                 }
                 .students__bottom-img-text__head2{
                     margin: 0;
-                    font-family: $font2;
+                    font-family: $interFont;
                     line-height: 1.71;
                     text-align: center;
                     color: #757575;
@@ -43,27 +43,27 @@
         .students__brief{
             .students__brief__main-head{
                 font-size: calc(48px + ((60 - 48)*((100vw - 1366px)/(1920 - 1366))));
-                font-family: $font1;
+                font-family: $georgiaFont;
                 font-weight: bold;
                 line-height: 1.25;
-                color: $mainColor2;
+                color: $colorBlue;
                 span{
-                    color: $mainColor1;
+                    color: $colorYellow;
                 }
             }
             .students__brief__paragraph{
-                font-family: $font2;
+                font-family: $interFont;
                 font-size: 14px;
                 line-height: 1.5;
                 color: #212529;
                 margin-bottom: 35px;
             }
             .students__brief__sec-head{
-                font-family: $font2;
+                font-family: $interFont;
                 font-size: 16px;
                 font-weight: bold;
                 line-height: 1.5;
-                color: $mainColor2;
+                color: $colorBlue;
             }
         }
         .students__brief__card{
@@ -85,14 +85,14 @@
             .students__brief__card-info{
                 margin-left: 24px;
                 h5{
-                    font-family: $font2;
+                    font-family: $interFont;
                     font-size: 16px;
                     font-weight: bold;
                     line-height: 1.5;
-                    color:$mainColor2 ;
+                    color:$colorBlue ;
                 }
                 h6 {
-                    font-family: $font2;
+                    font-family: $interFont;
                     font-size: 14px;
                     line-height: 1.71;
                     color: #757575;

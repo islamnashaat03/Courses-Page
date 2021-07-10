@@ -20,10 +20,10 @@ a{
     height: 100%;
 }
 .my-btn{
-    background-color: $mainColor1;
-    border: 1px solid $mainColor1;
-    font-family: $font2;
-    color: $mainColor2;
+    background-color: $colorYellow;
+    border: 1px solid $colorYellow;
+    font-family: $interFont;
+    color: $colorBlue;
 }
 @media only  screen and (min-width:1366px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl{

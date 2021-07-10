@@ -1,6 +1,6 @@
 .main-footer{
-    background-color: $mainColor2;
-    color: $mainColor4;
+    background-color: $colorBlue;
+    color: $colorWhite;
     padding-top: 72px;
     .main-footer__contact-info{
         display: flex;
@@ -13,12 +13,12 @@
                 margin: 10px 0;
             }
             h5{
-                font-family: $font2;
+                font-family: $interFont;
                 font-size: 20px;
                 font-weight: bold;
                 line-height: 1.8;
                 text-align: left;
-                color: $mainColor4;
+                color: $colorWhite;
             }
         }
         .main-footer__contact-info__title{
@@ -39,7 +39,7 @@
         .main-footer__links--edit{
                     display: flex;
                     flex-direction: column;
-                    font-family: $font2;
+                    font-family: $interFont;
                     line-height: 2.25;
                     text-align: left;
                     a{
@@ -50,7 +50,7 @@
     }
     
     .main-footer__copyright{
-        background-color: $mainColor1;
+        background-color: $colorYellow;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,10 +62,10 @@
             font-size: 23px;
         }
         p{
-            font-family: $font2;
+            font-family: $interFont;
             font-size: 15px;
             text-align: left;
-            color: $mainColor2;
+            color: $colorBlue;
             margin-bottom: 0;
         }
     }

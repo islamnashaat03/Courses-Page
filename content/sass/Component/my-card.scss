@@ -4,7 +4,7 @@
     flex-direction: column;
     border: 1px solid #bdbdbd;
     border-radius: 6px;
-    background-color: $mainColor4;
+    background-color: $colorWhite;
 
     .my-card__image{
         width: 100%;
@@ -25,15 +25,15 @@
         padding: 8px;
     }
     .my-card__title{
-        font-family: $font2;
+        font-family: $interFont;
         font-weight: bold;
         line-height: 1.2;
-        color: $mainColor2;
+        color: $colorBlue;
         font-size: 20px;
         font-size: calc(14px + ((20 - 14 )*((100vw - 1366px)/(1920 - 1366))));
     }
     .my-card__paragraph{
-        font-family: $font2;
+        font-family: $interFont;
         font-size: 14px;
         line-height: 1.71;
         color: #757575;

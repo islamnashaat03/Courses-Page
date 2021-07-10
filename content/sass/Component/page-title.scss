@@ -1,21 +1,21 @@
 .page-title{
-  background-color: $mainColor3;
+  background-color: $colorBackground;
   padding-bottom: 390px;
   .page-title__first-head{
-    font-family: $font2;
+    font-family: $interFont;
     font-size: 16px;
     font-weight: bold;
     line-height: 3.75;
     text-align: left;
-    color: $mainColor1;
+    color: $colorYellow;
     margin-bottom: -15px;
   }
   .page-title__second-head{
-    font-family: $font1;
+    font-family: $georgiaFont;
     font-size: calc(42px + ((48 - 42 ) * ((100vw - 1366px) / (1920 - 1366 )) ));
     font-weight: bold;
     line-height: 1.25;
     text-align: left;
-    color: $mainColor2;
+    color: $colorBlue;
   } 
 }

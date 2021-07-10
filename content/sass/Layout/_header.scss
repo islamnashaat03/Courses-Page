@@ -2,7 +2,7 @@
 
     // START UPPER NAV 
     .upper-navbar {
-        background-color: $mainColor1;
+        background-color: $colorYellow;
         padding: 8px;
         .upper-navbar--postion {
             display: flex;
@@ -11,7 +11,7 @@
         .upper-navbar__info {
             .upper-navbar__info__link {
                 font-size: calc(14px + ((20 - 14)*((100vw - 1366px)/(1920-1366))));
-                font-family: $font2;
+                font-family: $interFont;
                 font-weight: 500;
                 line-height: 1.21;
                 margin-#{$end}: 50px;
@@ -29,8 +29,8 @@
 
     // END UPPER NAV 
     .main-navbar {
-        background-color: $mainColor3;
-        font-family: $font2;
+        background-color: $colorBackground;
+        font-family: $interFont;
         padding-bottom: 80px;
         padding-top: 17px;
 
@@ -43,8 +43,8 @@
         }
 
         .navbar-brand {
-            color: $mainColor2;
-            font-family: $font2;
+            color: $colorBlue;
+            font-family: $interFont;
             font-weight: 500;
             text-transform: uppercase;
             font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
@@ -55,8 +55,8 @@
         .navbar-nav {
             .nav-item {
                 .nav-link {
-                    font-family: $font2;
-                    color: $mainColor2;
+                    font-family: $interFont;
+                    color: $colorBlue;
                     line-height: 1.31;
                     font-weight: bold;
                     font-size: calc(16px + ((22 - 16)*((100vw - 1366px)/(1920-1366))));
@@ -66,7 +66,7 @@
         }
 
         .search-btn {
-            background-color: $mainColor4;
+            background-color: $colorWhite;
             border: 1px solid #bdbdbd;
             padding: 9px 13px;
             padding: 13px;
