@@ -1,7 +1,7 @@
-.listing-page__header{
+.page-title{
   background-color: $mainColor3;
   padding-bottom: 390px;
-  .listing-page__header__first-head{
+  .page-title__first-head{
     font-family: $font2;
     font-size: 16px;
     font-weight: bold;
@@ -10,7 +10,7 @@
     color: $mainColor1;
     margin-bottom: -15px;
   }
-  .listing-page__header__second-head{
+  .page-title__second-head{
     font-family: $font1;
     font-size: calc(42px + ((48 - 42 ) * ((100vw - 1366px) / (1920 - 1366 )) ));
     font-weight: bold;

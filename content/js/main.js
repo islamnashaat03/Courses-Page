@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // START HOME PAGE 
-// if (window.location.pathname == '/index.html') {
+if ($('.home-page').length > 0) {
 
   // START TIMER 
   var countDownDate = new Date("Jul 14, 2021 12:00:00").getTime(),
@@ -60,7 +60,7 @@ $(document).ready(function(){
     });
   }
 }
-// };
+};
 
 
   // END COUNTER 
@@ -70,7 +70,7 @@ $(document).ready(function(){
   // ====================================================================================
 
     // START LISTING PAGE 
-    if (window.location.pathname == '/listing-page.html'){
+    if ($('.listing-page').length > 0){
       if(window.matchMedia('(max-width:767px)').matches){
         $('.owl-carousel').owlCarousel({
           loop:true,
