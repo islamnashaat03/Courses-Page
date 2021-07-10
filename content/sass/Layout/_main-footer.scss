@@ -86,9 +86,9 @@
         }
         .main-footer__links{
             margin-top: 40px;
-            h5{
-                // text-align: center;
-                margin: 10px 0 ;
+            .main-footer__links-icon{
+                display: flex;
+                align-items: center;
                 &::before{
                     content: '\e90a';
                     font-family:'icomoon' ;
@@ -99,15 +99,14 @@
                     font-family:'icomoon' ;
                 }
             }
+            h5{
+                margin: 10px 0 ;
+            }
             .main-footer__links--edit{
                 display: none;
-            //     flex-direction: row;
-            //     justify-content: space-around;
-            //     flex-wrap: wrap;
-            //     a{
-            //         padding: 8px;
-            //         margin: 0;
-            //     }
+                a{
+                    padding-#{$start}: 50px;
+                }
             }
         }
         
