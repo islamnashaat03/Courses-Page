@@ -1,29 +1,34 @@
 @font-face {
     font-family:'inter-regular' ;
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.eot');
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.otf');
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.svg');
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.ttf');
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.woff');
-    src: url('../css/fonts/inter-regular-font/Inter-VariableFont_slnt\,wght.woff2');
+    src: url('fonts/inter-regular-font/inter-regular.eot');
+    src: url('fonts/inter-regular-font/inter-regular.otf');
+    src: url('fonts/inter-regular-font/inter-regular.svg');
+    src: url('fonts/inter-regular-font/inter-regular.ttf');
+    src: url('fonts/inter-regular-font/inter-regular.woff');
+    src: url('fonts/inter-regular-font/inter-regular.woff2');
+
 
 }
 
 @font-face {
     font-family: 'georgia-regular-font';
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.eot');
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.otf');
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.svg');
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.ttf');
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.woff');
-    src: url('../css/fonts/georgia-font/Georgia\ Regular\ font.woff2');
+    src: url('fonts/georgia-font/georgia-regular-font.eot');
+    src: url('fonts/georgia-font/georgia-regular-font.otf');
+    src: url('fonts/georgia-font/georgia-regular-font.svg');
+    src: url('fonts/georgia-font/georgia-regular-font.ttf');
+    src: url('fonts/georgia-font/georgia-regular-font.woff');
+    src: url('fonts/georgia-font/georgia-regular-font.woff2');
 
 }
 
-$mainColor1:#fdc800;
-$mainColor2:#002147;
-$mainColor3:#f0f4f9;
-$mainColor4:#fff;
-$font1:'georgia-regular-font';
-$font2:'inter-regular';
+
+
+
+
+$georgiaFont:'georgia-regular-font';
+$interFont:'inter-regular';
 $transtion:.5s;
+$colorYellow:#fdc800;  //$mainColor1
+$colorBlue:#002147;    //$mainColor2
+$colorBackground:#f0f4f9; //$mainColor3
+$colorWhite:#fff;       //$mainColor4
