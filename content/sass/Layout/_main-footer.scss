@@ -89,8 +89,14 @@
             h5{
                 // text-align: center;
                 margin: 10px 0 ;
-                &::after{
-
+                &::before{
+                    content: '\e90a';
+                    font-family:'icomoon' ;
+                    margin-right: 10px;
+                }
+                &:not(.active)::before{
+                    content: '\e909';
+                    font-family:'icomoon' ;
                 }
             }
             .main-footer__links--edit{
