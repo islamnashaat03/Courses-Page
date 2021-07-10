@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // START COLLAPSE 
 
   if (window.matchMedia('(max-width:767px)').matches){
     var coll = document.querySelectorAll(".collapsible");
@@ -14,11 +15,11 @@ $(document).ready(function(){
         content.style.display = "flex";
       }
     });
+  };
   }
-  }
-  // START COLLAPSE 
   
 // END COLLPASE 
+
     // START HOME PAGE 
 if ($('.home-page').length > 0) {
 
@@ -48,17 +49,15 @@ if ($('.home-page').length > 0) {
   }
   }, 1000);
   // END TIMER 
-  
   // START COUNTER 
-  window.onscroll =  function(){
-  "use strict";
-  var calllc = pageYOffset;
-  console.log(calllc);
-
-  if (window.pageYOffset > 2800 ){
+  $(window).on('scroll', function () {
+    let scrollTop = Math.ceil(Number($(window).scrollTop()));
+    let pageY = pageYOffset
+    console.log("scrollTopscrollTopscrollTopscrollTop", scrollTop, pageY)
+      if (window.pageYOffset > 2600 ){
 
     const counters = document.querySelectorAll(".course-published__count");
-    const speed = 200;
+    const speed = 2000;
 
     counters.forEach((counter) => {
       const updateCount = () => {
@@ -78,11 +77,36 @@ if ($('.home-page').length > 0) {
       updateCount();
     });
   }
+  })
+// END COUNTER 
+
+if ((window.matchMedia('(max-width:786px)').matches)){
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    loop:false,
+    responsiveClass:true,
+    
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
 }
 };
 
 
-  // END COUNTER 
   // END HOME PAGE 
 
   // ====================================================================================
@@ -90,31 +114,9 @@ if ($('.home-page').length > 0) {
 
     // START LISTING PAGE 
     if ($('.listing-page').length > 0){
-      if(window.matchMedia('(max-width:767px)').matches){
-        $('.owl-carousel').owlCarousel({
-          loop:true,
-          margin:10,
-          loop:false,
-          responsiveClass:true,
-          
-          responsive:{
-              0:{
-                  items:1,
-                  nav:true
-              },
-              600:{
-                  items:3,
-                  nav:false
-              },
-              1000:{
-                  items:5,
-                  nav:true,
-                  loop:false
-              }
-          }
-      })
-      }
+      
     }
     // END LISTING PAGE 
 
 });
+

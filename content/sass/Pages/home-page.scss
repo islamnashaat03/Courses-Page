@@ -2,29 +2,55 @@
 @import '../Component/main-header';
 @import '../Component/counter';
 
-.top-courses{
+.top-courses {
   margin-bottom: 170px;
-  .col--edit{
-      padding: 0 13px;
-      margin-bottom: 30px;
+
+  .col--edit {
+    padding: 0 13px;
+    margin-bottom: 30px;
   }
+
   .top-courses__head {
-      font-family: $georgiaFont;
-      font-size: calc(42px + ((48 - 42 )*((100vw - 1366px)/(1920 - 1366))));
-      font-weight: bold;
-      line-height: 1.63;;
-      color: $colorBlue;
-      margin-bottom: 27px
+    font-family: $georgiaFont;
+    font-size: calc(42px + ((48 - 42)*((100vw - 1366px)/(1920 - 1366))));
+    font-weight: bold;
+    line-height: 1.63;
+    ;
+    color: $colorBlue;
+    margin-bottom: 27px
   }
-}
-@media only screen and (max-width:768px) {
-  .top-courses{
-      margin-bottom: 75px;
-      .top-courses__head{
-          font-size: calc(28px + ((34 - 28 )*((100vw - 320px)/(1366 - 320))));
+
+  .owl-theme {
+    .owl-dots {
+      display: none;
+    }
+
+    .owl-nav {
+
+      .owl-prev,
+      .owl-next {
+        font-size: 50px;
+        outline: 0;
+
+        &:hover {
+          background: #fff;
+          color: black;
+        }
       }
+    }
   }
 }
+
+@media only screen and (max-width:768px) {
+  .top-courses {
+    margin-bottom: 75px;
+
+    .top-courses__head {
+      font-size: calc(28px + ((34 - 28)*((100vw - 320px)/(1366 - 320))));
+    }
+  }
+}
+
 @import './Component/my-card.scss';
 @import '../Component/success-students';
 @import '../Component/visitors';
