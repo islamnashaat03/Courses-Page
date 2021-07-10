@@ -115,6 +115,13 @@
             .navbar-brand {
                 font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366 - 320))));
             }
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        padding-left: 20px;
+                    }
+                }
+            }
         }
     }
 }

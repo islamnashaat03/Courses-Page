@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+  if (window.matchMedia('(max-width:767px)').matches){
+    var coll = document.querySelectorAll(".collapsible");
+    var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "flex") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "flex";
+      }
+    });
+  }
+  }
+  // START COLLAPSE 
+  
+// END COLLPASE 
     // START HOME PAGE 
 if ($('.home-page').length > 0) {
 
