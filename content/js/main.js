@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
     // START HOME PAGE 
-if (window.location.pathname == '/index.html') {
+// if (window.location.pathname == '/index.html') {
 
   // START TIMER 
   var countDownDate = new Date("Jul 14, 2021 12:00:00").getTime(),
-
   myfunc = setInterval(function() {
   
   var now = new Date().getTime(),
@@ -61,7 +60,7 @@ if (window.location.pathname == '/index.html') {
     });
   }
 }
-};
+// };
 
 
   // END COUNTER 

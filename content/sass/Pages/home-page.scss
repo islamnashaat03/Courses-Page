@@ -1,7 +1,6 @@
-@import './Layout/upper-navbar';
-@import './Layout/main-navbar';
-@import './Layout/main-header';
-@import './Layout/counter';
+@import '../Layout/header';
+@import '../Component/main-header';
+@import '../Component/counter';
 
 .top-courses{
   margin-bottom: 170px;
@@ -27,7 +26,7 @@
   }
 }
 @import './Component/my-card.scss';
-@import './Layout/success-students';
-@import './Layout/_visitors';
-@import './Layout/subscribe-now';
+@import '../Component/success-students';
+@import '../Component/visitors';
+@import '../Component/subscribe-now';
 @import './Layout/main-footer';
