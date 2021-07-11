@@ -18,7 +18,6 @@
                 color: #212529;
             }
         }
-
         .upper-navbar__social {
             .upper-navbar__social__link {
                 margin-#{$start}: 8px;
@@ -26,110 +25,120 @@
             }
         }
     }
-
     // END UPPER NAV 
     .main-navbar {
         background-color: $colorBackground;
         font-family: $interFont;
         padding-bottom: 80px;
         padding-top: 17px;
-
         .navbar-toggler {
             border: 0;
         }
-
         .navbar-toggler:focus {
             box-shadow: none;
         }
+        // .navbar-toggler:not(.collapsed) {
+        //     .navbar-toggler-icon {
+        //         background-image: url(../images/times-solid.svg);
+        //     }
 
-        .navbar-brand {
-            color: $colorBlue;
-            font-family: $interFont;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-nav {
-            .nav-item {
-                .nav-link {
-                    font-family: $interFont;
-                    color: $colorBlue;
-                    line-height: 1.31;
-                    font-weight: bold;
-                    font-size: calc(16px + ((22 - 16)*((100vw - 1366px)/(1920-1366))));
-                    padding-right: 27px;
-                }
+        // }
+        .navbar-toggler.collapsed {
+            .navbar-toggler-icon {
+                background-image: url(../images/download.svg);
             }
         }
-
-        .search-btn {
-            background-color: $colorWhite;
-            border: 1px solid #bdbdbd;
-            padding: 9px 13px;
-            padding: 13px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .sign-up-btn {
-            @extend.my-btn;
-            padding: 9px 28px;
-            margin: 0 15px 0 35px;
-        }
-    }
-
-
-}
-
-@media only screen and (max-width:767px) {
-    .header {
-        .upper-navbar {
-            .upper-navbar--postion {
-                flex-direction: column;
+        .navbar-toggler{
+            .navbar-toggler-icon {
+                
+                background-image: url(../images/times-solid.svg);
             }
-
-            .upper-navbar__info {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .upper-navbar__info__link {
-                    font-size: calc(13px + ((19 - 13)*((100vw - 320px)/(1366-320))));
-                    margin: 4px;
-
-                }
-            }
-
-            .upper-navbar__social {
-                text-align: center;
-
-            }
-
         }
+    
 
-        .main-navbar {
             .navbar-brand {
-                font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366 - 320))));
+                color: $colorBlue;
+                font-family: $interFont;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
+                display: flex;
+                align-items: center;
             }
+
             .navbar-nav {
                 .nav-item {
                     .nav-link {
-                        padding-left: 20px;
+                        font-family: $interFont;
+                        color: $colorBlue;
+                        line-height: 1.31;
+                        font-weight: bold;
+                        font-size: calc(16px + ((22 - 16)*((100vw - 1366px)/(1920-1366))));
+                        padding-right: 27px;
+                    }
+                }
+            }
+
+            .search-btn {
+                background-color: $colorWhite;
+                border: 1px solid #bdbdbd;
+                padding: 9px 13px;
+                padding: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .sign-up-btn {
+                @extend.my-btn;
+                padding: 9px 28px;
+                margin: 0 15px 0 35px;
+            }
+        }
+}
+
+    @media only screen and (max-width:767px) {
+        .header {
+            .upper-navbar {
+                .upper-navbar--postion {
+                    flex-direction: column;
+                }
+
+                .upper-navbar__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .upper-navbar__info__link {
+                        font-size: calc(13px + ((19 - 13)*((100vw - 320px)/(1366-320))));
+                        margin: 4px;
+                    }
+                }
+
+                .upper-navbar__social {
+                    text-align: center;
+                }
+            }
+
+            .main-navbar {
+                .navbar-brand {
+                    font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366 - 320))));
+                }
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-@media only screen and (min-width:1366px) {
-    .header {
-        .main-navbar {
-            padding-bottom: 95px;
+    @media only screen and (min-width:1366px) {
+        .header {
+            .main-navbar {
+                padding-bottom: 95px;
+            }
         }
     }
-}
