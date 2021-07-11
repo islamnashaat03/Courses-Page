@@ -1,0 +1,39 @@
+.search-fixed-div {
+  background-color: #eee;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  padding: 100px 20px;
+  display: none;
+}
+
+.search-fixed-div .search-form {
+  background-color: #eee;
+  position: relative;
+}
+
+.search-fixed-div .search-form .search-form__input {
+  width: 100%;
+  padding: 20px;
+  outline: 0;
+  border: 2px solid #eee;
+  font-size: 18px;
+}
+
+.search-fixed-div .search-form .search-form__submit-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+}
+
+.search-fixed-div .search-form .search-form__close-btn {
+  position: absolute;
+  left: 40px;
+  top: -70px;
+  font-size: 35px;
+  border: 0;
+  outline: 0;
+}
+/*# sourceMappingURL=search-fixed-div.css.map */

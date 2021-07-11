@@ -1,12 +1,12 @@
 .header {
-
     // START UPPER NAV 
     .upper-navbar {
         background-color: $colorYellow;
-        padding: 8px;
+        padding: 7px;
         .upper-navbar--postion {
             display: flex;
             justify-content: space-between;
+            align-items: center; 
         }
         .upper-navbar__info {
             .upper-navbar__info__link {
@@ -128,6 +128,7 @@
                     .nav-item {
                         .nav-link {
                             padding-left: 20px;
+                            margin:5px;
                         }
                     }
                 }
