@@ -123,6 +123,16 @@
         }
     }
 }
+@media (min-width: 769px) and (max-width: 991px) {
+    .students{
+        .students__picture{
+            margin-bottom: 75px;
+            .students__bottom-img-text{
+                margin-#{$start}:calc((100% - 92%) / 2) ;
+            }
+        }
+    }  
+}
 @media only screen and (min-width:1920px) {
     .students{
         .students__brief{

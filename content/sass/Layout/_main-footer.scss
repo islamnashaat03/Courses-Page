@@ -85,10 +85,11 @@
             }
         }
         .main-footer__links{
-            margin-top: 40px;
+            margin-top: 15px;
             .main-footer__links-icon{
                 display: flex;
                 align-items: center;
+                transition: .25s ease-in-out;
                 &::before{
                     content: '\e90a';
                     font-family:'icomoon' ;
@@ -101,11 +102,13 @@
             }
             h5{
                 margin: 10px 0 ;
+                transition: .25s ease-in-out;
             }
             .main-footer__links--edit{
                 display: none;
+                transition: .25s ease-in-out;
                 a{
-                    padding-#{$start}: 50px;
+                    padding-#{$start}: 35px;
                 }
             }
         }
