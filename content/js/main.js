@@ -1,12 +1,3 @@
-document.onclick = rollOn();
-function rollOn(){
-  var ser =document.getElementById('searchDiv');
-  if (ser.style.display === 'none'){
-    ser.style.display = 'block';
-  } else{
-      ser.style.display = 'none'
-    }
-};
 
 $(document).ready(function(){
   // START COLLAPSE 
@@ -130,4 +121,18 @@ if ((window.matchMedia('(max-width:786px)').matches)){
     // END LISTING PAGE 
 
 });
+
+document.onclick = rollOn();
+function rollOn(){
+  var ser = document.getElementById('searchDiv');
+  if (ser.style.display === 'none'){
+      ser.style.display = 'block';
+
+  } else{
+      ser.style.display = 'none'
+    }
+
+};
+
+
 
