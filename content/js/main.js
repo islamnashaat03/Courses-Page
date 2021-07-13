@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  // START COLLAPSE 
+    // START COLLAPSE 
 
   if (window.matchMedia('(max-width:767px)').matches){
     var coll = document.querySelectorAll(".collapsible");
@@ -19,7 +19,7 @@ $(document).ready(function(){
   };
   }
   
-// END COLLPASE 
+    // END COLLPASE 
 
     // START HOME PAGE 
 if ($('.home-page').length > 0) {
@@ -51,8 +51,8 @@ if ($('.home-page').length > 0) {
   // document.getElementById("timerEnds").remove();
   }
   }, 1000);
-  // END TIMER 
-  // START COUNTER 
+    // END TIMER 
+    // START COUNTER 
   $(window).on('scroll', function () {
     let scrollTop = Math.ceil(Number($(window).scrollTop()));
     let pageY = pageYOffset
@@ -81,7 +81,7 @@ if ($('.home-page').length > 0) {
     });
   }
   })
-// END COUNTER 
+    // END COUNTER 
 
 if ((window.matchMedia('(max-width:768px)').matches)){
   $('.owl-carousel').owlCarousel({
@@ -107,16 +107,13 @@ if ((window.matchMedia('(max-width:768px)').matches)){
     }
 })
 }
-
-// main.js
-
-// POST request using fetch()
+    // POST request using fetch()
 fetch("https://jsonplaceholder.typicode.com/posts", {
 	
-	// Adding method type
+    // Adding method type
 	method: "POST",
 	
-	// Adding body or contents to send
+  	// Adding body or contents to send
 	body: JSON.stringify({
 		title: "foo",
 		body: "bar",
