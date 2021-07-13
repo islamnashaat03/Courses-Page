@@ -78,20 +78,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
+                <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About</a>
                 </li>
+                <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Courses</a>
                 </li>
+                <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
                 </li>
+                <li><hr class="dropdown-divider" /></li>
               </ul>
 
               <form class="d-flex">
@@ -112,7 +115,6 @@
       <div class="page-title">
         <div class="container">
           <h6 class="page-title__first-head">Course category</h6>
-          <span class="icon-times-solid"></span>
           <h2 class="page-title__second-head">Web Development</h2>
         </div>
       </div>
@@ -120,7 +122,7 @@
       <!-- START TOP COURSES  -->
       <section class="top-courses listing-page__top-courses">
         <div class="container">
-          <div class="row">
+          <div class="row ">
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
               <label for="Categories" class="top-courses__label"
                 >Categories</label
@@ -162,7 +164,7 @@
               </select>
             </div>
           </div>
-          <div class="row">
+          <div class="row ">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
@@ -464,7 +466,9 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="main-footer__links">
-                    <h5>community</h5>
+                    <div class="collapsible active main-footer__links-icon">
+                      <h5>community</h5>
+                    </div>
                     <div class="main-footer__links--edit">
                       <a href="">Learners</a>
                       <a href="">Partenrs</a>
@@ -479,7 +483,9 @@
                 </div>
                 <div class="col-md-4">
                   <div class="main-footer__links">
-                    <h5>Information</h5>
+                    <div class="collapsible active main-footer__links-icon">
+                      <h5>Information</h5>
+                    </div>
                     <div class="main-footer__links--edit">
                       <a href="">About</a>
                       <a href="">Pricing</a>
@@ -491,7 +497,9 @@
                 </div>
                 <div class="col-md-3">
                   <div class="main-footer__links">
-                    <h5>More</h5>
+                    <div class="collapsible active main-footer__links-icon">
+                      <h5>More</h5>
+                    </div>
                     <div class="main-footer__links--edit">
                       <a href="">Press</a>
                       <a href="">Investors</a>
@@ -526,7 +534,6 @@
     </div>
 
     <script src="content/js/Vendor/jQuery v3.6.0.js"></script>
-
     <script src="content/js/Vendor/bootstrap.bundle.min.js"></script>
     <script src="content/js/main.js"></script>
   </body>

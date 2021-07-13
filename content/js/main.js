@@ -25,7 +25,7 @@ $(document).ready(function(){
 if ($('.home-page').length > 0) {
 
   // START TIMER 
-  var countDownDate = new Date("Jul 14, 2021 12:00:00").getTime(),
+  var countDownDate = new Date("Jul 12, 2021 12:00:00").getTime(),
   myfunc = setInterval(function() {
   
   var now = new Date().getTime(),
@@ -46,7 +46,9 @@ if ($('.home-page').length > 0) {
   document.getElementById("hours").innerHTML = "" 
   document.getElementById("mins").innerHTML = ""
   document.getElementById("secs").innerHTML = ""
-  document.getElementById("end").innerHTML = "TIME UP!!";
+  document.getElementById('timer').style.display = 'none';
+  document.getElementById("end").innerHTML = "Sorry The Offer End!!";
+  // document.getElementById("timerEnds").remove();
   }
   }, 1000);
   // END TIMER 
@@ -81,7 +83,7 @@ if ($('.home-page').length > 0) {
   })
 // END COUNTER 
 
-if ((window.matchMedia('(max-width:786px)').matches)){
+if ((window.matchMedia('(max-width:768px)').matches)){
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -94,17 +96,46 @@ if ((window.matchMedia('(max-width:786px)').matches)){
             nav:true
         },
         600:{
-            items:3,
+            items:1,
             nav:false
         },
         1000:{
-            items:5,
+            items:2,
             nav:true,
             loop:false
         }
     }
 })
 }
+
+// main.js
+
+// POST request using fetch()
+fetch("https://jsonplaceholder.typicode.com/posts", {
+	
+	// Adding method type
+	method: "POST",
+	
+	// Adding body or contents to send
+	body: JSON.stringify({
+		title: "foo",
+		body: "bar",
+		userId: 1
+	}),
+	
+	// Adding headers to the request
+	headers: {
+		"Content-type": "application/json; charset=UTF-8"
+	}
+})
+
+// Converting to JSON
+.then(response => response.json())
+
+// Displaying results to console
+.then(json => console.log(json));
+
+
 };
 
 
@@ -125,14 +156,14 @@ if ((window.matchMedia('(max-width:786px)').matches)){
 document.onclick = rollOn();
 function rollOn(){
   var ser = document.getElementById('searchDiv');
-  if (ser.style.display === 'none'){
+  if (ser.style.display == 'none'){
       ser.style.display = 'block';
-
   } else{
       ser.style.display = 'none'
     }
-
 };
+
+
 
 
 

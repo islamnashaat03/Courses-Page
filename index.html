@@ -120,7 +120,7 @@
       <section class="main-header">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 .col-md-6 .col-lg-6 .col-xl-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <div class="">
                 <div>
                   <h4 class="main-header__title">Become Master</h4>
@@ -138,7 +138,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <div class="outer">
                 <img
                   src="http://www.lorempixel.com/420/395"
@@ -153,7 +153,7 @@
       <!-- END MAIN HEADER  -->
       <!-- START counter  -->
       <div class="container">
-        <div class="counter">
+        <div class="counter" id="timerEnds" >
           <div class="row align-items-center">
             <div class="col-sm-6">
               <div class="counter__left-side">
@@ -165,7 +165,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="countdown">
+              <div class="countdown" id="timer" >
                 <div class="countdown__box">
                   <p id="days" class="countdown__box__num"></p>
                   <span class="countdown__box__name">Days</span>
@@ -182,8 +182,8 @@
                   <p id="secs" class="countdown__box__num edit--after"></p>
                   <span class="countdown__box__name">Seconds</span>
                 </div>
-                <p id="end"></p>
               </div>
+              <p id="end" class="countdown__end"></p>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
             <h2 class="top-courses__head">Top Featured Courses</h2>
           </div>
           <div class="row owl-carousel owl-theme d-flex">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-1.jpg" alt="" class="inner" />
@@ -212,7 +212,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-2.jpg" alt="" class="inner" />
@@ -226,7 +226,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-3.jpg" alt="" class="inner" />
@@ -240,7 +240,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-4.jpg" alt="" class="inner" />
@@ -256,7 +256,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-5.jpg" alt="" class="inner" />
@@ -272,7 +272,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-6.jpg" class="inner" />
@@ -288,7 +288,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-7.jpg" alt="" class="inner" />
@@ -304,7 +304,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-8.jpg" alt="" class="inner" />
@@ -320,7 +320,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
               <div class="my-card">
                 <div class="my-card__image outer">
                   <img src="content/images/card-9.jpg" alt="" class="inner" />
@@ -401,7 +401,7 @@
       <section class="visitors" id="counter-div">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="course-published">
                 <div class="">
                   <img src="content/images/E-commerce.jpg" alt="" />
@@ -410,7 +410,7 @@
                 <span class="course-published__name">COURSES PUBLISHED</span>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="course-published">
                 <img
                   src="content/images/Customize your experience.jpg"
@@ -420,7 +420,7 @@
                 <span class="course-published__name">EXPERT INSTRUCTORS</span>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="course-published">
                 <img src="content/images/Launch product.jpg" alt="" />
                 <span class="course-published__count" data-target="8300"
@@ -429,7 +429,7 @@
                 <span class="course-published__name">HAPPY LEARNERS</span>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
               <div class="course-published">
                 <img src="content/images/Winner.jpg" alt="" />
                 <span class="course-published__count" data-target="32">0</span>

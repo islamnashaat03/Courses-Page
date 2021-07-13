@@ -37,23 +37,26 @@
         .navbar-toggler:focus {
             box-shadow: none;
         }
-        // .navbar-toggler:not(.collapsed) {
-        //     .navbar-toggler-icon {
-        //         background-image: url(../images/times-solid.svg);
-        //     }
-
-        // }
-        .navbar-toggler.collapsed {
+        .navbar-toggler:not(.collapsed) {
             .navbar-toggler-icon {
-                background-image: url(../images/download.svg);
-            }
-        }
-        .navbar-toggler{
-            .navbar-toggler-icon {
-                
                 background-image: url(../images/times-solid.svg);
+                
+            }
+
+        }
+        .navbar-toggler.collapsed {
+            .icon-close {
+                background-image: url(../images/download.svg) !important;
+                
             }
         }
+        // .navbar-toggler{
+        //     .navbar-toggler-icon {
+                
+        //         background-image: url(../images/times-solid.svg);
+        //         // background-image: url(../images/download.svg);
+        //     }
+        // }
     
 
             .navbar-brand {

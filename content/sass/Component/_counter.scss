@@ -1,48 +1,59 @@
-.counter{
+.counter {
     background-color: $colorBlue;
     color: $colorWhite;
     margin-top: -100px;
     margin-bottom: 60px;
-    padding:24px ;
+    padding: 24px;
     border-radius: 12px;
-    .counter__left-side{
+
+    .counter__left-side {
         display: flex;
         align-items: center;
     }
-    .counter__left-side__header{
+
+    .counter__left-side__header {
         font-family: $georgiaFont;
-        font-size: 30px;
+        font-size: calc(26px + ((32 - 26) * ((100vw - 1366px)/(1920 - 1366))));
         font-weight: bold;
         line-height: 1.17;
         text-align: left;
         margin-bottom: 0;
         margin-#{$start}: 10px;
+
         span {
-        color: $colorYellow;
+            color: $colorYellow;
         }
     }
-    .countdown{
+
+    .countdown {
         display: flex;
         align-items: center;
-        .countdown__box{
+
+        .countdown__box {
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             flex: 0 0 25%;
             justify-content: center;
-            .edit--after{
-                &::after{display: none;}            }
-            p{
-                &::after{
-                content: ":";
-                position: absolute;
-                right: 0;
-                font-size: 20px;
-                top: 28%;
-            } 
+
+            .edit--after {
+                &::after {
+                    display: none;
+                }
             }
-            .countdown__box__num{
+
+            p {
+                &::after {
+                    content: ":";
+                    position: absolute;
+                    right: 0;
+                    font-size: 20px;
+                    top: 28%;
+                }
+            }
+
+            .countdown__box__num {
                 font-size: 60px;
                 font-weight: bold;
                 font-family: $interFont;
@@ -52,52 +63,65 @@
                 margin-bottom: 0;
             }
         }
-        .countdown__box__name{
+
+        .countdown__box__name {
             font-size: calc(14px + ((20 - 14) * ((100vw - 1366px)/(1920 - 1366))));
         }
+     
+    }
+    .countdown__end {
+        text-align: center;
+        color: tomato;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
     }
 }
+
 @media only screen and (max-width:768px) {
-    .counter{
-        .counter__left-side{
+    .counter {
+        .counter__left-side {
             display: block;
             margin-bottom: 20px;
-            img{
+
+            img {
                 margin-bottom: 20px;
             }
-            
         }
-        .countdown{
-            .countdown__box{
-                .countdown__box__num{
+
+        .countdown {
+            .countdown__box {
+                .countdown__box__num {
                     font-size: calc(48px + ((60 - 48) * ((100vw - 1366px)/(1920 - 1366))));
                 }
+
                 padding: 10px;
-                p{
-                    &::after{
-                    font-size: calc(12px + ((16 - 12) * ((100vw - 320px)/(1920 - 320))));
-                    
+
+                p {
+                    &::after {
+                        font-size: calc(12px + ((16 - 12) * ((100vw - 320px)/(1920 - 320))));
+
+                    }
                 }
-                }
-                
-                .countdown__box__name{
+
+                .countdown__box__name {
                     font-size: calc(10px + ((16 - 10) * ((100vw - 320px)/(1920 - 320))));
                 }
             }
         }
     }
 
-@media only screen and (min-width:1366px) {
-    .counter{
-        .countdown{
-            .countdown__box{
-                p{
-                    &::after{
-                        font-size: calc(24px + ((30 - 24) * ((100vw - 1366px)/(1920 - 1366))));
+    @media only screen and (min-width:1366px) {
+        .counter {
+            .countdown {
+                .countdown__box {
+                    p {
+                        &::after {
+                            font-size: calc(24px + ((30 - 24) * ((100vw - 1366px)/(1920 - 1366))));
+                        }
                     }
                 }
             }
         }
     }
-}
 }
