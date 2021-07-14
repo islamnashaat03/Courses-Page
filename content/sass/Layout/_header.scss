@@ -37,7 +37,7 @@
         .navbar-toggler:focus {
             box-shadow: none;
         }
-        .navbar-toggler:not(.collapsed) {
+        .navbar-toggler[aria-expanded='true'] {
             .navbar-toggler-icon {
                 background-image: url(../images/times-solid.svg);
                 

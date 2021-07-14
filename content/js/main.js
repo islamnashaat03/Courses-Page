@@ -7,16 +7,20 @@ $(document).ready(function(){
     var i;
   
   for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].onclick = function() {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
-      if (content.style.display === "flex") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "flex";
-      }
-    });
+        content.classList.toggle('active')
+      // if (content.style.display === "flex") {
+      //   content.style.display = "none";
+      // } else {
+      //   content.style.display = "flex";
+      // }
+    };
   };
+  // for (var i = 0 ; i < coll.length ; i++){
+  //   this.classList.add('open');
+  // }
   }
   
     // END COLLPASE 
@@ -150,15 +154,23 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 });
 
-document.onclick = rollOn();
-function rollOn(){
-  var ser = document.getElementById('searchDiv');
-  if (ser.style.display == 'none'){
-      ser.style.display = 'block';
-  } else{
-      ser.style.display = 'none'
-    }
-};
+// document.onclick = rollOn();
+// function rollOn(){
+//   var ser = document.getElementById('searchDiv');
+//   if (ser.style.display == 'none'){
+//       ser.style.display = 'block';
+//   } else{
+//       ser.style.display = 'none'
+//     }
+// };
+
+// var elmnt = document.getElementsByClassName("search-btn");
+  function myFunction(){
+    var lala = document.getElementById('searchDiv')
+      lala.classList.add('active')
+  }
+
+  
 
 
 
