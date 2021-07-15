@@ -1,7 +1,15 @@
-
 $(document).ready(function(){
-    // START COLLAPSE 
+    // START SEARCH DIV IN NAV BAR 
+    // $('.search-btn').click(function(){
+    //   $('#searchDiv').addClass('active');
+    // });
+    //   $('.search-form__close-btn').click(function(){
+    //   $('#searchDiv').removeClass('active');
+    // });
+    // END  SEARCH DIV IN NAV BAR 
 
+
+    // START COLLAPSE  IN FOOTER 
   if (window.matchMedia('(max-width:767px)').matches){
     var coll = document.querySelectorAll(".collapsible");
     var i;
@@ -22,8 +30,8 @@ $(document).ready(function(){
   //   this.classList.add('open');
   // }
   }
-  
-    // END COLLPASE 
+    // END COLLPASE IN FOOTER 
+
 
     // START HOME PAGE 
 if ($('.home-page').length > 0) {
@@ -44,18 +52,20 @@ if ($('.home-page').length > 0) {
       document.getElementById("mins").innerHTML = minutes 
       document.getElementById("secs").innerHTML = seconds 
   
-  if (timeleft < 0) {
-  clearInterval(myfunc);
-  document.getElementById("days").innerHTML = ""
-  document.getElementById("hours").innerHTML = "" 
-  document.getElementById("mins").innerHTML = ""
-  document.getElementById("secs").innerHTML = ""
-  document.getElementById('timer').style.display = 'none';
-  document.getElementById("end").innerHTML = "Sorry The Offer End!!";
-  // document.getElementById("timerEnds").remove();
+    if (timeleft < 0) {
+    clearInterval(myfunc);
+    document.getElementById("days").innerHTML = ""
+    document.getElementById("hours").innerHTML = "" 
+    document.getElementById("mins").innerHTML = ""
+    document.getElementById("secs").innerHTML = ""
+    document.getElementById('timer').style.display = 'none';
+    document.getElementById("end").innerHTML = "Sorry The Offer End!!";
+    // document.getElementById("timerEnds").remove();
   }
   }, 1000);
     // END TIMER 
+
+
     // START COUNTER 
   $(window).on('scroll', function () {
     let scrollTop = Math.ceil(Number($(window).scrollTop()));
@@ -87,30 +97,34 @@ if ($('.home-page').length > 0) {
   })
     // END COUNTER 
 
-if ((window.matchMedia('(max-width:768px)').matches)){
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    loop:false,
-    responsiveClass:true,
-    
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:1,
-            nav:false
-        },
-        1000:{
-            items:2,
-            nav:true,
-            loop:false
+
+    // START  CHANGE CARD SECTION TO SLIDER 
+    if ((window.matchMedia('(max-width:768px)').matches)){
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        loop:false,
+        responsiveClass:true,
+        
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:1,
+                nav:false
+            },
+            1000:{
+                items:2,
+                nav:true,
+                loop:false
+            }
         }
+    })
     }
-})
-}
+    // END  CHANGE CARD SECTION TO SLIDER 
+
     // POST request using fetch()
 fetch("https://jsonplaceholder.typicode.com/posts", {
 	
@@ -138,9 +152,6 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 
 };
-
-
-
   // END HOME PAGE 
 
   // ====================================================================================
@@ -153,26 +164,11 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     // END LISTING PAGE 
 
 });
-
-// document.onclick = rollOn();
-// function rollOn(){
-//   var ser = document.getElementById('searchDiv');
-//   if (ser.style.display == 'none'){
-//       ser.style.display = 'block';
-//   } else{
-//       ser.style.display = 'none'
-//     }
-// };
-
-// var elmnt = document.getElementsByClassName("search-btn");
-  function myFunction(){
-    var lala = document.getElementById('searchDiv')
-      lala.classList.add('active')
-  }
-
-  
-
-
-
-
-
+var x = document.getElementsByClassName('search-btn'),
+y =  document.getElementById('searchDiv');
+  function rollOn(){
+    y.classList.add('active');
+}
+function rollOn2(){
+  y.classList.remove('active')
+}
