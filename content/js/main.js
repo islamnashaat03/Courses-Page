@@ -1,11 +1,11 @@
 $(document).ready(function(){
     // START SEARCH DIV IN NAV BAR 
-    // $('.search-btn').click(function(){
-    //   $('#searchDiv').addClass('active');
-    // });
-    //   $('.search-form__close-btn').click(function(){
-    //   $('#searchDiv').removeClass('active');
-    // });
+    $('.search-btn').click(function(){
+      $('#searchDiv').addClass('active');
+    });
+      $('.search-form__close-btn').click(function(){
+      $('#searchDiv').removeClass('active');
+    });
     // END  SEARCH DIV IN NAV BAR 
 
 
@@ -19,16 +19,8 @@ $(document).ready(function(){
       this.classList.toggle("active");
       var content = this.nextElementSibling;
         content.classList.toggle('active')
-      // if (content.style.display === "flex") {
-      //   content.style.display = "none";
-      // } else {
-      //   content.style.display = "flex";
-      // }
     };
   };
-  // for (var i = 0 ; i < coll.length ; i++){
-  //   this.classList.add('open');
-  // }
   }
     // END COLLPASE IN FOOTER 
 
@@ -166,11 +158,11 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     // END LISTING PAGE 
 
 });
-var x = document.getElementsByClassName('search-btn'),
-y =  document.getElementById('searchDiv');
-  function rollOn(){
-    y.classList.add('active');
-}
-function rollOn2(){
-  y.classList.remove('active')
-}
+// var x = document.getElementsByClassName('search-btn'),
+// y =  document.getElementById('searchDiv');
+//   function rollOn(){
+//     y.classList.add('active');
+// }
+// function rollOn2(){
+//   y.classList.remove('active')
+// }

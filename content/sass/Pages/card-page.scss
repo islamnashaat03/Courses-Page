@@ -1,0 +1,13 @@
+.card-page{
+  .card-page-students{
+    background-color: $colorBackground;
+    margin-top: 50px;
+    padding: 114px 0;
+    .students{
+      margin-bottom: 0;
+      .students__brief__card{
+        background-color: $colorWhite;
+      }
+    }
+  }
+}
