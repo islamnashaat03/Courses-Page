@@ -6,6 +6,8 @@
   z-index: 5000;
   padding: 100px 20px;
   display: none;
+  top: 48px;
+
   .search-form {
     background-color: #eee;
     position: relative;
@@ -24,7 +26,8 @@
       top: 10px;
       font-size: 24px;
     }
-    .search-form__close-btn{
+
+    .search-form__close-btn {
       position: absolute;
       left: 40px;
       top: -70px;
@@ -34,6 +37,8 @@
     }
   }
 }
-.search-fixed-div.active{
+
+.search-fixed-div.active {
   display: block;
+  transition: .25s ease-in-out;
 }

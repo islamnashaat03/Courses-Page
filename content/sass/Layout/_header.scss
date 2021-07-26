@@ -50,15 +50,6 @@
                 
             }
         }
-        // .navbar-toggler{
-        //     .navbar-toggler-icon {
-                
-        //         background-image: url(../images/times-solid.svg);
-        //         // background-image: url(../images/download.svg);
-        //     }
-        // }
-    
-
             .navbar-brand {
                 color: $colorBlue;
                 font-family: $interFont;
@@ -127,6 +118,7 @@
                 .navbar-brand {
                     font-size: calc(16px + ((22 - 16)*((100vw - 320px)/(1366 - 320))));
                 }
+                .navbar-toggler{z-index: 1000;}
                 .navbar-nav {
                     .nav-item {
                         .nav-link {
@@ -138,7 +130,21 @@
             }
         }
     }
-
+    @media only screen and (max-width:992px) {
+        .header{
+            .main-navbar{
+                .navbar-collapse{
+                    position: absolute;
+                    top: 75px;
+                    left: 0;
+                    background: #eee;
+                    width: 100%;
+                    z-index: 1000;
+                    padding: 15px;
+                }
+            }
+        }
+    }
     @media only screen and (min-width:1366px) {
         .header {
             .main-navbar {

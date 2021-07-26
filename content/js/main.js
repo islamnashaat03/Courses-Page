@@ -61,6 +61,8 @@ if ($('.home-page').length > 0) {
     document.getElementById('timer').style.display = 'none';
     document.getElementById("end").innerHTML = "Sorry The Offer End!!";
     // document.getElementById("timerEnds").remove();
+  }else{
+    document.getElementById('')
   }
   }, 1000);
     // END TIMER 
