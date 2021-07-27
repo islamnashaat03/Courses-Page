@@ -1,6 +1,7 @@
 .card-details{
+  margin-bottom: 60px;
   .row-edit{
-    margin-top: -300px;
+    margin-top: -282px;
     .card-details__brief{
       .img{
         width: 100%;
@@ -41,11 +42,11 @@
       border: 1px solid #bdbdbd;
       border-radius: 6px;
       background-color: $colorWhite;
-      padding: 5px 0 13px 0 ;
+      padding: 15px 0 13px 0 ;
       .card-details__course-brief__list{
-        margin-bottom: 22px;
+        margin-bottom: 25px;
         .card-details__course-brief__list-item{
-          padding: 11px 21px 5px ;
+          padding: 12px 21px 7px ;
           font-family: $interFont;
           font-size: 16px;
           line-height: 1.13;
@@ -72,7 +73,7 @@
       }
       .card-details__course-brief__img{
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 55px;
       }
     }
   }

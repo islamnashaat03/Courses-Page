@@ -12,7 +12,6 @@
 .card-page{
   .card-page-students{
     background-color: $colorBackground;
-    margin-top: 50px;
     padding: 114px 0;
     .students{
       margin-bottom: 0;
@@ -20,6 +19,9 @@
         background-color: $colorWhite;
       }
     }
+  }
+  .page-title--card-page{
+    padding-bottom: 310px;
   }
 }
 @media only screen and (min-width:768px) {
