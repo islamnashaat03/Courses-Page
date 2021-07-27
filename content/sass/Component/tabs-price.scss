@@ -14,8 +14,13 @@
         margin: 0;
         border-radius: 4px;
         .tab-list__item{
-          padding: 10px;
+          padding: 9px 37px;
           cursor: pointer;
+          transition: .5s;
+          &:first-child{
+            margin-right: 5px;
+            padding: 9px 28px;
+          }
         }
         .tab-list__item.active{
           background-color: #00b2b2;

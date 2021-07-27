@@ -157,7 +157,40 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     }
     // END LISTING PAGE 
 
-});
+    // =============  START PRICE PAGE ==============
+    let tabs = document.querySelectorAll('.tab-list__item');
+    let tabsArray = Array.from(tabs);
+    let divContent = document.querySelectorAll('.tabs-content');
+    let divsArray = Array.from(divContent);
+
+    tabsArray.forEach((ele) => {
+      ele.addEventListener("click" , function (e) {
+        tabsArray.forEach((ele) => {
+          ele.classList.removeClass
+        })
+      })
+    })
+
+    // =============  END PRICE PAGE ==============
+        tabsArray.forEach((ele) => {
+        ele.addEventListener("click", function (e) {
+          // console.log(ele);
+          tabsArray.forEach((ele) => {
+            ele.classList.remove("active");
+          });
+          e.currentTarget.classList.add("active");
+          divsArray.forEach((div) => {
+            div.style.display = "none";
+          });
+          // console.log(e.currentTarget.dataset.cont);
+          document.querySelector(e.currentTarget.dataset.cont).style.display = "block";
+        });
+      });
+  });
+    
+    // console.log(tabsArray);
+    
+
 // var x = document.getElementsByClassName('search-btn'),
 // y =  document.getElementById('searchDiv');
 //   function rollOn(){
