@@ -158,7 +158,8 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     // END LISTING PAGE 
 
     // =============  START PRICE PAGE ==============
-    let tabs = document.querySelectorAll('.tab-list__item');
+    if ($('.price-page').length > 0 ){
+      let tabs = document.querySelectorAll('.tab-list__item');
     let tabsArray = Array.from(tabs);
     let divContent = document.querySelectorAll('.tabs-content');
     let divsArray = Array.from(divContent);
@@ -170,32 +171,21 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
         })
       })
     })
-
-    // =============  END PRICE PAGE ==============
-        tabsArray.forEach((ele) => {
-        ele.addEventListener("click", function (e) {
-          // console.log(ele);
-          tabsArray.forEach((ele) => {
-            ele.classList.remove("active");
-          });
-          e.currentTarget.classList.add("active");
-          divsArray.forEach((div) => {
-            div.style.display = "none";
-          });
-          // console.log(e.currentTarget.dataset.cont);
-          document.querySelector(e.currentTarget.dataset.cont).style.display = "block";
-        });
+    tabsArray.forEach((ele) => {
+    ele.addEventListener("click", function (e) {
+      tabsArray.forEach((ele) => {
+        ele.classList.remove("active");
       });
+      e.currentTarget.classList.add("active");
+      divsArray.forEach((div) => {
+        div.style.display = "none";
+      });
+      document.querySelector(e.currentTarget.dataset.cont).style.display = "block";
+    });
   });
-    
-    // console.log(tabsArray);
-    
+    }
+});
+  
+    // =============  END PRICE PAGE ==============
 
-// var x = document.getElementsByClassName('search-btn'),
-// y =  document.getElementById('searchDiv');
-//   function rollOn(){
-//     y.classList.add('active');
-// }
-// function rollOn2(){
-//   y.classList.remove('active')
-// }
+

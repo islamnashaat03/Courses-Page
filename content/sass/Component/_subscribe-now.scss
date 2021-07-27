@@ -35,6 +35,9 @@
                     color: #bdbdbd;
                 }
             }
+            .field-requierd{
+                border: 1px solid red;
+            }
             button{
                 @extend.my-btn;
                 position: absolute;
