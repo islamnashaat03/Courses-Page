@@ -1,90 +1,118 @@
-.price-page{
-  .page-title{
+.price-page {
+  .page-title {
     padding-bottom: 110px;
-    .page-title--price-page{
+
+    .page-title--price-page {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 37px;
-      .tab-list{
+
+      .tab-list {
         display: flex;
         list-style: none;
         background-color: $colorWhite;
         padding: 5px;
         margin: 0;
         border-radius: 4px;
-        .tab-list__item{
+
+        .tab-list__item {
           padding: 9px 37px;
           cursor: pointer;
           transition: .5s;
-          &:first-child{
+
+          &:first-child {
             margin-right: 5px;
             padding: 9px 28px;
           }
         }
-        .tab-list__item.active{
+
+        .tab-list__item.active {
           background-color: #00b2b2;
           border-radius: 4px;
         }
       }
     }
-    .tabs-content{
-      .price-card{
+
+    .tabs-content {
+      .price-card {
         border-radius: 6px;
         border: solid 1px $colorLight;
         background-color: $colorWhite;
         padding: 0px 34px 10px;
-        .price-card__type{
-            background-color: #0053a7;
-            padding: 10px;
-            width: fit-content;
-            text-align: center;
-            margin: auto;
-            color: $colorWhite;
-            font-family: $interFont;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 6px 45px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          
+
+        .price-card__type {
+          background-color: #0053a7;
+          padding: 10px;
+          width: fit-content;
+          text-align: center;
+          margin: auto;
+          color: $colorWhite;
+          font-family: $interFont;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 6px 45px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+
         }
-        .price-card__type--2{
+
+        .price-card__type--2 {
           background-color: #033977;
         }
-        .price-card__type--3{
+
+        .price-card__type--3 {
           background-color: $colorBlue;
         }
-        .price-card__price{
+
+        .price-card__price {
           font-family: $georgiaFont;
           font-weight: bold;
           color: $colorBlue;
-          font-size: calc(18px + ((24 - 18 ) * ((100vw - 1366px) / (1920 - 1366))));
+          font-size: calc(18px + ((24 - 18) * ((100vw - 1366px) / (1920 - 1366))));
           line-height: 2.5;
           margin-bottom: -13px;
-          span{
-            font-size: calc(48px + ((60 - 48 ) * ((100vw - 1366px) / (1920 - 1366))));
+
+          span {
+            font-size: calc(48px + ((60 - 48) * ((100vw - 1366px) / (1920 - 1366))));
             font-weight: bold;
             line-height: 1.67;
           }
         }
-        .price-card__quote{
+
+        .price-card__quote {
           font-family: $interFont;
           font-size: 16px;
           text-align: left;
           color: $colorLight;
           margin-bottom: 23px;
         }
-        .price-card__list{
+
+        .price-card__list {
           margin-bottom: 22px;
-          .price-card__list-item{
+          list-style: none;
+          padding: 0;
+
+          .price-card__list-item {
             font-family: $interFont;
             font-size: 16px;
             color: $colorBlue;
             padding: 2px 0;
+            &::before{
+              content: "✓";
+              margin-#{$end}: 17px;
+              font-size: 22px;
+              color: #00b2b2;
+            }
+          }
+          .price-card__list-item--disabled{
+            &::before{
+              color: $colorLight;
+            }
           }
         }
-        .Purchase-btn{
+
+        .Purchase-btn {
           background-color: $colorBlue;
           color: $colorWhite;
           width: 98%;
@@ -92,7 +120,8 @@
           padding: 13px;
           margin-bottom: 35px;
         }
-        .Purchase-btn--2{
+
+        .Purchase-btn--2 {
           background-color: $colorYellow;
           color: $colorBlue;
 
@@ -100,36 +129,39 @@
       }
     }
   }
-  
-}
-@media only screen and (max-width:767px) {
-  .price-page{
-    .page-title{
-      .tabs-content{
-        .price-card{
-          .price-card__type{
-              font-size: 16px;
-          }
-          .price-card__price{
-            font-size: calc(18px + ((24 - 18 ) * ((100vw - 320px) / (1366 - 320))));
 
-            span{
-              font-size: calc(48px + ((60 - 48 ) * ((100vw - 320px) / (1366 - 320))));
+}
+
+@media only screen and (max-width:767px) {
+  .price-page {
+    .page-title {
+      .tabs-content {
+        .price-card {
+          .price-card__type {
+            font-size: 16px;
+          }
+
+          .price-card__price {
+            font-size: calc(18px + ((24 - 18) * ((100vw - 320px) / (1366 - 320))));
+
+            span {
+              font-size: calc(48px + ((60 - 48) * ((100vw - 320px) / (1366 - 320))));
             }
           }
         }
       }
     }
-    
+
   }
 }
+
 // @media only screen and (min-width:1200px) {
 //   .price-page{
 //     .page-title{
 //       .tabs-content{
 //         .price-card{
 //           .Purchase-btn{
-            
+
 //           }
 //         }
 //       }
