@@ -7,6 +7,7 @@
     padding: 10px;
     // color: $colorYellow;
     font-weight: bold;
+    font-family: $interFont;
     .breadcrumb-item+.breadcrumb-item::before{
       color: $colorYellow ;
     }
@@ -18,3 +19,6 @@
     }
   }
 }
+// .breadcrumb-section--edit{
+//   margin-bottom: 30px;
+// }

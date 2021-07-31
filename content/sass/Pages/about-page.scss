@@ -1,0 +1,39 @@
+.about-us{
+  padding: 85px 0;
+  .about-us-wrapper{
+    .about-us__header{
+      margin-bottom: 25px;
+      font-size: calc(35px + ((41 - 35) * ((100vw - 1366px) / (1920 - 1366 ))));
+      font-weight: bold;
+      font-family: $georgiaFont;
+      text-transform: capitalize;
+      color: $colorBlue;
+    }
+    .about-us__paragraphs-wrapper{
+      .about-us__paragraph{
+        color: #1f1414;
+      }
+    }
+
+  }
+  .about-us__image{
+      position: relative;
+      height: 100%;
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (22 / 25) * 100%;
+        
+      }
+      > .inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+      }
+    
+  }
+}
