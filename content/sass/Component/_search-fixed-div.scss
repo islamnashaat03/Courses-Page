@@ -6,8 +6,8 @@
   z-index: 5000;
   padding: 100px 20px;
   display: none;
-  top: 48px;
 
+  top: 48px ;
   .search-form {
     background-color: #eee;
     position: relative;
@@ -18,6 +18,7 @@
       outline: 0;
       border: 2px solid #eee;
       font-size: 18px;
+      border-radius: 10px;
     }
 
     .search-form__submit-btn {

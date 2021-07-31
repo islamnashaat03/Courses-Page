@@ -1,18 +1,22 @@
-.main-footer{
+.main-footer {
     background-color: $colorBlue;
     color: $colorWhite;
     padding-top: 72px;
-    .main-footer__contact-info{
+
+    .main-footer__contact-info {
         display: flex;
         flex-direction: column;
-        .main-footer__contact-info__links{
+
+        .main-footer__contact-info__links {
             display: flex;
             flex-direction: column;
             margin-top: 20px;
-            a{
+
+            a {
                 margin: 10px 0;
             }
-            h5{
+
+            h5 {
                 font-family: $interFont;
                 font-size: 20px;
                 font-weight: bold;
@@ -21,46 +25,54 @@
                 color: $colorWhite;
             }
         }
-        .main-footer__contact-info__title{
-        display: flex;
-        align-items: center;
-        h4{
-            margin-bottom: 0;
-            font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
-        }
-            
+
+        .main-footer__contact-info__title {
+            display: flex;
+            align-items: center;
+
+            h4 {
+                margin-bottom: 0;
+                font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
+            }
+
         }
     }
-    .main-footer__links{
-        h5{
+
+    .main-footer__links {
+        h5 {
             font-weight: bold;
             font-size: 20px;
         }
-        .main-footer__links--edit{
-                    display: flex;
-                    flex-direction: column;
-                    font-family: $interFont;
-                    line-height: 2.25;
-                    text-align: left;
-                    a{
-                        font-size: 16px;
-                        margin: 5px 0 ;
-                    }
-                }
+
+        .main-footer__links--edit {
+            display: flex;
+            flex-direction: column;
+            font-family: $interFont;
+            line-height: 2.25;
+            text-align: left;
+
+            a {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+        }
     }
-    .main-footer__copyright{
+
+    .main-footer__copyright {
         background-color: $colorYellow;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 30px;
         margin-top: 30px;
-        a{
+
+        .main-footer__copyright__social-item {
             margin: 0 8px;
             color: #212529;
             font-size: 23px;
         }
-        p{
+
+        p {
             font-family: $interFont;
             font-size: 15px;
             text-align: left;
@@ -69,54 +81,61 @@
         }
     }
 }
-@media only  screen and (max-width:767px) {
-    .main-footer{
-        .main-footer__contact-info__title{
-            justify-content: center;
-            
-        }
-        .main-footer__contact-info__links{
-            text-align: center;
-        }
-        .main-footer__copyright{
+
+@media only screen and (max-width:767px) {
+    .main-footer {
+        .main-footer__copyright {
             flex-direction: column;
-            p{
-                margin-bottom: 15px;
+            padding: 20px 0 10px ;
+            .main-footer__copyright__social-item {
+                margin: 0 4px;
+            }
+
+            p {
+                margin-bottom: 8px;
             }
         }
-        .main-footer__links{
+
+        .main-footer__links {
             margin-top: 15px;
-            .main-footer__links-icon{
+
+            .main-footer__links-icon {
                 display: flex;
                 align-items: center;
                 transition: .25s ease-in-out;
-                &::before{
+
+                &::before {
                     content: '\e90a';
-                    font-family:'icomoon' ;
+                    font-family: 'icomoon';
                     margin-right: 10px;
                 }
-                &:not(.active)::before{
+
+                &:not(.active)::before {
                     content: '\e909';
-                    font-family:'icomoon' ;
+                    font-family: 'icomoon';
                 }
             }
-            .main-footer__links--edit.active{
+
+            .main-footer__links--edit.active {
                 display: flex;
-                
+
             }
-            h5{
-                margin: 10px 0 ;
+
+            h5 {
+                margin: 10px 0;
                 transition: .25s ease-in-out;
             }
-            .main-footer__links--edit{
+
+            .main-footer__links--edit {
                 display: none;
                 transition: .25s ease-in-out;
-                a{
+
+                a {
                     padding-#{$start}: 35px;
                 }
             }
         }
-        
+
     }
-    
+
 }

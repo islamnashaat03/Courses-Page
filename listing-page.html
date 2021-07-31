@@ -13,16 +13,18 @@
 
   <body>
     <div class="listing-page">
-			<div class="search-fixed-div" id="searchDiv">
-        <form action="" class="search-form" id="searchDiv">
-          <input type="text" class="search-form__input" />
-          <button type="submit" class="search-form__submit-btn btn">
-            <span class="icon-search"></span>
-          </button>
-          <button class="search-form__close-btn btn" onclick="rollOn()">
-            <span class="icon-close"></span>
-          </button>
-        </form>
+      <div class="search-fixed-div" id="searchDiv">
+        <div class="container">
+          <div action="" class="search-form">
+            <input type="text" class="search-form__input" />
+            <button type="submit" class="search-form__submit-btn btn">
+              <span class="icon-search"></span>
+            </button>
+            <button class="search-form__close-btn btn" type="button">
+              <span class="icon-close"></span>
+            </button>
+          </div>
+        </div>
       </div>
       <!-- START HEADER      -->
       <header class="header">
@@ -80,7 +82,12 @@
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
@@ -100,10 +107,10 @@
               <div class="d-flex">
                 <button class="btn sign-up-btn" type="button">Sign up</button>
                 <a href="#">
-									<button class="btn search-btn" type="button">
+                  <button class="btn search-btn" type="button">
                     <span class="icon-search"></span>
                   </button>
-									</a>
+                </a>
               </div>
             </div>
           </div>
@@ -122,7 +129,7 @@
       <!-- START TOP COURSES  -->
       <section class="top-courses listing-page__top-courses">
         <div class="container">
-          <div class="row ">
+          <div class="row">
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
               <label for="Categories" class="top-courses__label"
                 >Categories</label
@@ -164,240 +171,7 @@
               </select>
             </div>
           </div>
-          <div class="row ">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-1.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/coursera.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    User Research for User Experience Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-2.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">Buddhism and Modern Psychology</h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-2.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">Buddhism and Modern Psychology</h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-3.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">Introduction to Philosophy</h6>
-                  <p class="my-card__paragraph">Duke University</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-3.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">Introduction to Philosophy</h6>
-                  <p class="my-card__paragraph">Duke University</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-4.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/coursera.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Advance on Seeing Through Photographs
-                  </h6>
-                  <p class="my-card__paragraph">Duke University</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-5.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Think Again I: How to Understand Arguments
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-5.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Think Again I: How to Understand Arguments
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-6.jpg" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    User Research for User Experience Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-6.jpg" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    User Research for User Experience Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-7.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/coursera.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    User Research for User Experience Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-8.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Introduction to Logic and Critical Thinking
-                  </h6>
-                  <p class="my-card__paragraph">Duke University</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-8.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/ACM15324.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Introduction to Logic and Critical Thinking
-                  </h6>
-                  <p class="my-card__paragraph">Duke University</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-9.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Modern and Contemporary Art and Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
-              <div class="my-card">
-                <div class="my-card__image outer">
-                  <img src="content/images/card-9.jpg" alt="" class="inner" />
-                  <div class="my-card__small-img">
-                    <img src="content/images/Logo_180x180.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="my-card__body">
-                  <h6 class="my-card__title">
-                    Modern and Contemporary Art and Design
-                  </h6>
-                  <p class="my-card__paragraph">The Museum of Modern Art</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row wrapper-listing"></div>
         </div>
       </section>
       <!-- END TOP COURSES  -->
@@ -521,11 +295,11 @@
             <div>
               <p>Copyright © 2021 Tung Chi Vo</p>
             </div>
-            <div>
-              <a href=""><span class="icon-facebook"></span></a>
-              <a href=""><span class="icon-pinterest"></span></a>
-              <a href=""><span class="icon-tiwitter"></span></a>
-              <a href=""><span class="icon-instegram"></span></a>
+            <div class="main-footer__copyright__social">
+              <a href="" class="main-footer__copyright__social-item"><span class="icon-facebook"></span></a>
+              <a href="" class="main-footer__copyright__social-item"><span class="icon-pinterest"></span></a>
+              <a href="" class="main-footer__copyright__social-item"><span class="icon-tiwitter"></span></a>
+              <a href="" class="main-footer__copyright__social-item"><span class="icon-instegram"></span></a>
             </div>
           </section>
         </div>
