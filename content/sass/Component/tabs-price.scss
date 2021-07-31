@@ -135,6 +135,7 @@
 @media only screen and (max-width:767px) {
   .price-page {
     .page-title {
+      .page-title--price-page{flex-direction: column;}
       .tabs-content {
         .price-card {
           .price-card__type {
@@ -154,17 +155,3 @@
 
   }
 }
-
-// @media only screen and (min-width:1200px) {
-//   .price-page{
-//     .page-title{
-//       .tabs-content{
-//         .price-card{
-//           .Purchase-btn{
-
-//           }
-//         }
-//       }
-//     }
-//   }    
-// }

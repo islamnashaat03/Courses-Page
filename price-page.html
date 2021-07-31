@@ -63,7 +63,7 @@
         <!-- START MAIN NAVBAR  -->
         <nav class="navbar navbar-expand-lg navbar-light main-navbar">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
               <img src="content/images/Group 8.jpg" alt="" class="me-3" />
               For Education
             </a>
@@ -80,37 +80,48 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.html"
+                    >Home</a
+                  >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="about-us-page.html">About</a>
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Courses</a>
+                  <a class="nav-link" href="listing-page.html">Courses</a>
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="contact-us-page.html">Contact</a>
                 </li>
                 <li><hr class="dropdown-divider" /></li>
               </ul>
-
-              <form class="d-flex">
-                <button class="btn sign-up-btn" type="submit">Sign up</button>
-                <a href="#">
-									<button class="btn search-btn" type="button">
+              <div class="d-flex">
+                <a class="btn sign-up-btn" type="submit" href="sign-up-page.html">Sign up</a>
+                  <button class="btn search-btn" type="button">
                     <span class="icon-search"></span>
                   </button>
-									</a>
-              </form>
+              </div>
             </div>
           </div>
         </nav>
         <!-- END MAIN NAVBAR  -->
+        <!-- START BREAD CRUMB  -->
+        <section class="breadcrumb-section">
+          <div class="container">
+            <div aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="listing-page.html">Courses</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Plans</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <!-- END BREAD CRUMB  -->
       </header>
       <!-- END HEADER  -->
       <!-- START HEADER  -->
@@ -289,7 +300,7 @@
                   <form action="" class="subscribe-now__content__form">
                     <input
                       type="email"
-                      placeholder="Enter email address " class="field-requierd"/>
+                      placeholder="Enter email address" />
                     <span class="icon-message"></span>
                     <button class="btn" type="submit" value="submit">
                       Subscribe now
@@ -391,11 +402,11 @@
               <div>
                 <p>Copyright © 2021 Tung Chi Vo</p>
               </div>
-              <div>
-                <a href=""><span class="icon-facebook"></span></a>
-                <a href=""><span class="icon-pinterest"></span></a>
-                <a href=""><span class="icon-tiwitter"></span></a>
-                <a href=""><span class="icon-instegram"></span></a>
+              <div class="main-footer__copyright__social">
+                <a href="" class="main-footer__copyright__social-item"><span class="icon-facebook"></span></a>
+                <a href="" class="main-footer__copyright__social-item"><span class="icon-pinterest"></span></a>
+                <a href="" class="main-footer__copyright__social-item"><span class="icon-tiwitter"></span></a>
+                <a href="" class="main-footer__copyright__social-item"><span class="icon-instegram"></span></a>
               </div>
             </section>
           </div>

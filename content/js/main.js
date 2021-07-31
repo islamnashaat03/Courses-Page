@@ -188,6 +188,7 @@ $(document).ready(function () {
             </h6>
             <p class="my-card__paragraph">${post.body}</p>
           </div>
+          <a href="card-page.html" class="card-page-link-overlay"></a>
         </div>
       </div>
       `);

@@ -3,7 +3,8 @@
 @import '../Component/search-fixed-div.scss';
 @import '../Component/counter';
 
-.top-courses {
+.home-page{
+  .top-courses {
   margin-bottom: 170px;
 
   .col--edit {
@@ -40,7 +41,23 @@
     }
   }
 }
+  .header{
+    .home-page__main-navbar{
+      padding-bottom: 80px;
+    }
+  }
 
+}
+
+@media only screen and (min-width:1366px) {
+  .home-page{
+    .header {
+      .main-navbar {
+        padding-bottom: 95px;
+      }
+    }
+  }
+}
 @media only screen and (max-width:768px) {
   .top-courses {
     margin-bottom: 75px;

@@ -1,0 +1,20 @@
+.breadcrumb-section{
+  background-color: $colorBackground;
+  padding-bottom: 25px;
+  .breadcrumb{
+    margin-bottom: 0;
+    background-color:$colorWhite;
+    padding: 10px;
+    // color: $colorYellow;
+    font-weight: bold;
+    .breadcrumb-item+.breadcrumb-item::before{
+      color: $colorYellow ;
+    }
+    .breadcrumb-item{
+      color: $colorYellow ;
+    }
+    .breadcrumb-item.active{
+      color: $colorLight;
+    }
+  }
+}

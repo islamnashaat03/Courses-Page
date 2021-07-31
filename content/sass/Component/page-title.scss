@@ -19,3 +19,11 @@
     color: $colorBlue;
   } 
 }
+@media only screen and (max-width:768px){
+  .page-title{
+    .page-title__second-head{
+      font-size: calc(28px + ((34 - 28 ) * ((100vw - 320px) / (1366 - 320 )) ));
+      margin-bottom: 20px;
+    }
+  }
+}

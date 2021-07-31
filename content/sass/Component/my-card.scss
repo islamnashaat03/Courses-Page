@@ -5,6 +5,7 @@
     border: 1px solid #bdbdbd;
     border-radius: 6px;
     background-color: $colorWhite;
+    position: relative;
 
     .my-card__image{
         width: 100%;
@@ -37,6 +38,13 @@
         font-size: 14px;
         line-height: 1.71;
         color: #757575;
+    }
+    .card-page-link-overlay{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
     }
 }
 @media only screen and (max-width:768px ){

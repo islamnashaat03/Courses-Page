@@ -29,7 +29,7 @@
     .main-navbar {
         background-color: $colorBackground;
         font-family: $interFont;
-        padding-bottom: 80px;
+        padding-bottom: 45px;
         padding-top: 17px;
         .navbar-toggler {
             border: 0;
@@ -145,13 +145,7 @@
             }
         }
     }
-    @media only screen and (min-width:1366px) {
-        .header {
-            .main-navbar {
-                padding-bottom: 95px;
-            }
-        }
-    }
+
     @media only screen and (max-width:768px) {
         .header{
             .main-navbar{

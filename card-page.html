@@ -1,389 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card</title>
 
-    <link rel="stylesheet" href="content/css/Vendor/iconmoon.css" />
-    <link rel="stylesheet" href="content/css/Vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="content/css/main-ltr.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card</title>
 
-  <body>
-    <div class="card-page">
-      <div class="search-fixed-div" id="searchDiv">
+  <link rel="stylesheet" href="content/css/Vendor/iconmoon.css" />
+  <link rel="stylesheet" href="content/css/Vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="content/css/main-ltr.css" />
+</head>
+
+<body>
+  <div class="card-page">
+    <div class="search-fixed-div" id="searchDiv">
+      <div class="container">
+        <div action="" class="search-form">
+          <input type="text" class="search-form__input" />
+          <button type="submit" class="search-form__submit-btn btn">
+            <span class="icon-search"></span>
+          </button>
+          <button class="search-form__close-btn btn" type="button">
+            <span class="icon-close"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- START HEADER   -->
+    <header class="header">
+      <!-- START UPPER NAV BAR  -->
+      <div class="upper-navbar">
         <div class="container">
-          <div action="" class="search-form">
-            <input type="text" class="search-form__input" />
-            <button type="submit" class="search-form__submit-btn btn">
-              <span class="icon-search"></span>
-            </button>
-            <button class="search-form__close-btn btn" type="button">
-              <span class="icon-close"></span>
-            </button>
+          <div class="upper-navbar--postion">
+            <div class="upper-navbar__info">
+              <a href="#" class="upper-navbar__info__link">
+                <span class="icon-location"></span>
+                <span> 1600 Amphitheatre Parkway, CA 94043 </span>
+              </a>
+
+              <a href="mailto:" class="upper-navbar__info__link">
+                <span class="icon-message"></span> vctung@outlook.com
+              </a>
+            </div>
+            <div class="upper-navbar__social">
+              <a href="" class="upper-navbar__social__link"><span class="icon-facebook"></span></a>
+              <a href="" class="upper-navbar__social__link"><span class="icon-pinterest"></span></a>
+              <a href="" class="upper-navbar__social__link"><span class="icon-tiwitter"></span></a>
+              <a href="" class="upper-navbar__social__link"><span class="icon-instegram"></span></a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- START HEADER   -->
-        <header class="header">
-          <!-- START UPPER NAV BAR  -->
-          <div class="upper-navbar">
-            <div class="container">
-              <div class="upper-navbar--postion">
-                <div class="upper-navbar__info">
-                  <a href="#" class="upper-navbar__info__link">
-                    <span class="icon-location"></span>
-                    <span> 1600 Amphitheatre Parkway, CA 94043 </span>
-                  </a>
-
-                  <a href="mailto:" class="upper-navbar__info__link">
-                    <span class="icon-message"></span> vctung@outlook.com
-                  </a>
-                </div>
-                <div class="upper-navbar__social">
-                  <a href="" class="upper-navbar__social__link"
-                    ><span class="icon-facebook"></span
-                  ></a>
-                  <a href="" class="upper-navbar__social__link"
-                    ><span class="icon-pinterest"></span
-                  ></a>
-                  <a href="" class="upper-navbar__social__link"
-                    ><span class="icon-tiwitter"></span
-                  ></a>
-                  <a href="" class="upper-navbar__social__link"
-                    ><span class="icon-instegram"></span
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- END UPPER  NAV BAR  -->
-          <!-- START MAIN NAVBAR  -->
-          <nav class="navbar navbar-expand-lg navbar-light main-navbar">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="content/images/Group 8.jpg" alt="" class="me-3" />
-                For Education
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
+      <!-- END UPPER  NAV BAR  -->
+      <!-- START MAIN NAVBAR  -->
+      <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="content/images/Group 8.jpg" alt="" class="me-3" />
+            For Education
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us-page.html">About</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listing-page.html">Courses</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us-page.html">Contact</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a class="btn sign-up-btn" type="submit" href="sign-up-page.html">Sign up</a>
+              <button class="btn search-btn" type="button">
+                <span class="icon-search"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Courses</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                </ul>
-
-                <form class="d-flex">
-                  <button class="btn sign-up-btn" type="submit">Sign up</button>
-                  <a href="#">
-                    <button class="btn search-btn" type="button">
-                      <span class="icon-search"></span>
-                    </button>
-                    </a>
-                </form>
-              </div>
             </div>
-          </nav>
-          <!-- END MAIN NAVBAR  -->
-        </header>
-      <!-- END HEADER  -->
-      <!-- START HEADER  -->
-        <div class="page-title page-title--card-page">
-          <div class="container">
-            <h6 class="page-title__first-head">Course detail</h6>
-            <h2 class="page-title__second-head">User Research for User Experience Design</h2>
           </div>
         </div>
-      <!-- END HEADER  -->
-      <!-- START CARD DETAILS  -->
-        <section class="card-details">
-          <div class="container">
-            <div class="row row-edit">
-              <div class="col-md-8">
-                <div class="card-details__brief">
-                  <img src="content/images/card-1.jpg" alt="" class="img">
-                  <h3 class="card-details__brief__header">Description</h3>
-                  <p class="card-details__brief__paragraph">
-                    The online Master of Computer and Information Technology degree (MCIT Online) is an online masters degree in Computer Science tailored for non-Computer Science majors. Offered by the University of Pennsylvania, this new program brings the long-running, established on-campus MCIT degree online. The MCIT Online program empowers students without computer science backgrounds to succeed in computing and technology fields. MCIT Online students come from diverse academic backgrounds ranging from business and history to chemistry and medicine.
+      </nav>
+      <!-- END MAIN NAVBAR  -->
+      <!-- START BREAD CRUMB  -->
+      <section class="breadcrumb-section">
+        <div class="container">
+          <div aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="listing-page.html">Courses</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Course Details</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- END BREAD CRUMB  -->
+    </header>
+    <!-- END HEADER  -->
+    <!-- START HEADER  -->
+    <div class="page-title page-title--card-page">
+      <div class="container">
+        <h6 class="page-title__first-head">Course detail</h6>
+        <h2 class="page-title__second-head">User Research for User Experience Design</h2>
+      </div>
+    </div>
+    <!-- END HEADER  -->
+    <!-- START CARD DETAILS  -->
+    <section class="card-details">
+      <div class="container">
+        <div class="row row-edit">
+          <div class="col-md-8 col-8--edit">
+            <div class="card-details__img">
+              <img src="content/images/card-1.jpg" alt="" class="img">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-details__course-brief">
+              <ul class="list-unstyled card-details__course-brief__list">
+                <li class="card-details__course-brief__list-item">
+                  <strong>Enrolled :</strong> 1200 students
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li class="card-details__course-brief__list-item">
+                  <strong>Duration :</strong> 2 hours
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li class="card-details__course-brief__list-item">
+                  <strong>Lectures :</strong> 8
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li class="card-details__course-brief__list-item">
+                  <strong>Categories:</strong> Technology
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li class="card-details__course-brief__list-item">
+                  <strong>Level:</strong> Intermediate Level
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+              </ul>
+              <div class="card-details__course-brief__img ">
+                <img src="https://www.lorempixel.com\70\130" alt="">
+              </div>
+              <div class="card-details__course-brief__contact-mail">
+                <span class="card-details__course-brief__contact-mail__span">
+                  Contact a customer support at
+                </span>
+                <a href="mailto:" class="card-details__course-brief__contact-mail__link">vctung@outlook.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card-details__brief">
+              <h3 class="card-details__brief__header">Description</h3>
+              <p class="card-details__brief__paragraph">
+                The online Master of Computer and Information Technology degree (MCIT Online) is an online masters
+                degree in Computer Science tailored for non-Computer Science majors. Offered by the University of
+                Pennsylvania, this new program brings the long-running, established on-campus MCIT degree online. The
+                MCIT Online program empowers students without computer science backgrounds to succeed in computing and
+                technology fields. MCIT Online students come from diverse academic backgrounds ranging from business and
+                history to chemistry and medicine.
+              </p>
+              <p class="card-details__brief__paragraph">
+                Computer science might not be in your past, but it will be in your future. Technology has an immense
+                impact on our lives, and is creating fields and positions that didn’t exist five years ago. Equipped
+                with a competitive computer science degree, MCIT Online graduates will be uniquely positioned to fill
+                roles in finance, healthcare, education, and government, as well as in the core software development
+                industry. Exposure to real-world projects throughout the program will prepare students to utilize skills
+                that positively impact society.
+              </p>
+              <h3 class="card-details__brief__header">What You’ll Learn?</h3>
+              <ul class="card-details__brief__list">
+                <li class="card-details__brief__list__item">
+                  <p>
+                    <strong>Ivy League Quality</strong> A first-of-its-kind program that offers an Ivy League master’s
+                    degree in Computer Science designed for non-CS majors.
                   </p>
-                  <p class="card-details__brief__paragraph"> 
-                    Computer science might not be in your past, but it will be in your future. Technology has an immense impact on our lives, and is creating fields and positions that didn’t exist five years ago. Equipped with a competitive computer science degree, MCIT Online graduates will be uniquely positioned to fill roles in finance, healthcare, education, and government, as well as in the core software development industry. Exposure to real-world projects throughout the program will prepare students to utilize skills that positively impact society.
+                </li>
+                <li class="card-details__brief__list__item">
+                  <p>
+                    <strong>Built Around Your Schedule The coursework</strong> is 100 percent online. You’ll benefit
+                    from the same high-quality instruction as on-campus students and graduate with the same degree. The
+                    diploma does not indicate whether the degree was earned online or on-campus.
                   </p>
-                    <h3 class="card-details__brief__header">What You’ll Learn?</h3>
-                    <ul class="card-details__brief__list">
-                      <li class="card-details__brief__list__item">
-                        <strong>Ivy League Quality</strong> A first-of-its-kind program that offers an Ivy League master’s degree in Computer Science designed for non-CS majors.
-                      </li>
-                      <li class="card-details__brief__list__item">
-                        <strong>Built Around Your Schedule The coursework</strong> is 100 percent online. You’ll benefit from the same high-quality instruction as on-campus students and graduate with the same degree. The diploma does not indicate whether the degree was earned online or on-campus.
-                      </li>
-                      <li class="card-details__brief__list__item">
-                        <strong>Accessible Pricing The cost of the MCIT Online degree</strong> is significantly less than on-campus alternatives and most online master’s degrees in Computer Science. Students pay $2,640 per course unit for a total of 10 courses units. Tuition and fees are posted as a guide and may be subject to change.
-                      </li>
-                      <li class="card-details__brief__list__item">
-                        <strong>Try before you apply Penn Engineering</strong> offers an online Specialization, Introduction to Programming with Python and Java, on Coursera to help you decide whether the MCIT Online program is the right fit before you apply.
-                      </li>
-                    </ul>
+                </li>
+                <li class="card-details__brief__list__item">
+                  <p>
+                    <strong>Accessible Pricing The cost of the MCIT Online degree</strong> is significantly less than
+                    on-campus alternatives and most online master’s degrees in Computer Science. Students pay $2,640 per
+                    course unit for a total of 10 courses units. Tuition and fees are posted as a guide and may be
+                    subject to change.
+                  </p>
+                </li>
+                <li class="card-details__brief__list__item">
+                  <p>
+                    <strong>Try before you apply Penn Engineering</strong> offers an online Specialization, Introduction
+                    to Programming with Python and Java, on Coursera to help you decide whether the MCIT Online program
+                    is the right fit before you apply.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CARD DETAILS  -->
+    <!-- START SUCCESSFUL STUDENT  -->
+    <div class="card-page-students">
+      <section class="students ">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="students__picture">
+                <div>
+                  <img src="content/images/img.jpg" alt="" class="students__picture__main-pic" />
+                  <img src="content/images/Instagram post.jpg" alt="" class="students__top-left-img" />
+                </div>
+                <div class="students__bottom-img-text">
+                  <h4 class="students__bottom-img-text__head1">Kimmie Vo</h4>
+                  <h6 class="students__bottom-img-text__head2">
+                    Junior Designer
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="students__brief">
+                <h2 class="students__brief__main-head">
+                  Successful Student <span>Feedback</span>
+                </h2>
+                <p class="students__brief__paragraph">
+                  Take courses from the world’s best instructors and
+                  universities. Courses include recorded auto-graded and
+                  peer-reviewed assignments, video lectures, and community
+                  discussion forums. When you complete a course, you’ll be
+                  eligible to receive a shareable electronic Course Certificate
+                  for a small fee.
+                </p>
+                <h5 class="students__brief__sec-head">
+                  The courses that Kimmie has taken
+                </h5>
+                <div class="d-flex students__brief__card">
+                  <div class="students__brief__card-img">
+                    <img src="content/images/card-9.jpg" alt="" />
+                  </div>
+                  <div class="students__brief__card-info">
+                    <h5>Modern and Contemporary Art and Design</h5>
+                    <h6>The Museum of Modern Art</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END SUCCESSFUL STUDENT  -->
+    <!-- START SUBSCRIBE NOW  -->
+    <section class="subscribe-now">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 offset-lg-1">
+            <img src="content/images/Recruiting.jpg" alt="" />
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="subscribe-now__content">
+              <h6 class="subscribe-now__content__title">Subscrible now</h6>
+              <h2 class="subscribe-now__content__quote">
+                Get every single update you will get
+              </h2>
+              <form action="" class="subscribe-now__content__form">
+                <input type="email" placeholder="Enter email address " required />
+                <span class="icon-message"></span>
+                <button class="btn" type="submit" value="submit">
+                  Subscribe now
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </section>
+    <!-- END SUBSCRIBE NOW  -->
+    <!-- START FOOTER  -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="main-footer__contact-info">
+              <div class="main-footer__contact-info__title" style="align-items: center">
+                <img src="content/images/Group 8.jpg" alt="" class="me-3" />
+                <h4>FOR EDUCATION</h4>
+              </div>
+              <div class="main-footer__contact-info__links">
+                <a href="" class="">
+                  <span class="icon-location me-1"></span>
+                  1500 Treat Ave, Suite 200San Francisco, CA 94110
+                </a>
+                <a href="mailto:">
+                  <span class="icon-message me-1"></span>
+                  vctung@outlook.com
+                </a>
+                <a href="">
+                  <span class="icon-phone"></span>
+                  1-800-800-2299 (Support)
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="main-footer__links">
+                  <div class="collapsible active main-footer__links-icon">
+                    <h5>community</h5>
+                  </div>
+                  <div class="main-footer__links--edit">
+                    <a href="">Learners</a>
+                    <a href="">Partenrs</a>
+                    <a href="">Developers</a>
+                    <a href="">Beta Testers</a>
+                    <a href="">Translation</a>
+                    <a href="">Blog</a>
+                    <a href="">Tech Blog</a>
+                    <a href="">Teaching Center</a>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card-details__course-brief">
-                  <ul class="list-unstyled card-details__course-brief__list">
-                    <li class="card-details__course-brief__list-item">
-                      <strong>Enrolled :</strong> 1200 students
-                    </li>
-                    <li ><hr class="dropdown-divider"></li>
-                    <li class="card-details__course-brief__list-item">
-                      <strong>Duration :</strong> 2 hours
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li class="card-details__course-brief__list-item">
-                      <strong>Lectures :</strong> 8
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li class="card-details__course-brief__list-item">
-                      <strong>Categories:</strong> Technology
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li class="card-details__course-brief__list-item">
-                      <strong>Level:</strong> Intermediate Level
-                    </li>
-                    <li><hr class="dropdown-divider"></li>  
-                  </ul>
-                  <div class="card-details__course-brief__img ">
-                    <img src="https://www.lorempixel.com\70\130" alt="">
+                <div class="main-footer__links">
+                  <div class="collapsible active main-footer__links-icon">
+                    <h5>Information</h5>
                   </div>
-                  <div class="card-details__course-brief__contact-mail">
-                    <span class="card-details__course-brief__contact-mail__span">
-                      Contact a customer support at
-                    </span>
-                    <a href="mailto:" class="card-details__course-brief__contact-mail__link">vctung@outlook.com</a>
+                  <div class="main-footer__links--edit">
+                    <a href="">About</a>
+                    <a href="">Pricing</a>
+                    <a href="">Blog</a>
+                    <a href="">Careers</a>
+                    <a href="">Contact</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="main-footer__links">
+                  <div class="collapsible active main-footer__links-icon">
+                    <h5>More</h5>
+                  </div>
+                  <div class="main-footer__links--edit">
+                    <a href="">Press</a>
+                    <a href="">Investors</a>
+                    <a href="">Terms</a>
+                    <a href="">Privacy</a>
+                    <a href="">Help</a>
+                    <a href="">Accessibility</a>
+                    <a href="">Contact</a>
+                    <a href="">Articles</a>
+                    <a href="">Directory</a>
+                    <a href="">Affiliates</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      <!-- END CARD DETAILS  -->
-      <!-- START SUCCESSFUL STUDENT  -->
-      <div class="card-page-students">
-        <section class="students ">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="students__picture">
-                  <div>
-                    <img
-                      src="content/images/img.jpg"
-                      alt=""
-                      class="students__picture__main-pic"
-                    />
-                    <img
-                      src="content/images/Instagram post.jpg"
-                      alt=""
-                      class="students__top-left-img"
-                    />
-                  </div>
-                  <div class="students__bottom-img-text">
-                    <h4 class="students__bottom-img-text__head1">Kimmie Vo</h4>
-                    <h6 class="students__bottom-img-text__head2">
-                      Junior Designer
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="students__brief">
-                  <h2 class="students__brief__main-head">
-                    Successful Student <span>Feedback</span>
-                  </h2>
-                  <p class="students__brief__paragraph">
-                    Take courses from the world’s best instructors and
-                    universities. Courses include recorded auto-graded and
-                    peer-reviewed assignments, video lectures, and community
-                    discussion forums. When you complete a course, you’ll be
-                    eligible to receive a shareable electronic Course Certificate
-                    for a small fee.
-                  </p>
-                  <h5 class="students__brief__sec-head">
-                    The courses that Kimmie has taken
-                  </h5>
-                  <div class="d-flex students__brief__card">
-                    <div class="students__brief__card-img">
-                      <img src="content/images/card-9.jpg" alt="" />
-                    </div>
-                    <div class="students__brief__card-info">
-                      <h5>Modern and Contemporary Art and Design</h5>
-                      <h6>The Museum of Modern Art</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+        <section class="main-footer__copyright">
+          <div>
+            <p>Copyright © 2021 Tung Chi Vo</p>
+          </div>
+          <div class="main-footer__copyright__social">
+            <a href="" class="main-footer__copyright__social-item"><span class="icon-facebook"></span></a>
+            <a href="" class="main-footer__copyright__social-item"><span class="icon-pinterest"></span></a>
+            <a href="" class="main-footer__copyright__social-item"><span class="icon-tiwitter"></span></a>
+            <a href="" class="main-footer__copyright__social-item"><span class="icon-instegram"></span></a>
           </div>
         </section>
       </div>
-      <!-- END SUCCESSFUL STUDENT  -->
-      <!-- START SUBSCRIBE NOW  -->
-        <section class="subscribe-now">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 offset-lg-1">
-                <img src="content/images/Recruiting.jpg" alt="" />
-              </div>
-              <div class="col-md-6 d-flex align-items-center">
-                <div class="subscribe-now__content">
-                  <h6 class="subscribe-now__content__title">Subscrible now</h6>
-                  <h2 class="subscribe-now__content__quote">
-                    Get every single update you will get
-                  </h2>
-                  <form action="" class="subscribe-now__content__form">
-                    <input
-                      type="email"
-                      placeholder="Enter email address "
-                      required
-                    />
-                    <span class="icon-message"></span>
-                    <button class="btn" type="submit" value="submit">
-                      Subscribe now
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="col-md-1"></div>
-            </div>
-          </div>
-        </section>
-      <!-- END SUBSCRIBE NOW  -->
-      <!-- START FOOTER  -->
-        <footer class="main-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="main-footer__contact-info">
-                  <div
-                    class="main-footer__contact-info__title"
-                    style="align-items: center"
-                  >
-                    <img src="content/images/Group 8.jpg" alt="" class="me-3" />
-                    <h4>FOR EDUCATION</h4>
-                  </div>
-                  <div class="main-footer__contact-info__links">
-                    <a href="" class="">
-                      <span class="icon-location me-1"></span>
-                      1500 Treat Ave, Suite 200San Francisco, CA 94110
-                    </a>
-                    <a href="mailto:">
-                      <span class="icon-message me-1"></span>
-                      vctung@outlook.com
-                    </a>
-                    <a href="">
-                      <span class="icon-phone"></span>
-                      1-800-800-2299 (Support)
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="main-footer__links">
-                      <div class="collapsible active main-footer__links-icon">
-                        <h5>community</h5>
-                      </div>
-                      <div class="main-footer__links--edit">
-                        <a href="">Learners</a>
-                        <a href="">Partenrs</a>
-                        <a href="">Developers</a>
-                        <a href="">Beta Testers</a>
-                        <a href="">Translation</a>
-                        <a href="">Blog</a>
-                        <a href="">Tech Blog</a>
-                        <a href="">Teaching Center</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="main-footer__links">
-                      <div class="collapsible active main-footer__links-icon">
-                        <h5>Information</h5>
-                      </div>
-                      <div class="main-footer__links--edit">
-                        <a href="">About</a>
-                        <a href="">Pricing</a>
-                        <a href="">Blog</a>
-                        <a href="">Careers</a>
-                        <a href="">Contact</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="main-footer__links">
-                      <div class="collapsible active main-footer__links-icon">
-                        <h5>More</h5>
-                      </div>
-                      <div class="main-footer__links--edit">
-                        <a href="">Press</a>
-                        <a href="">Investors</a>
-                        <a href="">Terms</a>
-                        <a href="">Privacy</a>
-                        <a href="">Help</a>
-                        <a href="">Accessibility</a>
-                        <a href="">Contact</a>
-                        <a href="">Articles</a>
-                        <a href="">Directory</a>
-                        <a href="">Affiliates</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <section class="main-footer__copyright">
-              <div>
-                <p>Copyright © 2021 Tung Chi Vo</p>
-              </div>
-              <div>
-                <a href=""><span class="icon-facebook"></span></a>
-                <a href=""><span class="icon-pinterest"></span></a>
-                <a href=""><span class="icon-tiwitter"></span></a>
-                <a href=""><span class="icon-instegram"></span></a>
-              </div>
-            </section>
-          </div>
-        </footer>
-      <!-- END FOOTER  -->
-    </div>
-      
-          <script src="content/js/Vendor/jQuery v3.6.0.js"></script>
-          <script src="content/js/Vendor/bootstrap.bundle.min.js"></script>
-          <script src="content/js/main.js"></script>
-        </body>
-      </html>
+    </footer>
+    <!-- END FOOTER  -->
+  </div>
+
+  <script src="content/js/Vendor/jQuery v3.6.0.js"></script>
+  <script src="content/js/Vendor/bootstrap.bundle.min.js"></script>
+  <script src="content/js/main.js"></script>
+</body>
+
+</html>
