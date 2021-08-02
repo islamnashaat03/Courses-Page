@@ -24,7 +24,8 @@ $(document).ready(function () {
   }
   // END COLLPASE IN FOOTER
 
-  // START HOME PAGE
+
+  // ===================START HOME PAGE=================================
   if ($(".home-page").length > 0) {
     // START TIMER
     var countDownDate = new Date("Jul 12, 2021 12:00:00").getTime(),
@@ -135,13 +136,25 @@ $(document).ready(function () {
 
       // Displaying results to console
       .then((json) => console.log(json));
+
+
+          // START VALIDATION IN SUBSCRIBE SECTION   
+    $(".subscribe-now__content__form").validate({
+      rules: {
+        email: {
+          required: true,
+          email: true
+        }
+      }
+    });
+  // END VALIDATION IN SUBSCRIBE SECTION   
   }
-  // END HOME PAGE
 
-  // ====================================================================================
-  // ====================================================================================
 
-  // START LISTING PAGE
+  // ===================END HOME PAGE===================================
+
+
+  //==================== START LISTING PAGE=============================
   if ($(".listing-page").length > 0) {
     let categories = $("#Categories");
     categories.on("change", function () {
@@ -176,21 +189,21 @@ $(document).ready(function () {
           listingWrapper.append(`
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
             <div class="my-card">
-          <div class="my-card__image outer">
-            <img src="content/images/card-1.jpg" alt="" class="inner" />
-            <div class="my-card__small-img">
-              <img src="content/images/coursera.jpg" alt="" />
+              <div class="my-card__image outer">
+                <img src="content/images/card-1.jpg" alt="" class="inner" />
+                <div class="my-card__small-img">
+                  <img src="content/images/coursera.jpg" alt="" />
+                </div>
+              </div>
+              <div class="my-card__body">
+                <h6 class="my-card__title">
+                ${post.title}
+                </h6>
+                <p class="my-card__paragraph">${post.body}</p>
+              </div>
+                <a href="card-page.html" class="card-page-link-overlay"></a>
             </div>
           </div>
-          <div class="my-card__body">
-            <h6 class="my-card__title">
-              ${post.title}
-            </h6>
-            <p class="my-card__paragraph">${post.body}</p>
-          </div>
-          <a href="card-page.html" class="card-page-link-overlay"></a>
-        </div>
-      </div>
       `);
         }
       });
@@ -203,10 +216,24 @@ $(document).ready(function () {
     // fetch('https://jsonplaceholder.typicode.com/todos/1')
     //   .then(response => response.json())
     //   .then(json => console.log(json))
-  }
-  // END LISTING PAGE
 
-  // =============  START PRICE PAGE ==============
+          // START VALIDATION IN SUBSCRIBE SECTION   
+          $(".subscribe-now__content__form").validate({
+            rules: {
+              email: {
+                required: true,
+                email: true
+              }
+            }
+          });
+        // END VALIDATION IN SUBSCRIBE SECTION  
+
+  }
+
+
+  //===================== END LISTING PAGE==============================
+
+  // ===================  START PRICE PAGE =============================
   if ($(".price-page").length > 0) {
     let tabs = document.querySelectorAll(".tab-list__item");
     let tabsArray = Array.from(tabs);
@@ -236,4 +263,11 @@ $(document).ready(function () {
   }
 });
 
-// =============  END PRICE PAGE ==============
+// ====================== END PRICE PAGE ===============================
+// =======================START CONTACT PAGE============================ 
+if ($(".contact-us-page").length > 0 ){
+        // START VALIDATION IN CONTACT FORM   
+        // END VALIDATION IN CONTACT FORM 
+        $("#contact-form").validate()
+      }
+      // =======================END CONTACT PAGE============================ 

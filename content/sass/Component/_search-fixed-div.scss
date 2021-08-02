@@ -30,11 +30,12 @@
 
     .search-form__close-btn {
       position: absolute;
-      left: 40px;
+      left: 20px;
       top: -70px;
       font-size: 35px;
       border: 0;
       outline: 0;
+      color: $colorBlue;
     }
   }
 }
