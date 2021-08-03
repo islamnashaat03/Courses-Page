@@ -104,6 +104,13 @@
       }
     }
   }
+  .card-details__purchase-btn{
+    background-color: $colorYellow;
+    color: $colorBlue;
+    padding: 13px 70px;
+    min-width: 130px;
+    font-size: 22px;
+  }
 }
 
 @media only screen and (max-width:768px) {
