@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="content/css/Vendor/bootstrap.min.css" />
   <link rel="stylesheet" href="content/css/Vendor/owl.carousel.min.css" />
   <link rel="stylesheet" href="content/css/Vendor/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="content/css/Vendor/cmxform.css">
   <link rel="stylesheet" href="content/css/main-ltr.css" />
 </head>
 
@@ -128,16 +129,16 @@
               <h3 class="sign-up__header">Sign Up</h3>
               <form action="" class="sign-up-form " id="sign-up-form">
                 <div class="form-group">
-                  <input type="text" class="form-control" minlength="4" placeholder="User Name" required>
+                  <input type="text" class="form-control" placeholder="User Name" name="username" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Email" required>
+                  <input type="email" class="form-control" placeholder="Email" name="email" required>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" name="password" class="form-control" placeholder="Password" id="password" required>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Retype Password">
+                  <input type="password" class="form-control" placeholder="Retype Password" name="confirm_password" required >
                 </div>
                 <div class="form-group">
                   <button class="btn sign-me-up-btn" type="submit">Sign Up</button>
@@ -265,6 +266,7 @@
   <script src="content/js/Vendor/bootstrap.bundle.min.js"></script>
   <script src="content/js/Vendor/owl.carousel.min.js"></script>
   <script src="content/js/Vendor/all.min.js"></script>
+  <script src="content/js/Vendor/jquery.validate.min.js"></script>
   <script src="content/js/main.js"></script>
 </body>
 

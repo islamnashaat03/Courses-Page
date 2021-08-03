@@ -15,7 +15,7 @@
       }
     }
 
-    
+
 
 
     .card-details__course-brief {
@@ -64,6 +64,7 @@
       }
     }
   }
+
   .card-details__brief {
     .card-details__brief__header {
       font-family: $georgiaFont;
@@ -79,6 +80,7 @@
       font-size: 16px;
       line-height: 1.5;
       color: #212529;
+
       &:last-child {
         margin-bottom: 500px;
       }
@@ -86,6 +88,7 @@
 
     .card-details__brief__list {
       list-style: none;
+
       .card-details__brief__list__item {
         font-family: $interFont;
         font-size: 16px;
@@ -93,18 +96,23 @@
         color: #212529;
         margin-bottom: 7px;
         display: flex;
+
         // align-items: center;
-        &::before{
+        &::before {
           content: "✓";
           margin-right: 17px;
           font-size: 22px;
           color: #00b2b2;
         }
-        p{margin-bottom: 0;}
+
+        p {
+          margin-bottom: 0;
+        }
       }
     }
   }
-  .card-details__purchase-btn{
+
+  .card-details__purchase-btn {
     background-color: $colorYellow;
     color: $colorBlue;
     padding: 13px 70px;
@@ -112,22 +120,19 @@
     font-size: 22px;
   }
 }
-
 @media only screen and (max-width:768px) {
-  .card-details {
+  .card-details{
     .row-edit {
       .col-8--edit {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
-
-      .card-details__brief {
-        .card-details__brief__header {
-          font-size: calc(28px + ((36 - 28) * ((100vw - 320px) / (1366 - 320))));
-        }
-
-        .card-details__brief__paragraph {
-          font-size: 14px;
-        }
+    }
+    .card-details__brief{
+      .card-details__brief__header{
+        font-size: calc(25px + ((31 - 25) * ((100vw - 320px) / (1366 - 320))));
+      }
+      .card-details__brief__paragraph {
+        font-size: 14px;
       }
     }
   }

@@ -271,3 +271,25 @@ if ($(".contact-us-page").length > 0 ){
         $("#contact-form").validate()
       }
       // =======================END CONTACT PAGE============================ 
+
+      // ======================START SIGN UP PAGE================= 
+      if ($('.sign-up-page').length > 0){
+        $("#sign-up-form").validate({
+          rules:{
+            username:{
+              required: true,
+              minlength: 4 ,
+            },
+            password:{
+              required:true,
+              minlength:8
+            },
+            confirm_password:{
+              required:true,
+              minlength:8,
+              equalTo :'#password'
+            }
+          }
+        })
+      }
+      // ======================END SIGN UP PAGE================= 
