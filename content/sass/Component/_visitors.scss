@@ -1,22 +1,28 @@
-.visitors{
-    background-color: $colorBackground;
+.visitors {
+    // background-color: $colorBackground;
     padding: 80px 0;
-    .course-published{
+    background-image: url('../images/Group\ 57.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .course-published {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
         height: 100%;
         justify-content: space-between;
-        .course-published__count{
+
+        .course-published__count {
             font-family: $georgiaFont;
             font-weight: bold;
             line-height: 1;
             color: $colorBlue;
             padding: 10px 0;
-            font-size: calc(48px + ((60 - 48 ) * ((100vw - 1366px) / (1920 - 1366 ))));
+            font-size: calc(48px + ((60 - 48) * ((100vw - 1366px) / (1920 - 1366))));
         }
-        .course-published__name{
+
+        .course-published__name {
             font-family: $interFont;
             font-weight: bold;
             line-height: 1.5;
@@ -25,12 +31,13 @@
         }
     }
 }
+
 @media only screen and (max-width:768px) {
-    .visitors{
+    .visitors {
         .course-published {
-            .course-published__name{
+            .course-published__name {
                 font-size: 14px;
             }
         }
-    } 
+    }
 }
