@@ -161,6 +161,16 @@ $(document).ready(function () {
       id = categories.val();
       getListingCard(id);
     });
+    let instructors = $("#instructors");
+    instructors.on("change", function () {
+      id = instructors.val();
+      getListingCard(id);
+    });
+    let Level = $("#Level");
+    Level.on("change", function () {
+      id = Level.val();
+      getListingCard(id);
+    });
     let observer = new IntersectionObserver((entries) => {
       console.log("entrieeee", entries);
       getListingCard(id)
@@ -171,9 +181,7 @@ $(document).ready(function () {
 
     async function getListingCard(id) {
       let listingWrapper = $(".wrapper-listing");
-      let response = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${id}`
-      );
+      let response = await fetch('listing.json');
       // debugger;
       let posts = await response.json();
       console.log(posts);
@@ -190,9 +198,9 @@ $(document).ready(function () {
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
             <div class="my-card">
               <div class="my-card__image outer">
-                <img src="content/images/card-1.jpg" alt="" class="inner" />
+                <img src="content/images/card-1.png" alt="" class="inner" />
                 <div class="my-card__small-img">
-                  <img src="content/images/coursera.jpg" alt="" />
+                  <img src="content/images/coursera.png" alt="" />
                 </div>
               </div>
               <div class="my-card__body">
@@ -207,15 +215,10 @@ $(document).ready(function () {
       `);
         }
       });
-
-      // .then(response => response.json())
-      // .then(json => console.log(json))
     }
     getListingCard(id);
 
-    // fetch('https://jsonplaceholder.typicode.com/todos/1')
-    //   .then(response => response.json())
-    //   .then(json => console.log(json))
+
 
           // START VALIDATION IN SUBSCRIBE SECTION   
           $(".subscribe-now__content__form").validate({

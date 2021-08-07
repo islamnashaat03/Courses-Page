@@ -6,6 +6,8 @@
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
+        height: 100%;
+        justify-content: space-between;
         .course-published__count{
             font-family: $georgiaFont;
             font-weight: bold;
