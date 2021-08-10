@@ -138,7 +138,7 @@ $(document).ready(function () {
       .then((json) => console.log(json));
 
 
-          // START VALIDATION IN SUBSCRIBE SECTION   
+    // START VALIDATION IN SUBSCRIBE SECTION   
     $(".subscribe-now__content__form").validate({
       rules: {
         email: {
@@ -147,7 +147,7 @@ $(document).ready(function () {
         }
       }
     });
-  // END VALIDATION IN SUBSCRIBE SECTION   
+    // END VALIDATION IN SUBSCRIBE SECTION   
   }
 
 
@@ -155,16 +155,66 @@ $(document).ready(function () {
 
 
   //==================== START LISTING PAGE=============================
+  
   if ($(".listing-page").length > 0) {
-    let categories = $("#Categories");
+    let posts;
+    let listingWrapper = $(".wrapper-listing");
+    let filterItems =[];
+    let newArr = [];
+
+    let categories = $("#categories-list");
+    function filterCategoriesList(selectedId){
+      let filteredCatIndex = posts.map((ele) =>{return ele.id  }).indexOf(+selectedId)
+
+      debugger
+      filterItems =posts[filteredCatIndex].items;
+    
+      fillListItems(posts[filteredCatIndex].items)
+  
+  
+    }
+    function filterInstructor(instructorName){
+      if(filterItems.length ==0) {
+        // let 
+        debugger
+        newArr.forEach((ele)=>{
+         if(ele.instructor == instructorName) {
+          filterItems =filterItems.concat(ele)
+         }
+        })
+        console.log("filllter instructor", filterItems)
+
+      } else{
+        filterItems = filterItems.filter((ele)=>{
+          return ele.instructor ==instructorName
+        })
+        console.log("filllter instructor", filterItems)
+
+      }
+
+    }
     categories.on("change", function () {
+      debugger
       id = categories.val();
-      getListingCard(id);
+      filterCategoriesList(id)
+
+      // getListingCard(id);
     });
+    console.log("categor", categories)
+    // categories.change(function () {
+    //   alert("The text has been changed.");
+    // });
+    // categories.addEventListener('change', (event) => {
+    //   // const result = document.querySelector('.result');
+    //   // result.textContent = `You like ${event.target.value}`;
+    //   alert("The text has been changed.");
+
+    // });
     let instructors = $("#instructors");
+    let instructorName; 
     instructors.on("change", function () {
-      id = instructors.val();
-      getListingCard(id);
+      instructorName = instructors.val();
+      filterInstructor(instructorName)
     });
     let Level = $("#Level");
     Level.on("change", function () {
@@ -178,29 +228,52 @@ $(document).ready(function () {
     let target = document.querySelector(".subscribe-now");
     observer.observe(target);
 
+    let isCatFill = false
+    function fillCategores(posts){
+      debugger
+      
+      posts.forEach((ele)=>{
+        categories.append(`
+          <option value="${ele.id}">${ele.level}</option>
+        `)
 
+      })
+      isCatFill = true
+
+    }
     async function getListingCard(id) {
-      let listingWrapper = $(".wrapper-listing");
       let response = await fetch('listing.json');
       // debugger;
-      let posts = await response.json();
-      console.log(posts);
-      let newArr = [];
+      posts = await response.json();
+      if(!isCatFill) {
+        fillCategores(posts)
+
+      }
+      console.log("poooooste", posts);
+
       if (id > 0) {
         $(".wrapper-listing").empty();
         newArr.push(posts);
       } else {
-        newArr = posts;
+        posts.forEach((ele)=>{
+          newArr.push(...ele.items) //spread  es5
+
+        })
+        console.log(newArr)
       }
-      newArr.forEach((post, index) => {
-        if (index < 3) {
+      fillListItems(newArr)
+ 
+    }
+    function fillListItems(list){
+      listingWrapper.empty()
+      list.forEach((post, index) => {
           listingWrapper.append(`
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
             <div class="my-card">
               <div class="my-card__image outer">
-                <img src="content/images/card-1.png" alt="" class="inner" />
+                <img src="${post.imgUrl}" alt="" class="inner" />
                 <div class="my-card__small-img">
-                  <img src="content/images/coursera.png" alt="" />
+                  <img src="${post.thambNailUrl}" alt="" />
                 </div>
               </div>
               <div class="my-card__body">
@@ -213,25 +286,31 @@ $(document).ready(function () {
             </div>
           </div>
       `);
-        }
+        
       });
+      
     }
     getListingCard(id);
 
+    let levelsCat = $("#Categories");
+    levelsCat.on('change', function () {
+      debugger
+      console.log(this.val)
+    })
 
-
-          // START VALIDATION IN SUBSCRIBE SECTION   
-          $(".subscribe-now__content__form").validate({
-            rules: {
-              email: {
-                required: true,
-                email: true
-              }
-            }
-          });
-        // END VALIDATION IN SUBSCRIBE SECTION  
+    // START VALIDATION IN SUBSCRIBE SECTION   
+    $(".subscribe-now__content__form").validate({
+      rules: {
+        email: {
+          required: true,
+          email: true
+        }
+      }
+    });
+    // END VALIDATION IN SUBSCRIBE SECTION  
 
   }
+
 
 
   //===================== END LISTING PAGE==============================
@@ -268,31 +347,31 @@ $(document).ready(function () {
 
 // ====================== END PRICE PAGE ===============================
 // =======================START CONTACT PAGE============================ 
-if ($(".contact-us-page").length > 0 ){
-        // START VALIDATION IN CONTACT FORM   
-        // END VALIDATION IN CONTACT FORM 
-        $("#contact-form").validate()
-      }
-      // =======================END CONTACT PAGE============================ 
+if ($(".contact-us-page").length > 0) {
+  // START VALIDATION IN CONTACT FORM   
+  // END VALIDATION IN CONTACT FORM 
+  $("#contact-form").validate()
+}
+// =======================END CONTACT PAGE============================ 
 
-      // ======================START SIGN UP PAGE================= 
-      if ($('.sign-up-page').length > 0){
-        $("#sign-up-form").validate({
-          rules:{
-            username:{
-              required: true,
-              minlength: 4 ,
-            },
-            password:{
-              required:true,
-              minlength:8
-            },
-            confirm_password:{
-              required:true,
-              minlength:8,
-              equalTo :'#password'
-            }
-          }
-        })
+// ======================START SIGN UP PAGE================= 
+if ($('.sign-up-page').length > 0) {
+  $("#sign-up-form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 4,
+      },
+      password: {
+        required: true,
+        minlength: 8
+      },
+      confirm_password: {
+        required: true,
+        minlength: 8,
+        equalTo: '#password'
       }
-      // ======================END SIGN UP PAGE================= 
+    }
+  })
+}
+      // ======================END SIGN UP PAGE=================
