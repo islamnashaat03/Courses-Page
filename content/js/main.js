@@ -8,22 +8,16 @@ $(document).ready(function () {
     $("#searchDiv").removeClass("active");
   });
   // END  SEARCH DIV IN NAV BAR
-  $('#icon-nav').click(function(){
-		$(this).toggleClass('open');
-	});
+  $('#icon-nav').click(function () {
+    $(this).toggleClass('open');
+  });
 
   // START COLLAPSE  IN FOOTER
-  if (window.matchMedia("(max-width:767px)").matches) {
-    var coll = document.querySelectorAll(".collapsible");
-    var i;
+  if (window.matchMedia("(min-width:991px)").matches) {
+    $(".accordion-collapse").addClass("show");
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].onclick = function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        content.classList.toggle("active");
-      };
-    }
+  } else{
+    $(".accordion-collapse").removeClass("show");
   }
   // END COLLPASE IN FOOTER
 
@@ -321,35 +315,33 @@ $(document).ready(function () {
   }
 
   // ====================== END PRICE PAGE ===============================
-// =======================START CONTACT PAGE============================
-if ($(".contact-us-page").length > 0) {
-  // START VALIDATION IN CONTACT FORM
-  // END VALIDATION IN CONTACT FORM
-  $("#contact-form").validate();
-}
-// =======================END CONTACT PAGE============================
+  // =======================START CONTACT PAGE============================
+  if ($(".contact-us-page").length > 0) {
+    // START VALIDATION IN CONTACT FORM
+    // END VALIDATION IN CONTACT FORM
+    $("#contact-form").validate();
+  }
+  // =======================END CONTACT PAGE============================
 
-// ======================START SIGN UP PAGE=================
-if ($(".sign-up-page").length > 0) {
-  $("#sign-up-form").validate({
-    rules: {
-      username: {
-        required: true,
-        minlength: 4,
+  // ======================START SIGN UP PAGE=================
+  if ($(".sign-up-page").length > 0) {
+    $("#sign-up-form").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 4,
+        },
+        password: {
+          required: true,
+          minlength: 8,
+        },
+        confirm_password: {
+          required: true,
+          minlength: 8,
+          equalTo: "#password",
+        },
       },
-      password: {
-        required: true,
-        minlength: 8,
-      },
-      confirm_password: {
-        required: true,
-        minlength: 8,
-        equalTo: "#password",
-      },
-    },
-  });
-}
-// ======================END SIGN UP PAGE=================
+    });
+  }
+  // ======================END SIGN UP PAGE=================
 });
-
-
