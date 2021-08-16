@@ -21,7 +21,7 @@ $(document).ready(function () {
     function filterLanguages(languageName) {
       if (filterItems.length == 0) {
         newArr.forEach((ele) => {
-          if (ele.language == languageName) {
+          if (ele.lang == languageName) {
             filterItems = filterItems.concat(ele)
           }
         })
@@ -45,13 +45,14 @@ $(document).ready(function () {
         })
         console.log("filllter instructor", filterItems)
 
-      } else {
-        filterItems = filterItems.filter((ele) => {
-          return ele.instructor == instructorName
-        })
-        console.log("filllter instruct", filterItems)
-
       }
+      //  else {
+      //   filterItems = filterItems.filter((ele) => {
+      //     return ele.instructor == instructorName
+      //   })
+      //   console.log("filllter instruct", filterItems)
+
+      // }
 
     }
     categories.on("change", function () {
