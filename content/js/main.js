@@ -8,6 +8,9 @@ $(document).ready(function () {
     $("#searchDiv").removeClass("active");
   });
   // END  SEARCH DIV IN NAV BAR
+  $('#icon-nav').click(function(){
+		$(this).toggleClass('open');
+	});
 
   // START COLLAPSE  IN FOOTER
   if (window.matchMedia("(max-width:767px)").matches) {

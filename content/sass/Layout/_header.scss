@@ -39,27 +39,96 @@
 
         .navbar-toggler {
             border: 0;
+            position: relative;
+            height: 25px;
+            width: 30px;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            .navbar-toggler-icon{
+                background-image: none;
+                position: absolute;
+                display: block;
+                content: "";
+                width:100%;
+                height: 3px;
+                background-color: $colorBlue;
+                top: 0;
+                opacity: 1;
+                transform-origin: left center;
+                transition: .25s ease-in-out;
+                &::after{
+                position: absolute;
+                display: block;
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: $colorBlue;
+                top: 10px;
+                left: 0;
+                opacity: 1;
+                transform-origin: left center;
+                transition: .25s ease-in-out;
+                }
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: $colorBlue;
+                    top: 20px;
+                    left: 0;
+                    opacity: 1;
+                    transform-origin: left center;
+                    transition: .25s ease-in-out;
+                }
+            }
+            
+
+        }
+        .navbar-toggler.open{
+            .navbar-toggler-icon{
+                transform: rotate(45deg);
+                top: -3px;
+                left: 8px;
+                &::after{
+                    width: 0%;
+                    opacity: 0;
+                }
+                &::before{
+                    transform: rotate(-92deg);
+                    top: 15px;
+                    left: 15px;
+                    right: -22px;
+                }
+            }
         }
 
         .navbar-toggler:focus {
             box-shadow: none;
         }
 
-        .navbar-toggler[aria-expanded='true'] {
-            .navbar-toggler-icon {
-                background-image: url(../images/times-solid.svg);
-                font-size: 18px;
+        // .navbar-toggler[aria-expanded='true'] {
+        //     .navbar-toggler-icon {
+        //         // background-image: url(../images/times-solid.svg);
+        //         // font-size: 18px;
+        //         position: absolute;
+        //         content: "";
+        //         width: 30px;
+        //         height: 3px;
+        //         background: red;
 
-            }
+        //     }
 
-        }
+        // }
 
-        .navbar-toggler.collapsed {
-            .icon-close {
-                background-image: url(../images/download.svg) !important;
+        // .navbar-toggler.collapsed {
+        //     .icon-close {
+        //         background-image: url(../images/download.svg) !important;
 
-            }
-        }
+        //     }
+        // }
 
         .navbar-brand {
             color: $colorBlue;
