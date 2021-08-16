@@ -24,7 +24,6 @@ $(document).ready(function () {
   }
   // END COLLPASE IN FOOTER
 
-
   // ===================START HOME PAGE=================================
   if ($(".home-page").length > 0) {
     // START TIMER
@@ -114,174 +113,120 @@ $(document).ready(function () {
     }
     // END  CHANGE CARD SECTION TO SLIDER
 
-    // POST request using fetch()
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      // Adding method type
-      method: "POST",
-
-      // Adding body or contents to send
-      body: JSON.stringify({
-        title: "foo",
-        body: "bar",
-        userId: 1,
-      }),
-
-      // Adding headers to the request
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      // Converting to JSON
-      .then((response) => response.json())
-
-      // Displaying results to console
-      .then((json) => console.log(json));
-
-
-    // START VALIDATION IN SUBSCRIBE SECTION   
+    // START VALIDATION IN SUBSCRIBE SECTION
     $(".subscribe-now__content__form").validate({
       rules: {
         email: {
           required: true,
-          email: true
-        }
-      }
+          email: true,
+        },
+      },
     });
-    // END VALIDATION IN SUBSCRIBE SECTION   
+    // END VALIDATION IN SUBSCRIBE SECTION
   }
-
 
   // ===================END HOME PAGE===================================
 
-
   //==================== START LISTING PAGE=============================
-  
   if ($(".listing-page").length > 0) {
-<<<<<<< HEAD
-    let filter =  $('.filter')
-    filter.on('change' , function (){
-    id = filter.val();
-    getListingCard();
+    let id = "";
+    let posts;
+    let listingWrapper = $(".wrapper-listing");
+    let filterItems = [];
+    let newArr = [];
+
+    let categories = $("#categories-list");
+
+    function filterCategoriesList(selectedId) {
+      let filteredCatIndex = posts
+        .map((ele) => {
+          return ele.id;
+        })
+        .indexOf(+selectedId);
+      // debugger
+      filterItems = posts[filteredCatIndex].items;
+      fillListItems(posts[filteredCatIndex].items);
+    }
+
+    function filterLanguages(languageName) {
+      if (filterItems.length == 0) {
+        newArr.forEach((ele) => {
+          if (ele.lang == languageName) {
+            filterItems = filterItems.concat(ele);
+          }
+        });
+        console.log("filllter languases", filterItems);
+      } else {
+        filterItems = filterItems.filter((ele) => {
+          return ele.lang == languageName;
+        });
+        console.log("filllter lang", filterItems);
+      }
+    }
+
+    function filterInstructor(instructorName) {
+      if (filterItems.length == 0) {
+        newArr.forEach((ele) => {
+          if (ele.instructor == instructorName) {
+            filterItems = filterItems.concat(ele);
+          }
+        });
+        console.log("filllter instructor", filterItems);
+      } else {
+        filterItems = filterItems.filter((ele) => {
+          return ele.instructor == instructorName;
+        });
+        console.log("filllter instruct", filterItems);
+      }
+    }
+    categories.on("change", function () {
+      id = categories.val();
+      filterCategoriesList(id);
+      console.log("categor", filterItems);
     });
-    // let categories = $("#Categories");
-    // categories.on("change", function () {
-    //   id = categories.val();
-    //   // getListingCard(id);
-    // });
-    // let categories = $("#Categories");
-    // Languages.on("change", function () {
-    //   id = Languages.val();
-    //   // getListingCard(id);
-    // });
-    // let instructors = $("#instructors");
-    // instructors.on("change", function () {
-    //   id = instructors.val();
-    //   // getListingCard(id);
-    // });
-    // let Level = $("#Level");
-    // Level.on("change", function () {
-    //   id = Level.val();
-    //   getListingCard(id);
-    // });
+
+    let languages = $("#languages");
+    let languageName;
+    languages.on("change", function () {
+      languageName = languages.val();
+      filterLanguages(languageName);
+    });
+
+    let instructors = $("#instructors");
+    let instructorName;
+    instructors.on("change", function () {
+      instructorName = instructors.val();
+      filterInstructor(instructorName);
+    });
+
+    let Level = $("#Level");
+    Level.on("change", function () {
+      id = Level.val();
+      getListingCard(id);
+    });
+
     // let observer = new IntersectionObserver((entries) => {
     //   console.log("entrieeee", entries);
     //   getListingCard(id)
     // });
     // let target = document.querySelector(".subscribe-now");
     // observer.observe(target);
-=======
-    let posts;
-    let listingWrapper = $(".wrapper-listing");
-    let filterItems =[];
-    let newArr = [];
 
-    let categories = $("#categories-list");
-    function filterCategoriesList(selectedId){
-      let filteredCatIndex = posts.map((ele) =>{return ele.id  }).indexOf(+selectedId)
+    let isCatFill = false;
 
-      debugger
-      filterItems =posts[filteredCatIndex].items;
-    
-      fillListItems(posts[filteredCatIndex].items)
-  
-  
-    }
-    function filterInstructor(instructorName){
-      if(filterItems.length ==0) {
-        // let 
-        debugger
-        newArr.forEach((ele)=>{
-         if(ele.instructor == instructorName) {
-          filterItems =filterItems.concat(ele)
-         }
-        })
-        console.log("filllter instructor", filterItems)
-
-      } else{
-        filterItems = filterItems.filter((ele)=>{
-          return ele.instructor ==instructorName
-        })
-        console.log("filllter instructor", filterItems)
-
-      }
-
-    }
-    categories.on("change", function () {
-      debugger
-      id = categories.val();
-      filterCategoriesList(id)
-
-      // getListingCard(id);
-    });
-    console.log("categor", categories)
-    // categories.change(function () {
-    //   alert("The text has been changed.");
-    // });
-    // categories.addEventListener('change', (event) => {
-    //   // const result = document.querySelector('.result');
-    //   // result.textContent = `You like ${event.target.value}`;
-    //   alert("The text has been changed.");
-
-    // });
-    let instructors = $("#instructors");
-    let instructorName; 
-    instructors.on("change", function () {
-      instructorName = instructors.val();
-      filterInstructor(instructorName)
-    });
-    let Level = $("#Level");
-    Level.on("change", function () {
-      id = Level.val();
-      getListingCard(id);
-    });
-    let observer = new IntersectionObserver((entries) => {
-      console.log("entrieeee", entries);
-      getListingCard(id)
-    });
-    let target = document.querySelector(".subscribe-now");
-    observer.observe(target);
->>>>>>> c368a6b87a10b6db6d4201587815f5f36f829d02
-
-    let isCatFill = false
-    function fillCategores(posts){
-      debugger
-      
-      posts.forEach((ele)=>{
+    function fillCategores(posts) {
+      posts.forEach((ele) => {
         categories.append(`
           <option value="${ele.id}">${ele.level}</option>
-        `)
-
-      })
-      isCatFill = true
-
+        `);
+      });
+      isCatFill = true;
     }
     async function getListingCard(id) {
-      let response = await fetch('listing.json');
-      // debugger;
+      let response = await fetch("listing.json");
       posts = await response.json();
-      if(!isCatFill) {
-        fillCategores(posts)
-
+      if (!isCatFill) {
+        fillCategores(posts);
       }
       console.log("poooooste", posts);
 
@@ -289,20 +234,20 @@ $(document).ready(function () {
         $(".wrapper-listing").empty();
         newArr.push(posts);
       } else {
-        posts.forEach((ele)=>{
-          newArr.push(...ele.items) //spread  es5
-
-        })
-        console.log(newArr)
+        posts.forEach((ele) => {
+          newArr.push(...ele.items); //spread  es5
+        });
+        console.log(newArr);
       }
-      fillListItems(newArr)
- 
+      fillListItems(newArr);
+      filterLanguages(languageName);
     }
-    function fillListItems(list){
-      listingWrapper.empty()
-      list.forEach((post, index) => {
-          listingWrapper.append(`
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col--edit">
+
+    function fillListItems(list) {
+      listingWrapper.empty();
+      list.forEach((post) => {
+        listingWrapper.append(`
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col--edit">
             <div class="my-card">
               <div class="my-card__image outer">
                 <img src="${post.imgUrl}" alt="" class="inner" />
@@ -320,45 +265,26 @@ $(document).ready(function () {
             </div>
           </div>
       `);
-        
       });
-      
     }
     getListingCard(id);
 
-    let levelsCat = $("#Categories");
-    levelsCat.on('change', function () {
-      debugger
-      console.log(this.val)
-    })
+    // let levelsCat = $("#Categories");
+    // levelsCat.on('change', function () {
+    //   console.log("haaaaard" , this.val)
+    // })
 
-<<<<<<< HEAD
-
-    // START VALIDATION IN SUBSCRIBE SECTION   
-          $(".subscribe-now__content__form").validate({
-            rules: {
-              email: {
-                required: true,
-                email: true
-              }
-            }
-          });
-=======
-    // START VALIDATION IN SUBSCRIBE SECTION   
+    // START VALIDATION IN SUBSCRIBE SECTION
     $(".subscribe-now__content__form").validate({
       rules: {
         email: {
           required: true,
-          email: true
-        }
-      }
+          email: true,
+        },
+      },
     });
->>>>>>> c368a6b87a10b6db6d4201587815f5f36f829d02
-    // END VALIDATION IN SUBSCRIBE SECTION  
-
+    // END VALIDATION IN SUBSCRIBE SECTION
   }
-
-
 
   //===================== END LISTING PAGE==============================
 
@@ -390,19 +316,18 @@ $(document).ready(function () {
       });
     });
   }
-});
 
-// ====================== END PRICE PAGE ===============================
-// =======================START CONTACT PAGE============================ 
+  // ====================== END PRICE PAGE ===============================
+// =======================START CONTACT PAGE============================
 if ($(".contact-us-page").length > 0) {
-  // START VALIDATION IN CONTACT FORM   
-  // END VALIDATION IN CONTACT FORM 
-  $("#contact-form").validate()
+  // START VALIDATION IN CONTACT FORM
+  // END VALIDATION IN CONTACT FORM
+  $("#contact-form").validate();
 }
-// =======================END CONTACT PAGE============================ 
+// =======================END CONTACT PAGE============================
 
-// ======================START SIGN UP PAGE================= 
-if ($('.sign-up-page').length > 0) {
+// ======================START SIGN UP PAGE=================
+if ($(".sign-up-page").length > 0) {
   $("#sign-up-form").validate({
     rules: {
       username: {
@@ -411,14 +336,17 @@ if ($('.sign-up-page').length > 0) {
       },
       password: {
         required: true,
-        minlength: 8
+        minlength: 8,
       },
       confirm_password: {
         required: true,
         minlength: 8,
-        equalTo: '#password'
-      }
-    }
-  })
+        equalTo: "#password",
+      },
+    },
+  });
 }
-      // ======================END SIGN UP PAGE=================
+// ======================END SIGN UP PAGE=================
+});
+
+

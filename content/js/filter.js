@@ -29,7 +29,7 @@ $(document).ready(function () {
 
       } else {
         filterItems = filterItems.filter((ele) => {
-          return ele.language == languageName
+          return ele.lang == languageName
         })
         console.log("filllter lang", filterItems)
 
@@ -46,13 +46,13 @@ $(document).ready(function () {
         console.log("filllter instructor", filterItems)
 
       }
-      //  else {
-      //   filterItems = filterItems.filter((ele) => {
-      //     return ele.instructor == instructorName
-      //   })
-      //   console.log("filllter instruct", filterItems)
+      else {
+        filterItems = filterItems.filter((ele) => {
+          return ele.instructor == instructorName
+        })
+        console.log("filllter instruct", filterItems)
 
-      // }
+      }
 
     }
     categories.on("change", function () {
@@ -118,7 +118,8 @@ $(document).ready(function () {
         })
         console.log(newArr)
       }
-      fillListItems(newArr)
+      fillListItems(newArr);
+      filterLanguages(languageName);
 
     }
 
