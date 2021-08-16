@@ -156,27 +156,37 @@ $(document).ready(function () {
 
   //==================== START LISTING PAGE=============================
   if ($(".listing-page").length > 0) {
-    let categories = $("#Categories");
-    categories.on("change", function () {
-      id = categories.val();
-      getListingCard(id);
+    let filter =  $('.filter')
+    filter.on('change' , function (){
+    id = filter.val();
+    getListingCard();
     });
-    let instructors = $("#instructors");
-    instructors.on("change", function () {
-      id = instructors.val();
-      getListingCard(id);
-    });
-    let Level = $("#Level");
-    Level.on("change", function () {
-      id = Level.val();
-      getListingCard(id);
-    });
-    let observer = new IntersectionObserver((entries) => {
-      console.log("entrieeee", entries);
-      getListingCard(id)
-    });
-    let target = document.querySelector(".subscribe-now");
-    observer.observe(target);
+    // let categories = $("#Categories");
+    // categories.on("change", function () {
+    //   id = categories.val();
+    //   // getListingCard(id);
+    // });
+    // let categories = $("#Categories");
+    // Languages.on("change", function () {
+    //   id = Languages.val();
+    //   // getListingCard(id);
+    // });
+    // let instructors = $("#instructors");
+    // instructors.on("change", function () {
+    //   id = instructors.val();
+    //   // getListingCard(id);
+    // });
+    // let Level = $("#Level");
+    // Level.on("change", function () {
+    //   id = Level.val();
+    //   getListingCard(id);
+    // });
+    // let observer = new IntersectionObserver((entries) => {
+    //   console.log("entrieeee", entries);
+    //   getListingCard(id)
+    // });
+    // let target = document.querySelector(".subscribe-now");
+    // observer.observe(target);
 
 
     async function getListingCard(id) {
@@ -220,7 +230,7 @@ $(document).ready(function () {
 
 
 
-          // START VALIDATION IN SUBSCRIBE SECTION   
+    // START VALIDATION IN SUBSCRIBE SECTION   
           $(".subscribe-now__content__form").validate({
             rules: {
               email: {
@@ -229,7 +239,7 @@ $(document).ready(function () {
               }
             }
           });
-        // END VALIDATION IN SUBSCRIBE SECTION  
+    // END VALIDATION IN SUBSCRIBE SECTION  
 
   }
 

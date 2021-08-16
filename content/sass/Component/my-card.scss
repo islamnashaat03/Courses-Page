@@ -7,39 +7,47 @@
     background-color: $colorWhite;
     position: relative;
 
-    .my-card__image{
+    .my-card__image {
         width: 100%;
         position: relative;
         margin-bottom: 30px;
         border-radius: 6px;
-        img{width: 100%;}
-    
+
+        img {
+            width: 100%;
+        }
+
     }
-    .my-card__small-img{
+
+    .my-card__small-img {
         background-color: #f0f4f9;
         padding: 5px;
         position: absolute;
         bottom: -15px;
         left: 16px;
     }
-    .my-card__body{
+
+    .my-card__body {
         padding: 8px;
     }
-    .my-card__title{
+
+    .my-card__title {
         font-family: $interFont;
         font-weight: bold;
         line-height: 1.2;
         color: $colorBlue;
         font-size: 20px;
-        font-size: calc(14px + ((20 - 14 )*((100vw - 1366px)/(1920 - 1366))));
+        font-size: calc(14px + ((20 - 14)*((100vw - 1366px)/(1920 - 1366))));
     }
-    .my-card__paragraph{
+
+    .my-card__paragraph {
         font-family: $interFont;
         font-size: 14px;
         line-height: 1.71;
         color: #757575;
     }
-    .card-page-link-overlay{
+
+    .card-page-link-overlay {
         position: absolute;
         left: 0;
         right: 0;
@@ -47,15 +55,10 @@
         bottom: 0;
     }
 }
-@media only screen and (max-width:768px ){
-    .my-card{
-        .my-card__title{
-            font-size: calc(14px + ((20 - 14 )*((100vw - 320px)/(1366 - 320))));
-        }
-    }
-}
+
 .outer {
     position: relative;
+
     &:before {
         display: block;
         content: "";
@@ -63,11 +66,20 @@
         padding-top: 56.25%;
         // padding-top: math.div(9, 16)
     }
-    > .inner {
+
+    >.inner {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .my-card {
+        .my-card__title {
+            font-size: calc(14px + ((20 - 14)*((100vw - 320px)/(1366 - 320))));
+        }
     }
 }
