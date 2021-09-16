@@ -8,23 +8,42 @@ $(document).ready(function () {
     $("#searchDiv").removeClass("active");
   });
   // END  SEARCH DIV IN NAV BAR
-  $('#icon-nav').click(function () {
-    $(this).toggleClass('open');
+  $("#icon-nav").click(function () {
+    $(this).toggleClass("open");
   });
 
   // START COLLAPSE  IN FOOTER
   if (window.matchMedia("(min-width:991px)").matches) {
     $(".accordion-collapse").addClass("show");
-
-  } else{
+  } else {
     $(".accordion-collapse").removeClass("show");
   }
   // END COLLPASE IN FOOTER
 
+  // START SCROLL TO TOP BUTTON
+  if (window.matchMedia('(min-width:992px)').matches){
+    let span = document.querySelector(".up");
+    window.onscroll = () => {
+      if (scrollY >= 800) {
+        span.classList.add("active");
+      } else {
+        span.classList.remove("active");
+      }
+    };
+    span.onclick = () => {
+      window.scrollTo({
+        top:0,
+        behavior:"smooth",
+      })
+    }
+  }
+  
+  // END SCROLL TO TOP BUTTON
+
   // ===================START HOME PAGE=================================
   if ($(".home-page").length > 0) {
     // START TIMER
-    var countDownDate = new Date("Jul 12, 2021 12:00:00").getTime(),
+    var countDownDate = new Date("dec 12, 2021 12:00:00").getTime(),
       myfunc = setInterval(function () {
         var now = new Date().getTime(),
           timeleft = countDownDate - now,
@@ -58,8 +77,8 @@ $(document).ready(function () {
     // START COUNTER
     $(window).on("scroll", function () {
       let scrollTop = Math.ceil(Number($(window).scrollTop()));
-      let pageY = pageYOffset;
-      console.log("scrollTopscrollTopscrollTopscrollTop", scrollTop, pageY);
+      let pageY = scrollY;
+      // console.log("scrollTopscrollTopscrollTopscrollTop", scrollTop, pageY);
       if (window.pageYOffset > 2600) {
         const counters = document.querySelectorAll(".course-published__count");
         const speed = 2000;
