@@ -20,25 +20,7 @@ $(document).ready(function () {
   }
   // END COLLPASE IN FOOTER
 
-  // START SCROLL TO TOP BUTTON
-  if (window.matchMedia('(min-width:992px)').matches){
-    let span = document.querySelector(".up");
-    window.onscroll = () => {
-      if (scrollY >= 800) {
-        span.classList.add("active");
-      } else {
-        span.classList.remove("active");
-      }
-    };
-    span.onclick = () => {
-      window.scrollTo({
-        top:0,
-        behavior:"smooth",
-      })
-    }
-  }
-  
-  // END SCROLL TO TOP BUTTON
+ 
 
   // ===================START HOME PAGE=================================
   if ($(".home-page").length > 0) {
@@ -139,6 +121,25 @@ $(document).ready(function () {
       },
     });
     // END VALIDATION IN SUBSCRIBE SECTION
+
+     // START SCROLL TO TOP BUTTON
+  if (window.matchMedia('(min-width:992px)').matches){
+    let span = document.querySelector(".up");
+    window.onscroll = () => {
+      if (scrollY >= 800) {
+        span.classList.add("active");
+      } else {
+        span.classList.remove("active");
+      }
+    };
+    span.onclick = () => {
+      window.scrollTo({
+        top:0,
+        behavior:"smooth",
+      })
+    }
+  }
+  // END SCROLL TO TOP BUTTON
   }
 
   // ===================END HOME PAGE===================================
