@@ -1,5 +1,5 @@
 @font-face {
-    font-family:'inter-regular' ;
+    font-family: 'inter-regular';
     src: url('fonts/inter-regular-font/inter-regular.eot');
     src: url('fonts/inter-regular-font/inter-regular.otf');
     src: url('fonts/inter-regular-font/inter-regular.svg');
@@ -7,6 +7,7 @@
     src: url('fonts/inter-regular-font/inter-regular.woff');
     src: url('fonts/inter-regular-font/inter-regular.woff2');
 }
+
 @font-face {
     font-family: 'georgia-regular-font';
     src: url('fonts/georgia-font/georgia-regular-font.eot');
@@ -19,8 +20,8 @@
 
 $georgiaFont:'georgia-regular-font';
 $interFont:'inter-regular';
-$colorYellow:#fdc800;  
-$colorBlue:#002147;    
-$colorBackground:#f0f4f9; 
-$colorWhite:#fff;       
-$colorLight: #bdbdbd 
+$colorYellow:#fdc800;
+$colorBlue:#002147;
+$colorBackground:#f0f4f9;
+$colorWhite:#fff;
+$colorLight: #bdbdbd

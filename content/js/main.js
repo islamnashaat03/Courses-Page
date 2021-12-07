@@ -36,10 +36,10 @@ $(document).ready(function () {
           minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60)),
           seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("mins").innerHTML = minutes;
-        document.getElementById("secs").innerHTML = seconds;
+        document.getElementById("days").innerHTML = days < 10 ? `0${days} ` : days;
+        document.getElementById("hours").innerHTML = hours < 10 ? `0${hours} ` : hours;
+        document.getElementById("mins").innerHTML = minutes < 10 ? `0${minutes} ` : minutes;
+        document.getElementById("secs").innerHTML = seconds < 10 ? `0${seconds} ` : seconds;
 
         if (timeleft < 0) {
           clearInterval(myfunc);

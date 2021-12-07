@@ -1,7 +1,8 @@
-.subscribe-now{
+.subscribe-now {
     padding: 80px 0;
-    .subscribe-now__content{
-        .subscribe-now__content__title{
+
+    .subscribe-now__content {
+        .subscribe-now__content__title {
             font-family: $interFont;
             line-height: 3.75;
             text-align: left;
@@ -9,26 +10,29 @@
             font-weight: bold;
             margin-bottom: -15px;
         }
-        .subscribe-now__content__quote{
+
+        .subscribe-now__content__quote {
             font-family: $georgiaFont;
             font-weight: bold;
             line-height: 1.25;
             text-align: left;
             color: $colorBlue;
-            font-size: calc( 42px + ((48 - 42 ) * ((100vw - 1366px ) / (1920 - 1366 ))));
+            font-size: calc(42px + ((48 - 42) * ((100vw - 1366px) / (1920 - 1366))));
             margin-bottom: 26px;
         }
-        .subscribe-now__content__form{
+
+        .subscribe-now__content__form {
             position: relative;
-            
-            input{
+
+            input {
                 outline: 0;
                 border: 1px solid #bdbdbd;
                 border-radius: 4px;
                 padding: 15px;
                 width: 100%;
                 padding-left: 35px;
-                &::placeholder{
+
+                &::placeholder {
                     font-family: $interFont;
                     font-size: 16px;
                     line-height: 3.75;
@@ -36,10 +40,12 @@
                     color: #bdbdbd;
                 }
             }
-            .field-requierd{
+
+            .field-requierd {
                 border: 1px solid red;
             }
-            button{
+
+            button {
                 @extend.my-btn;
                 position: absolute;
                 right: 6px;
@@ -49,8 +55,19 @@
                 line-height: 1.31;
                 text-align: center;
                 padding: 10px 25px;
+                transition: .5s;
+
+                &:hover,
+                &:focus {
+                    box-shadow: inset 165px 0 0 0 $colorBlue;
+                    border: 1px solid $colorBlue;
+                    color: #fff;
+                    transition: .5s;
+
+                }
             }
-            .icon-message{
+
+            .icon-message {
                 position: absolute;
                 left: 15px;
                 top: 20px;
@@ -58,26 +75,28 @@
         }
     }
 }
-@media only  screen and (max-width:768px) {
-    .subscribe-now{
-        .subscribe-now__content{
-            .subscribe-now__content__form{
-            // padding: 15px ;
-            button{
-                padding: 10px 10px;
+
+@media only screen and (max-width:768px) {
+    .subscribe-now {
+        .subscribe-now__content {
+            .subscribe-now__content__form {
+
+                // padding: 15px ;
+                button {
+                    padding: 10px 10px;
+                }
             }
         }
-        }
-        
+
     }
 }
+
 @media only screen and (min-width:1024px) {
     .subscribe-now {
-        .subscribe-now__content{
-            .subscribe-now__content__quote{
+        .subscribe-now__content {
+            .subscribe-now__content__quote {
                 width: 75%;
             }
         }
-    }  
+    }
 }
-    

@@ -6,6 +6,7 @@
     border-radius: 6px;
     background-color: $colorWhite;
     position: relative;
+    transition: .3s;
 
     .my-card__image {
         width: 100%;
@@ -53,6 +54,11 @@
         right: 0;
         top: 0;
         bottom: 0;
+    }
+
+    &:hover {
+        transform: translateY(-15px);
+        transition: .3s;
     }
 }
 

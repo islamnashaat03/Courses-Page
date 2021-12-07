@@ -1,7 +1,8 @@
-.page-title{
+.page-title {
   background-color: $colorBackground;
   padding-bottom: 360px;
-  .page-title__first-head{
+
+  .page-title__first-head {
     font-family: $interFont;
     font-size: 16px;
     font-weight: bold;
@@ -10,19 +11,21 @@
     color: $colorYellow;
     margin-bottom: -15px;
   }
-  .page-title__second-head{
+
+  .page-title__second-head {
     font-family: $georgiaFont;
-    font-size: calc(42px + ((48 - 42 ) * ((100vw - 1366px) / (1920 - 1366 )) ));
+    font-size: calc(42px + ((48 - 42) * ((100vw - 1366px) / (1920 - 1366))));
     font-weight: bold;
     line-height: 1.25;
     text-align: left;
     color: $colorBlue;
-  } 
+  }
 }
-@media only screen and (max-width:768px){
-  .page-title{
-    .page-title__second-head{
-      font-size: calc(28px + ((34 - 28 ) * ((100vw - 320px) / (1366 - 320 )) ));
+
+@media only screen and (max-width:768px) {
+  .page-title {
+    .page-title__second-head {
+      font-size: calc(28px + ((34 - 28) * ((100vw - 320px) / (1366 - 320))));
       margin-bottom: 20px;
     }
   }

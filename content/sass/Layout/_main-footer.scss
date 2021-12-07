@@ -1,190 +1,209 @@
 .main-footer {
-    background-color: $colorBlue;
-    color: $colorWhite;
-    padding-top: 72px;
+  background-color: $colorBlue;
+  color: $colorWhite;
+  padding-top: 72px;
 
-    .main-footer__contact-info {
-        display: flex;
-        flex-direction: column;
+  .main-footer__contact-info {
+    display: flex;
+    flex-direction: column;
 
-        .main-footer__contact-info__links {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            text-align: center;
+    .main-footer__contact-info__links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      text-align: center;
 
-            a {
-                margin: 10px 0;
-            }
-
-            h5 {
-                font-family: $interFont;
-                font-size: 20px;
-                font-weight: bold;
-                line-height: 1.8;
-                text-align: left;
-                color: $colorWhite;
-            }
-        }
-
-        .main-footer__contact-info__title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            h4 {
-                margin-bottom: 0;
-                font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
-            }
-
-        }
-    }
-
-    .main-footer__links {
-      .accordion-item{
-        border: 0;
+      a {
         margin: 10px 0;
-          .accordion-header{
-            .accordion-button{
-              background-color: $colorBlue;
-              color: $colorWhite;
-              box-shadow: none;
-              padding: 0;
-              font-weight: bold;
-              font-size: 20px;
-              border-radius: 0;
-              pointer-events: none;
-              &::after{
-                display: none;
-              }
-            }
-          }
-          .accordion-collapse{
-            .accordion-body{
-              background-color: $colorBlue;
-              padding: 15px;
-              .main-footer__links--edit {
-                background-color: $colorBlue;
-                display: flex;
-                flex-direction: column;
-                font-family: $interFont;
-                line-height: 2.25;
-                text-align: left;
+      }
 
-                a {
-                    padding-#{$start}: 15px;
-                    font-size: 16px;
-                    margin: 5px 0;
-                }
-            }
-            .main-footer__links--edit.active {
-              display: flex;
-
-          }
-            }
-          }
+      h5 {
+        font-family: $interFont;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.8;
+        text-align: left;
+        color: $colorWhite;
       }
     }
 
-    .main-footer__copyright {
-        background-color: $colorYellow;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px;
-        margin-top: 30px;
+    .main-footer__contact-info__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        .main-footer__copyright__social-item {
-            margin: 0 8px;
-            color: #212529;
-            font-size: 23px;
-        }
+      h4 {
+        margin-bottom: 0;
+        font-size: calc(24px + ((30 - 24)*((100vw - 1366px)/(1920-1366))));
+      }
 
-        p {
-            font-family: $interFont;
-            font-size: 15px;
-            text-align: left;
-            color: $colorBlue;
-            margin-bottom: 0;
-        }
     }
-}
-@media only screen and (max-width:991px) {
-    .main-footer{
-        .row--edit{flex-direction: column;}
-        .main-footer__links {
-            margin-top: 15px;
-            .accordion-item{
-              border: 0;
-              margin: 10px 0;
-                .accordion-header{
-                  .accordion-button{
-                    background-color: $colorBlue;
-                    color: $colorWhite;
-                    box-shadow: none;
-                    padding: 0;
-                    font-weight: bold;
-                    font-size: 20px;
-                    border-radius: 0;
-                    pointer-events: all;
-                    &::after{
-                      display: none;
-                    }
-                    &::before{
-                      content: '\e90a';
-                      font-family: "icomoon";
-                      margin-right: 10px;
-                      font-weight: normal;
-                      font-size: 16px;
-                  
-                  }
-                  }
-                  .accordion-button[aria-expanded='true']{
-                    &::before{
-                      content: '\e909';
-                    font-family: 'icomoon';
-                    margin-right: 10px;
-                    font-weight: normal;
-                    font-size: 16px;
-                    }
-                  }
-                }
-                .accordion-collapse{
-                  .accordion-body{
-                    background-color: $colorBlue;
-                    .main-footer__links--edit {
-                      background-color: $colorBlue;
-      
-                      a {
-                          padding-#{$start}: 35px;
-                      }
-                  }
-                  .main-footer__links--edit.active {
-                    display: flex;
-    
-                }
-                  }
-                }
-            }
+  }
+
+  .main-footer__links {
+    .accordion-item {
+      border: 0;
+      margin: 10px 0;
+
+      .accordion-header {
+        .accordion-button {
+          background-color: $colorBlue;
+          color: $colorWhite;
+          box-shadow: none;
+          padding: 0;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0;
+          pointer-events: none;
+
+          &::after {
+            display: none;
+          }
         }
-    }
-}
-@media only screen and (max-width:767px) {
-    .main-footer {
-        .main-footer__copyright {
+      }
+
+      .accordion-collapse {
+        .accordion-body {
+          background-color: $colorBlue;
+          padding: 15px;
+
+          .main-footer__links--edit {
+            background-color: $colorBlue;
+            display: flex;
             flex-direction: column;
-            padding: 20px 0 10px ;
-            .main-footer__copyright__social-item {
-                margin: 0 4px;
+            font-family: $interFont;
+            line-height: 2.25;
+            text-align: left;
+
+            a {
+              padding-#{$start}: 15px;
+              font-size: 16px;
+              margin: 5px 0;
+            }
+          }
+
+          .main-footer__links--edit.active {
+            display: flex;
+
+          }
+        }
+      }
+    }
+  }
+
+  .main-footer__copyright {
+    background-color: $colorYellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 30px;
+
+    .main-footer__copyright__social-item {
+      margin: 0 8px;
+      color: #212529;
+      font-size: 23px;
+    }
+
+    p {
+      font-family: $interFont;
+      font-size: 15px;
+      text-align: left;
+      color: $colorBlue;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width:991px) {
+  .main-footer {
+    .row--edit {
+      flex-direction: column;
+    }
+
+    .main-footer__links {
+      margin-top: 15px;
+
+      .accordion-item {
+        border: 0;
+        margin: 10px 0;
+
+        .accordion-header {
+          .accordion-button {
+            background-color: $colorBlue;
+            color: $colorWhite;
+            box-shadow: none;
+            padding: 0;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0;
+            pointer-events: all;
+
+            &::after {
+              display: none;
             }
 
-            p {
-                margin-bottom: 8px;
+            &::before {
+              content: '\e90a';
+              font-family: "icomoon";
+              margin-right: 10px;
+              font-weight: normal;
+              font-size: 16px;
+
             }
+          }
+
+          .accordion-button[aria-expanded='true'] {
+            &::before {
+              content: '\e909';
+              font-family: 'icomoon';
+              margin-right: 10px;
+              font-weight: normal;
+              font-size: 16px;
+            }
+          }
         }
 
-        
+        .accordion-collapse {
+          .accordion-body {
+            background-color: $colorBlue;
 
+            .main-footer__links--edit {
+              background-color: $colorBlue;
+
+              a {
+                padding-#{$start}: 35px;
+              }
+            }
+
+            .main-footer__links--edit.active {
+              display: flex;
+
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .main-footer {
+    .main-footer__copyright {
+      flex-direction: column;
+      padding: 20px 0 10px;
+
+      .main-footer__copyright__social-item {
+        margin: 0 4px;
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+
+
+
+  }
 
 }

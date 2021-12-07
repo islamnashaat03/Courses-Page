@@ -118,19 +118,32 @@
     padding: 13px 70px;
     min-width: 130px;
     font-size: 22px;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 280px 0 0 0 $colorBlue;
+      border: 1px solid $colorBlue;
+      color: #fff;
+      transition: .5s;
+
+    }
   }
 }
+
 @media only screen and (max-width:768px) {
-  .card-details{
+  .card-details {
     .row-edit {
       .col-8--edit {
         margin-bottom: 20px;
       }
     }
-    .card-details__brief{
-      .card-details__brief__header{
+
+    .card-details__brief {
+      .card-details__brief__header {
         font-size: calc(25px + ((31 - 25) * ((100vw - 320px) / (1366 - 320))));
       }
+
       .card-details__brief__paragraph {
         font-size: 14px;
       }

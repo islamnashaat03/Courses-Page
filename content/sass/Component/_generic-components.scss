@@ -1,31 +1,45 @@
-html{
+html {
     font-size: 16px;
 }
-img{
+
+img {
     max-width: 100%;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
-    &:hover{
+
+    &:hover {
         color: inherit;
     }
 }
-.btn:focus{box-shadow: none;}
-.flex-center{
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-.my-btn{
+
+.my-btn {
     background-color: $colorYellow;
     border: 1px solid $colorYellow;
     font-family: $interFont;
     color: $colorBlue;
 }
-@media only  screen and (min-width:1366px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl{
+
+@media only screen and (min-width:1366px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
         max-width: 1170px;
         padding: 0;
     }

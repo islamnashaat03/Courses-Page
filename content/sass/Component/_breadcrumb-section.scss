@@ -1,24 +1,29 @@
-.breadcrumb-section{
+.breadcrumb-section {
   background-color: $colorBackground;
   padding-bottom: 25px;
-  .breadcrumb{
+
+  .breadcrumb {
     margin-bottom: 0;
-    background-color:$colorWhite;
+    background-color: $colorWhite;
     padding: 10px;
     // color: $colorYellow;
     font-weight: bold;
     font-family: $interFont;
-    .breadcrumb-item+.breadcrumb-item::before{
-      color: $colorYellow ;
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      color: $colorYellow;
     }
-    .breadcrumb-item{
-      color: $colorYellow ;
+
+    .breadcrumb-item {
+      color: $colorYellow;
     }
-    .breadcrumb-item.active{
+
+    .breadcrumb-item.active {
       color: $colorLight;
     }
   }
 }
+
 // .breadcrumb-section--edit{
 //   margin-bottom: 30px;
 // }

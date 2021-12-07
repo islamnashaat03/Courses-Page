@@ -45,33 +45,36 @@
             transform: rotate(0deg);
             transition: .5s ease-in-out;
             cursor: pointer;
-            margin-#{$end}:12px ;
-            .navbar-toggler-icon{
+            margin-#{$end}: 12px;
+
+            .navbar-toggler-icon {
                 background-image: none;
-                position: absolute;
-                display: block;
-                content: "";
-                width:100%;
-                height: 3px;
-                background-color: $colorBlue;
-                top: 0;
-                opacity: 1;
-                transform-origin: left center;
-                transition: .25s ease-in-out;
-                &::after{
                 position: absolute;
                 display: block;
                 content: "";
                 width: 100%;
                 height: 3px;
                 background-color: $colorBlue;
-                top: 10px;
-                left: 0;
+                top: 0;
                 opacity: 1;
                 transform-origin: left center;
                 transition: .25s ease-in-out;
+
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: $colorBlue;
+                    top: 10px;
+                    left: 0;
+                    opacity: 1;
+                    transform-origin: left center;
+                    transition: .25s ease-in-out;
                 }
-                &::before{
+
+                &::before {
                     position: absolute;
                     display: block;
                     content: "";
@@ -85,19 +88,22 @@
                     transition: .25s ease-in-out;
                 }
             }
-            
+
 
         }
-        .navbar-toggler.open{
-            .navbar-toggler-icon{
+
+        .navbar-toggler.open {
+            .navbar-toggler-icon {
                 transform: rotate(45deg);
                 top: 0;
                 left: 8px;
-                &::after{
+
+                &::after {
                     width: 0%;
                     opacity: 0;
                 }
-                &::before{
+
+                &::before {
                     transform: rotate(-92deg);
                     top: 15px;
                     left: 15px;
@@ -109,27 +115,6 @@
         .navbar-toggler:focus {
             box-shadow: none;
         }
-
-        // .navbar-toggler[aria-expanded='true'] {
-        //     .navbar-toggler-icon {
-        //         // background-image: url(../images/times-solid.svg);
-        //         // font-size: 18px;
-        //         position: absolute;
-        //         content: "";
-        //         width: 30px;
-        //         height: 3px;
-        //         background: red;
-
-        //     }
-
-        // }
-
-        // .navbar-toggler.collapsed {
-        //     .icon-close {
-        //         background-image: url(../images/download.svg) !important;
-
-        //     }
-        // }
 
         .navbar-brand {
             color: $colorBlue;
@@ -143,6 +128,9 @@
 
         .navbar-nav {
             .nav-item {
+                transition: .3s;
+                position: relative;
+
                 .nav-link {
                     font-family: $interFont;
                     color: $colorBlue;
@@ -150,6 +138,24 @@
                     font-weight: bold;
                     font-size: calc(16px + ((22 - 16)*((100vw - 1366px)/(1920-1366))));
                     padding-right: 27px;
+                    transition: .3s;
+                }
+
+                &::after {
+                    position: absolute;
+                    left: 8px;
+                    content: "";
+                    width: 0;
+                    height: 3px;
+                    background-color: $colorBlue;
+                    transition: .3s;
+                }
+
+                &:hover {
+                    &::after {
+                        width: calc(100% - 35px);
+                        transition: .3s;
+                    }
                 }
             }
         }
@@ -168,6 +174,16 @@
             @extend.my-btn;
             padding: 9px 28px;
             margin: 0 15px 0 35px;
+            transition: .5s;
+
+            &:hover,
+            &:focus {
+                box-shadow: inset 165px 0 0 0 $colorBlue;
+                border: 1px solid $colorBlue;
+                color: #fff;
+                transition: .5s;
+
+            }
         }
     }
 }

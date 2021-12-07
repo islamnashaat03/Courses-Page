@@ -98,15 +98,17 @@
             font-size: 16px;
             color: $colorBlue;
             padding: 2px 0;
-            &::before{
+
+            &::before {
               content: "✓";
               margin-#{$end}: 17px;
               font-size: 22px;
               color: #00b2b2;
             }
           }
-          .price-card__list-item--disabled{
-            &::before{
+
+          .price-card__list-item--disabled {
+            &::before {
               color: $colorLight;
             }
           }
@@ -119,12 +121,28 @@
           margin: auto;
           padding: 13px;
           margin-bottom: 35px;
+          transition: .5s;
+
+          &:hover,
+          &:focus {
+            color: $colorBlue;
+            transition: .5s;
+            background-color: $colorLight;
+          }
         }
 
         .Purchase-btn--2 {
           background-color: $colorYellow;
           color: $colorBlue;
+          transition: .5s;
 
+          &:hover,
+          &:focus {
+            color: $colorBlue;
+            transition: .5s;
+            background-color: $colorLight;
+
+          }
         }
       }
     }
@@ -135,7 +153,10 @@
 @media only screen and (max-width:767px) {
   .price-page {
     .page-title {
-      .page-title--price-page{flex-direction: column;}
+      .page-title--price-page {
+        flex-direction: column;
+      }
+
       .tabs-content {
         .price-card {
           .price-card__type {

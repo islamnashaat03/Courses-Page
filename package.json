@@ -27,5 +27,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "node-notifier": "^10.0.0",
     "sass": "^1.35.1"
-  }
+  },
+  "dependencies": {}
 }
