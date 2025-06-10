@@ -247,9 +247,13 @@ $(document).ready(function () {
       }
       console.log("poooooste", posts);
 
+      newArr = [];
       if (id > 0) {
-        $(".wrapper-listing").empty();
-        newArr.push(posts);
+        posts.forEach((ele) => {
+          if (ele.id === +id) {
+            newArr.push(...ele.items);
+          }
+        });
       } else {
         posts.forEach((ele) => {
           newArr.push(...ele.items); //spread  es5
@@ -315,7 +319,7 @@ $(document).ready(function () {
     tabsArray.forEach((ele) => {
       ele.addEventListener("click", function (e) {
         tabsArray.forEach((ele) => {
-          ele.classList.removeClass;
+          ele.classList.remove("active");
         });
       });
     });
